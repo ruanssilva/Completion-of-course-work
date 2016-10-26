@@ -1,0 +1,122 @@
+﻿@model IEnumerable<LVSA.Report.Application.ViewModels.CuboViewModel>
+
+@{
+    ViewBag.Title = "Cubo";
+    ViewBag.Description = "Listagem de cubos";
+}
+
+<div class="pull-left">
+    <a href="@Url.Action("Create")" class="btn btn-white btn-success btn-bold" title="Novo">Novo <i class="fa fa-plus"></i></a>
+</div>
+
+<div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+</div>
+
+<div class="table-header">
+    Resultados para cubos
+</div>
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConsultaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstrucaoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th class="text-right hidden-print"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Consulta.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Instrucao.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td class="text-right">
+                    <div class="hidden-sm hidden-xs action-buttons">
+                        <a class="pink" href="@Url.Action("Execute", new { id= item.Id })" title="Executar">
+                            <i class="ace-icon fa fa-play bigger-130"></i>
+                        </a>
+
+                        <a class="blue" href="@Url.Action("Details", new { id= item.Id })" title="Visualizar">
+                            <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                        </a>
+
+                        <a class="green" href="@Url.Action("Edit", new { id= item.Id })" title="Editar">
+                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                        </a>
+
+                        <a class="red" href="@Url.Action("Delete", new { id= item.Id })" title="Deletar">
+                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                        </a>
+                    </div>
+
+                    <div class="hidden-md hidden-lg">
+                        <div class="inline pos-rel">
+                            <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                <li>
+                                    <a href="@Url.Action("Execute", new { id= item.Id })" class="tooltip-info" data-rel="tooltip" title="Executar">
+                                        <span class="pink">
+                                            <i class="ace-icon fa fa-play bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Details", new { id= item.Id })" class="tooltip-info" data-rel="tooltip" title="Visualizar">
+                                        <span class="blue">
+                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Edit", new { id= item.Id })" class="tooltip-success" data-rel="tooltip" title="Editar">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Delete", new { id= item.Id })" class="tooltip-error" data-rel="tooltip" title="Deletar">
+                                        <span class="red">
+                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

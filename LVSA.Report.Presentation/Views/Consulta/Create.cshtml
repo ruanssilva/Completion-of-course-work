@@ -1,0 +1,120 @@
+﻿@model LVSA.Report.Application.ViewModels.ConsultaViewModel
+
+@{
+    ViewBag.Title = "Consulta";
+    ViewBag.Description = "Nova consulta";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoriaConsultaId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CategoriaConsultaId, new SelectList(ViewBag.CategoriaConsultaSet, "Id", "Nome", Model.CategoriaConsultaId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })
+                @Html.ValidationMessageFor(model => Model.CategoriaConsultaId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ativo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, true, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Sim</span>
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, false, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Não</span>
+                    </label>
+                </div>
+                <br />
+                @Html.ValidationMessageFor(model => model.Ativo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2"></label>
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>@Html.DisplayNameFor(model => model.TSQL)</legend>
+                    @Html.TextAreaFor(model => model.TSQL, htmlAttributes: new { @id = "code-sql", @class = "form-control" })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.TSQL, "", new { @class = "text-danger" })
+                </fieldset>
+            </div>
+            @if (Model.Parametros != null && Model.Parametros.Count() > 0)
+                {
+                <div class="col-md-6 pull-right">
+                    <fieldset>
+                        <legend>@Html.DisplayNameFor(model => model.Parametros)</legend>
+                        @Html.EditorFor(model => model.Parametros)
+                    </fieldset>
+                </div>
+            }
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button>
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+
+    </div>
+}
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/sql.js"></script>
+    <script>
+
+        if ($("#code-sql").length) {
+            var editor = CodeMirror.fromTextArea(document.getElementById("code-sql"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "text/x-sql",
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+    </script>
+}

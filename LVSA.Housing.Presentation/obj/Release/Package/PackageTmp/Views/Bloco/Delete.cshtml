@@ -1,0 +1,67 @@
+﻿@model LVSA.Housing.Application.ViewModels.BlocoViewModel
+
+
+@{
+    ViewBag.Title = "Bloco";
+    ViewBag.Description = "Deletar bloco";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover este bloco?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SindicoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sindico.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

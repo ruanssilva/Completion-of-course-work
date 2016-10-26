@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LVSA.Security.Application.ViewModels.RecursoViewModel>
+
+@{
+    var Seguranca = ((LVSA.Security.Application.Models.Seguranca)TempData["Seguranca"]);
+}
+
+@foreach (var i in Model.Where(w => w.Ativo && Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN").OrderByDescending(o => o.Peso))
+{
+    <li class="hover @TempData["##TempHover"] @(TempData["Recurso"] != null && ((LVSA.Security.Application.ViewModels.RecursoViewModel)TempData["Recurso"]).Id == i.Id ? "active" : "")">
+        <a data-id="@i.Controller#@i.Action" title="@i.Exibicao" href="@(i.RecursoSet != null && i.RecursoSet.Where(w => Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN").Count() > 0 ? "javascript:void(0);" : Url.Action(i.Action, i.Controller, new { }))" class="@(i.RecursoSet != null && i.RecursoSet.Where(w => Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN").Count() > 0 ? "dropdown-toggle" : "")">
+
+        <i class="menu-icon @i.Icon">
+        </i>
+        <span class="menu-text">
+        @(i.Exibicao.Count() > 16 ? i.Exibicao.Substring(0, 16) + "..." : i.Exibicao)
+        </span>
+
+        <b class="@(i.RecursoSet != null && i.RecursoSet.Where(w => Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN").Count() > 0 ? "arrow fa fa-angle-down" : "") "></b>
+        </a>
+
+        <b class="arrow"></b>
+
+        @if (i.RecursoSet != null && i.RecursoSet.Where(w => Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN").Count() > 0)
+        {
+            <ul class="submenu">
+                @Html.Partial("_PartialView/Recursos", i.RecursoSet.Where(w => Seguranca.RecursoSet.Select(s => s.Id).Contains(w.Id) && w.TipoRecurso.Codigo == "MN"))
+            </ul>
+        }
+
+    </li>
+}

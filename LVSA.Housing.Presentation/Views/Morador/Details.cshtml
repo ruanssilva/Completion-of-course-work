@@ -1,0 +1,67 @@
+﻿@model LVSA.Housing.Application.ViewModels.MoradorViewModel
+
+@{
+    ViewBag.Title = "Morador";
+    ViewBag.Description = "Detalhes do morador";
+}
+
+
+<div>
+    <div class="profile-user-info profile-user-info-striped">
+
+        @if (Model.Pessoa.PessoaComplemento != null && Model.Pessoa.PessoaComplemento.Imagem != null)
+        {
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    Foto
+                </div>
+                <div class="profile-info-value">
+                    <img style="max-width:80px;border-radius:20px;border: 2px solid #fff;" src="data:image;base64,@System.Convert.ToBase64String(Model.Pessoa.PessoaComplemento.Imagem.Valor)" />
+                </div>
+            </div>
+            
+        }
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.PessoaId)
+            </div>
+            <div class="profile-info-value">
+                @Model.Pessoa.Nome
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.MoradiaId)
+            </div>
+            <div class="profile-info-value">
+                @Model.Moradia.Nome
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Ativo)
+            </div>
+            <div class="profile-info-value">
+                @(Model.Ativo ? "Sim" : "Não")
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.ResponsavelFinanceiro)
+            </div>
+            <div class="profile-info-value">
+                @(Model.ResponsavelFinanceiro ? "Sim" : "Não")
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

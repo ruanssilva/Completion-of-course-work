@@ -1,0 +1,102 @@
+﻿@model IEnumerable<LVSA.Base.Presentation.ViewModels.ParamViewModel>
+
+@{
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+    
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewBag.Title = "Parâmetros para esta sessão";
+}
+
+
+<div class="login-container">
+
+    <br /><br />
+
+    <div class="center">
+        <img class="img-responsive" style="width: 400px; height:auto" src="@(serverCDN)/Content/Images/logo_LVSA.png" border="0">
+    </div>
+
+    <br />
+
+    <div class="space-6"></div>
+
+    <div class="position-relative">
+        <div id="login-box" class="login-box visible widget-box no-border">
+            <div class="widget-body">
+                <div class="widget-main">
+                    <h4 class="header lighter bigger" style="color: #3E3C54;">
+                        <i class="ace-icon fa fa-cogs"></i>
+                        parâmetros para esta sessão
+                    </h4>
+
+                    <div class="space-6"></div>
+
+                    @using (Html.BeginForm("Index", "Param", FormMethod.Post, new { @id = "Parametros" }))
+                    {
+                        if (Model != null)
+                        {
+                            <fieldset>
+
+                                @Html.EditorFor(model => model)
+
+                                <div class="space"></div>
+
+                                <div class="clearfix">
+                                    <button type="submit" name="Selecionar" class="width-100 pull-right btn btn-sm btn-primary">
+                                        <i class="fa fa-check"></i>
+                                        <span class="bigger-110"> Selecionar</span>
+                                    </button>
+                                </div>
+
+                                <div class="space-6"></div>
+
+                                <div class="social-or-login center">
+                                    <span class="bigger-110"></span>
+                                </div>
+
+                            </fieldset>
+
+                        }
+                    }
+
+
+                </div><!-- /.widget-main -->
+
+ 
+            </div><!-- /.widget-body -->
+        </div><!-- /.login-box -->
+
+
+    </div><!-- /.position-relative -->
+
+</div>
+
+<div style="text-align: center;">
+    <span class="white">© @DateTime.Now.Year – UBEC – União Brasiliense de Educação e Cultura</span>
+</div>
+
+<div class="navbar-fixed-top align-right">
+    <div class="pull-right">
+        <br />
+        &nbsp;
+        <a class="white" href="@Url.Action("Index","Contexto")">alterar contexto</a>
+        &nbsp;
+        <a class="white" href="@Url.Action("Logout","Login")">sair</a>
+        &nbsp;
+        &nbsp;
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="@(serverCDN)Content/Templates/Ace/assets/js/ace/elements.typeahead.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('select').change(function () {
+                $('#Parametros').submit();
+            });
+
+        });
+    </script>
+}

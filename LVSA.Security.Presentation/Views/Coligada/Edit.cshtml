@@ -1,0 +1,34 @@
+﻿@model LVSA.Security.Application.ViewModels.ColigadaViewModel
+
+@{
+    ViewBag.Title = "Coligada";
+    ViewBag.Description = "Editar coligada";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}
+

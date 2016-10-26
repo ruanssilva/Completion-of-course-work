@@ -1,0 +1,126 @@
+﻿@model LVSA.Report.Application.ViewModels.CuboViewModel
+
+@{
+    ViewBag.Title = "Cubo";
+    ViewBag.Description = "Detalhes do cubo";
+}
+
+<div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset>
+                <legend>@Html.DisplayNameFor(model => model.Consulta.TSQL)</legend>
+                <textarea id="view-sql">@Model.Consulta.TSQL</textarea>
+            </fieldset>
+            <span class="help-block">Pressione F11 para fullscreen</span>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <legend>@Html.DisplayNameFor(model => model.Instrucao.Code)</legend>
+                <textarea id="view-csharp">@Model.Instrucao.Code</textarea>
+            </fieldset>
+            <span class="help-block">Pressione F11 para fullscreen</span>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaCuboId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaCubo.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icon)
+        </dt>
+
+        <dd>
+            <i class="@Model.Icon"></i>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/clike.js"></script>
+    <script src="~/Content/CodeMirror/js/sql.js"></script>
+    <script>
+
+        if ($("#view-csharp").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-csharp"), {
+                mode: 'text/x-csharp',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+        if ($("#view-sql").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-sql"), {
+                mode: 'text/x-sql',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+    </script>
+}

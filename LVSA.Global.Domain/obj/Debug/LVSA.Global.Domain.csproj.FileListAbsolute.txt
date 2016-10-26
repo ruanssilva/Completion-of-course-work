@@ -1,0 +1,17 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\bin\Debug\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\bin\Debug\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Domain\obj\Debug\LVSA.Global.Domain.pdb

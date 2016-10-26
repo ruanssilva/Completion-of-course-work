@@ -1,0 +1,43 @@
+﻿@{
+    IEnumerable<LVSA.Base.Presentation.ViewModels.GritterViewModel> gritters = (IEnumerable<LVSA.Base.Presentation.ViewModels.GritterViewModel>)TempData["LVSA.CDN.Plugins.Gritter"];
+}
+
+@if (gritters != null && gritters.Count() > 0)
+{
+
+    foreach (var gritter in gritters)
+    {
+        gritter.Message = gritter.Message.Replace("\n", "");
+
+        if (gritter.Style == LVSA.Base.Presentation.ViewModels.GritterStyle.Warning)
+        {
+            <script>
+                var teste = LVSA.CDN.Plugins.Gritter.Warning('<i class="fa fa-exclamation-triangle"></i> @gritter.Tittle','@gritter.Message', @(gritter.Center ? "true" : "false"), @(gritter.Sticky ? "true" : "false"));
+            </script>
+        }
+        else if (gritter.Style == LVSA.Base.Presentation.ViewModels.GritterStyle.Success)
+        {
+            <script>
+                var teste = LVSA.CDN.Plugins.Gritter.Success('<i class="fa fa-check"></i> @gritter.Tittle','@gritter.Message', @(gritter.Center ? "true" : "false"), @(gritter.Sticky ? "true" : "false"));
+            </script>
+        }
+        else if (gritter.Style == LVSA.Base.Presentation.ViewModels.GritterStyle.Error)
+        {
+            <script>
+                var teste = LVSA.CDN.Plugins.Gritter.Error('<i class="fa fa-remove"></i> @gritter.Tittle','@gritter.Message', @(gritter.Center ? "true" : "false"), @(gritter.Sticky ? "true" : "false"));
+            </script>
+        }
+        else if (gritter.Style == LVSA.Base.Presentation.ViewModels.GritterStyle.Information)
+        {
+            <script>
+                var teste = LVSA.CDN.Plugins.Gritter.Information('<i class="fa fa-bullhorn"></i> @gritter.Tittle','@gritter.Message', @(gritter.Center ? "true" : "false"), @(gritter.Sticky ? "true" : "false"));
+            </script>
+        }
+        else
+        {
+            <script>
+                var teste = LVSA.CDN.Plugins.Gritter.Default('<i class="fa fa-bolt"></i> @gritter.Tittle','@gritter.Message', '@(gritter.Center ? "gritter-center" : "")', @(gritter.Sticky ? "true" : "false"));
+            </script>
+        }
+    }
+}

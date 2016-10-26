@@ -1,0 +1,23 @@
+﻿@model Dictionary<string, KeyValuePair<string, string>>
+@{
+    ViewBag.Title = "Pesquisa";
+    ViewBag.Description = Model != null && Model.Count() > 0 ? "Resultados para '" + ViewBag.Pesquisa + "'" : "Ops! Não encontramos resultados para '" + ViewBag.Pesquisa + "'";
+}
+@if (Model != null && Model.Count() > 0)
+{
+    <ul style="list-style:none;">
+        @foreach (var x in Model)
+        {
+            <li><a href="@x.Value.Value"><i class="@x.Value.Key"></i> @x.Key</a></li>
+        }
+    </ul>
+}
+else
+{
+    <h1></h1>
+    <h3>Algumas dicas para encontrar o que precisa:</h3>
+    <ol>
+        <li>Use verbos das ações desejadas. Por ex.: <b>Visualizar</b>, <b>Ver</b>, <b>Cadastrar</b> e etc...</li>
+        <li>Junte os verbos com o recurso desejado. Por ex.: 'Visualizar <b>nota</b>, Cadastrar <b>local</b>, Editar <b>pessoa</b>'</li>
+    </ol>
+}

@@ -1,0 +1,87 @@
+﻿@model LVSA.Farm.Application.ViewModels.DiagnosticoViewModel
+
+@{
+    ViewBag.Title = "Diagnóstico";
+    ViewBag.Description = "Detalhes do diagnóstico";
+}
+
+<div class="profile-user-info profile-user-info-striped">
+
+
+    <div class="profile-info-row">
+        <div class="profile-info-name">
+            @Html.DisplayNameFor(model => model.AnimalId)
+        </div>
+        <div class="profile-info-value">
+            @Html.DisplayFor(model => model.Animal.Nome)
+        </div>
+    </div>
+
+    <div class="profile-info-row">
+        <div class="profile-info-name">
+            @Html.DisplayNameFor(model => model.DoencaId)
+        </div>
+        <div class="profile-info-value">
+            @Html.DisplayFor(model => model.Doenca.Nome)
+        </div>
+    </div>
+
+    <div class="profile-info-row">
+        <div class="profile-info-name">
+            @Html.DisplayNameFor(model => model.DataDiagnostico)
+        </div>
+        <div class="profile-info-value">
+            @Model.DataDiagnostico.ToString("dd/MM/yyyy")
+        </div>
+    </div>
+
+    <div class="profile-info-row">
+        <div class="profile-info-name">
+            @Html.DisplayNameFor(model => model.Observacao)
+        </div>
+        <div class="profile-info-value">
+            @Html.DisplayFor(model => model.Observacao)
+        </div>
+    </div>
+
+    <div class="profile-info-row">
+        <div class="profile-info-name">
+            @Html.DisplayNameFor(model => model.RetratoSet)
+        </div>
+        <div class="profile-info-value">
+            @if (Model.RetratoSet != null && Model.RetratoSet.Count() > 0)
+            {
+                <ul class="ace-thumbnails clearfix">
+                    @{int count = 0;}
+                    @foreach (var x in Model.RetratoSet)
+                    {
+                        <li>
+                            <a class="cboxElement not-show-loading" href="data:image;base64,@System.Convert.ToBase64String(x.Valor)" data-rel="colorbox">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(x.Valor)" width="150" height="150" />
+                                <div class="tags">
+                                    <!-- #section:pages/gallery.tags -->
+                                    <span class="label-holder">
+                                        <span class="label label-info arrowed">clique para ampliar</span>
+                                    </span>
+
+                                    <!-- /section:pages/gallery.tags -->
+                                </div>
+                            </a>
+                        </li>
+                        count++;
+                    }
+
+                </ul>
+
+            }
+        </div>
+    </div>
+
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

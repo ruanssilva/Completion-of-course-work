@@ -1,0 +1,507 @@
+﻿@model LVSA.Security.Application.ViewModels.GrupoViewModel
+
+@{
+    string serverAPI = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.Security.Service"];
+
+    ViewBag.Title = "Grupo";
+    ViewBag.Description = "Pesquisa  de grupo";
+
+    object htmlAtrr = new { };
+
+    if (ViewBag.GrupoSet != null && ViewBag.FilialId != null && ViewBag.AplicacaoId != null)
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required", @disabled = "disabled" };
+    }
+    else
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required" };
+    }
+}
+
+@using (Html.BeginForm("Index", "Grupo", FormMethod.Post, new { @id = "Filtro" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="FilialId">Filial</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("FilialId", new SelectList(ViewBag.FilialSet, "Id", "Nome", "Coligada.Nome", (short?)ViewBag.FilialId), "Selecione filial...", htmlAtrr)
+                        @Html.ValidationMessage("FilialId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="AplicacaoId">Aplicação</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("AplicacaoId", new SelectList(ViewBag.AplicacaoSet ?? new List<LVSA.Security.Application.ViewModels.AplicacaoViewModel> { }, "Id", "Exibicao", (int?)ViewBag.AplicacaoId), "Selecione aplicação...", htmlAtrr)
+                        @Html.ValidationMessage("AplicacaoId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selecionar-filtro" class="form-actions no-color" style="@(ViewBag.GrupoSet != null && ViewBag.FilialId != null && ViewBag.AplicacaoId != null ? "display:none;" : "")">
+            <div>
+                <button type="submit" class="btn btn-white btn-primary btn-bold" title="Selecionar fitro">Pesquisar <i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <br />
+
+}
+
+
+@if (ViewBag.GrupoSet != null && ViewBag.FilialId != null && ViewBag.AplicacaoId != null)
+{
+    <div id="filtrado">
+
+        <div class="pull-left">
+            <a href="~/Grupo/Create" class="btn btn-white btn-success btn-bold" title="Novo">Novo <i class="fa fa-plus"></i></a>
+            <button id="alterar-filtro" type="button" class="btn btn-default btn-bold btn-white" title="Alterar filtro">Alterar pesquisa <i class="fa fa-retweet"></i></button>
+        </div>
+
+        <div class="clearfix">
+            <div class="pull-right tableTools-container"></div>
+        </div>
+
+        <div class="table-header">
+            Resultados para grupos
+        </div>
+
+
+        <table class="table datatable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th class="col-md-6">
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Publico)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ativo)
+                    </th>
+
+                    <th class="action-header"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Where(w => !w.Herdado).OrderBy(o => o.Nome))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            @(item.Publico ? "Sim" : "Não")
+                        </td>
+                        <td>
+                            @(item.Ativo ? "Sim" : "Não")
+                        </td>
+
+                        <td class="text-right">
+                            <div class="hidden-sm hidden-xs action-buttons">
+
+                                <a class="grey" href="~/Permissao/Grupo/@item.Id" title="Permissões">
+                                    <i class="ace-icon fa fa-shield bigger-130"></i>
+                                </a>
+
+                                <a class="orange" href="~/Agrupamento/Grupo/@item.Id" title="Membros do grupo">
+                                    <i class="ace-icon fa fa-users bigger-130"></i>
+                                </a>
+
+                                <a class="blue" href="~/Grupo/Details/@item.Id" title="Visualizar">
+                                    <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                </a>
+
+                                <a class="green" href="~/Grupo/Edit/@item.Id" title="Editar">
+                                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                </a>
+
+                                <a class="red" href="~/Grupo/Delete/@item.Id" title="Deletar">
+                                    <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                </a>
+
+                            </div>
+
+                            <div class="hidden-md hidden-lg">
+                                <div class="inline pos-rel">
+                                    <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                        <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                        <li>
+                                            <a href="~/Permissao/Grupo/@item.Id" class="tooltip-info" data-rel="tooltip" title="Permissões">
+                                                <span class="grey">
+                                                    <i class="ace-icon fa fa-shield bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Agrupamento/Grupo/@item.Id" class="tooltip-info" data-rel="tooltip" title="Membros do grupo">
+                                                <span class="orange">
+                                                    <i class="ace-icon fa fa-users bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Grupo/Details/@item.Id" class="tooltip-info" data-rel="tooltip" title="Visualizar">
+                                                <span class="blue">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Grupo/Edit/@item.Id" class="tooltip-success" data-rel="tooltip" title="Editar">
+                                                <span class="green">
+                                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Grupo/Delete/@item.Id" class="tooltip-success" data-rel="tooltip" title="Deletar">
+                                                <span class="red">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@if (Model != null)
+{
+    if (ViewBag.Delete != null && (bool)ViewBag.Delete)
+    {
+        <div id="Delete" class="modal fade">
+            <div class="modal-dialog">
+                @using (Html.BeginForm("Delete", "Grupo", new { id = Model.Id }, FormMethod.Post))
+                {
+                    <div class="modal-content">
+                        <!-- dialog body -->
+                        <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                            <h4 class="red">Atenção!</h4>
+                            <h5>Deseja realmente deletar este grupo?</h5>
+                            <hr />
+
+                            @Html.AntiForgeryToken()
+
+
+                            @Html.HiddenFor(model => model.Id)
+
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Nome)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Nome)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Descricao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Descricao)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Ativo)
+                                </dt>
+
+                                <dd>
+                                    @(Model.Ativo ? "Sim" : "Não")
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Publico)
+                                </dt>
+
+                                <dd>
+                                    @(Model.Publico ? "Sim" : "Não")
+                                </dd>
+
+                            </dl>
+
+                        </div>
+                        <!-- dialog buttons -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger">Deletar <i class="fa fa-trash-o"></i></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+    else if (ViewBag.Details != null && (bool)ViewBag.Details)
+    {
+        <div id="Details" class="modal fade">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"><i class="fa fa-search"></i> Visualizar <small>recurso</small></h4>
+                    </div>
+                    <!-- dialog body -->
+                    <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Nome)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Nome)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Descricao)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Descricao)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Ativo)
+                            </dt>
+
+                            <dd>
+                                @(Model.Ativo ? "Sim" : "Não")
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Publico)
+                            </dt>
+
+                            <dd>
+                                @(Model.Publico ? "Sim" : "Não")
+                            </dd>
+
+                        </dl>
+
+
+                    </div>
+                    <!-- dialog buttons -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                        <a href="~/Grupo/Edit/@Model.Id" class="btn btn-warning">Editar <i class="fa fa-edit"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <div id="CreateOrEdit" class="modal fade">
+            <div class="modal-dialog">
+                @using (Html.BeginForm("Action", "Grupo", FormMethod.Post))
+                {
+                    <input type="hidden" name="@Html.NameFor(model=>model.AplicacaoId)" value="@ViewBag.AplicacaoId" />
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title"><i class="fa @(Model.Id > 0 ? "fa-edit" : "fa-plus")"></i> @(Model.Id > 0 ? "Editar" : "Novo") <small>grupo</small></h4>
+                        </div>
+                        <!-- dialog body -->
+                        <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                @Html.HiddenFor(model => model.Id)
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Descricao, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.Ativo)</label>
+                                    <div class="col-md-8">
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="True" />
+                                                <span class="lbl"> Sim</span>
+                                                @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(!Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="False" />
+                                                <span class="lbl"> Não</span>
+                                                @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.Publico)</label>
+                                    <div class="col-md-8">
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Publico)" @(Model.Publico ? "checked" : "") id="@Html.IdFor(model => model.Publico)" type="radio" value="True" />
+                                                <span class="lbl"> Sim</span>
+                                                @Html.ValidationMessageFor(model => model.Publico, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Publico)" @(!Model.Publico ? "checked" : "") id="@Html.IdFor(model => model.Publico)" type="radio" value="False" />
+                                                <span class="lbl"> Não</span>
+                                                @Html.ValidationMessageFor(model => model.Publico, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Tags, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Tags, new { @class = "form-control field-tags" })
+                                        @Html.ValidationMessage("Tags", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- dialog buttons -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Salvar <i class="fa fa-save"></i></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+
+
+@section scripts {
+    <script>
+        $(function () {
+
+            $('#alterar-filtro').click(function () {
+                $('#filtrado').remove();
+
+                $('form#Filtro select').each(function () {
+                    $(this).attr('disabled', false).trigger('update');
+                });
+
+                $('#selecionar-filtro').show();
+            });
+
+            if ($("#CreateOrEdit").length)
+                $("#CreateOrEdit").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+            if ($("#Details").length)
+                $("#Details").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+            if ($("#Delete").length)
+                $("#Delete").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+
+            $('select[Name="FilialId"]').change(function () {
+
+                $('select[Name="AplicacaoId"]').find("option:selected").prop("selected", false).trigger('update');
+                if ($(this).val().length > 0) {
+
+                    $('select[Name="AplicacaoId"]').html('<option value="">Carregando...</option>').prop('disabled', true).trigger('update');
+
+                    var id = $(this).val();
+
+                    LVSA.Ajax.Request({ type: 'POST', url: '@(serverAPI)api/aplicacao/' + id, data: {}, headers: { 'Authorization': 'Bearer @TempData["Provider"]' } })
+                        .Get()
+                        .success(function (data) {
+                            if (data != null && data.length > 0) {
+                                $('select[Name="AplicacaoId"]').html('<option value="">Selecione aplicação...</option>');
+                                $.each(data, function (index, value) {
+                                    $('select[Name="AplicacaoId"]').append('<option ' + (data.length == 1 ? "selected" : "") + ' value="' + value.Id + '"> ' + value.Exibicao + '</option>')
+                                });
+
+                                if (data.length == 1)
+                                    $('select[Name="AplicacaoId"]').trigger('change');
+                            }
+                            else
+                                $('select[Name="AplicacaoId"]').html('<option value="">Ops! Sem resultados</option>');
+                        })
+                        .error(function () {
+                            LVSA.CDN.Plugins.Gritter.Error("Ops! Ocorreu um erro", "Não foi possível carregar o campo. Tente novamente mais tarde ou contacte o administrador", true, true);
+                            $('select[Name="AplicacaoId"]').html('<option value="">Falha no carregamento</option>');
+                        })
+                        .complete(function () {
+                            $('select[Name="AplicacaoId"]').prop('disabled', false).trigger('update');
+                        });
+
+
+
+                }
+            });
+
+        });
+    </script>
+}

@@ -1,0 +1,772 @@
+﻿@model IEnumerable<LVSA.Security.Application.Models.Seguranca>
+
+@{
+    ViewBag.Title = "Dashboard";
+    ViewBag.Description = "Status dos sistemas ativos";
+
+    LVSA.Security.Application.Models.Seguranca Seguranca = ((LVSA.Security.Application.Models.Seguranca)TempData["Seguranca"]);
+}
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="widget-box transparent" id="recent-box">
+            <div class="widget-header">
+                <div class="widget-toolbar no-border">
+                    <ul class="nav nav-tabs" id="recent-tab">
+                        @if (ViewBag.Seguranca != null)
+                        {
+                            <li class="active">
+                                <a aria-expanded="false" class="not-show-loading" data-toggle="tab" href="#task-seguranca">Usuário: <small><b>@ViewBag.Seguranca.Usuario.Id – @(((string)ViewBag.Seguranca.Usuario.Nome).Split(' ')[0])</b></small></a>
+                            </li>
+                        }
+
+                        <li>
+                            <a aria-expanded="false" class="not-show-loading" data-toggle="tab" href="#stalker-tab">Stalker</a>
+                        </li>
+
+                        <li class="@(ViewBag.Seguranca == null ? "active" : "")">
+                            <a aria-expanded="false" class="not-show-loading" data-toggle="tab" href="#task-tab">Registros de log</a>
+                        </li>
+
+                        <li class="">
+                            <a aria-expanded="true" class="not-show-loading" data-toggle="tab" href="#member-tab">Últimos usuários ativos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main padding-4">
+                    <div class="tab-content padding-8">
+                        @if (ViewBag.Seguranca != null)
+                        {
+                            <div id="task-seguranca" class="tab-pane active" style="max-height:500px; overflow:auto;">
+                                <!-- #section:pages/dashboard.tasks -->
+
+                                <dl class="dl-horizontal">
+
+                                    <dt>
+                                        Matrícula
+                                    </dt>
+
+                                    <dd>
+                                        @ViewBag.Seguranca.Usuario.Id
+                                    </dd>
+
+                                    <dt>
+                                        Nome
+                                    </dt>
+
+
+
+                                    <dd>
+                                        @ViewBag.Seguranca.Usuario.Nome
+                                    </dd>
+
+                                    <br />
+
+                                    <dt>
+                                        Tipo de usuário
+                                    </dt>
+
+                                    <dd>
+                                        <b>@(ViewBag.Seguranca.Usuario.TipoUsuario != null ? ViewBag.Seguranca.Usuario.TipoUsuario.Nome : "Normal")</b>
+                                    </dd>
+
+                                    <br />
+
+                                    <dt>
+                                        Aplicação atual
+                                    </dt>
+                                    <dd>
+                                        @(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Aplicacao != null ? ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Aplicacao.Exibicao : null)
+                                    </dd>
+                                    <dt>
+                                        Filial atual
+                                    </dt>
+                                    <dd>
+                                        <small>@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Filial != null ? ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Filial.Nome : null)</small>
+                                    </dd>
+
+
+                                    <br />
+
+                                    <dt title="Aplicações disponíveis">
+                                        Aplicações disponíveis
+                                    </dt>
+                                    <dd>
+                                        <a aria-expanded="true" data-toggle="tab" href="#aplicacoes-tab" class="not-show-loading ver-aplicacoes">@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoSet.Where(w => w.Ativo && !w.Abstrata).Count()) aplicaç@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoSet.Where(w => w.Ativo).Count() > 1 ? "ões" : "ão")</a>
+                                    </dd>
+                                    <dt>
+                                        Grupos inseridos
+                                    </dt>
+                                    <dd>
+                                        <a aria-expanded="true" data-toggle="tab" href="#grupos-tab" class="not-show-loading ver-grupos">@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Usuario.GrupoSet.Count()) grupo@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Usuario.GrupoSet.Count() > 1 ? "s" : "")</a>
+                                    </dd>
+
+                                    <dt>
+                                        Recursos acessiveis
+                                    </dt>
+                                    <dd>
+                                        <a aria-expanded="true" data-toggle="tab" href="#recursos-tab" class="not-show-loading ver-recursos">@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).GrupoSet.SelectMany(s => s.PermissaoSet).Select(s => s.Recurso).Where(w => w.Ativo).Count()) recurso@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).GrupoSet.SelectMany(s => s.PermissaoSet).Select(s => s.Recurso).Where(w => w.Ativo).Count() > 1 ? "s" : "")</a>
+                                    </dd>
+
+
+
+                                </dl>
+
+                                <!-- /section:pages/dashboard.tasks -->
+                            </div>
+                        }
+                        <div id="stalker-tab" class="tab-pane" style="max-height:500px;overflow:auto;">
+                            <ul id="stalker" class="item-list">
+
+                            </ul>
+                        </div>
+                        <div id="task-tab" class="tab-pane @(ViewBag.Seguranca == null ? "active" : "")" style="max-height:500px; overflow:auto;">
+                            <!-- #section:pages/dashboard.tasks -->
+                            <ul id="tasks" class="item-list ui-sortable">
+
+                                @if (ViewBag.Logs != null)
+                                {
+                                    foreach (var x in (List<dynamic>)ViewBag.Logs)
+                                    {
+                                        <li class="@(x.Style == 0 ? " item-grey" : "") @(x.style == 1 ? " item-green" : "") @(x.style == 2 ? "item-red" : "") @(x.style == 3 ? "item-orange" : "") clearfix ui-sortable-hand">
+                                            <label class="inline">
+                                                <span class="lbl"> @x.Mensagem  <small>em <b>@x.Horario</b></small> </span>
+                                            </label>
+                                        </li>
+                                    }
+                                }
+
+                            </ul>
+
+                            <!-- /section:pages/dashboard.tasks -->
+                        </div>
+
+                        <div id="member-tab" class="tab-pane">
+                            <!-- #section:pages/dashboard.members -->
+                            <div class="clearfix">
+                                @foreach (var x in Model.OrderByDescending(o => o.UltimaAtividade).Take(9))
+                                {
+                                    <div class="itemdiv memberdiv">
+
+                                        <div class="body" style="margin-left:0px !important;">
+                                            <div class="name" title="@x.Usuario.Nome">
+                                                @x.Usuario.Id – @(((string)x.Usuario.Nome).Split(' ')[0])
+                                            </div>
+
+                                            <div class="time">
+                                                <span class="green">@((int)(DateTime.Now - (DateTime)x.UltimaAtividade).TotalMinutes) minutos atrás</span>
+                                            </div>
+
+                                            <div>
+                                                <div class="inline position-relative">
+                                                    <button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                        contexto
+                                                        <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                    </button>
+
+                                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close" style="min-width:150px!important; z-index:9999;">
+                                                        <li title="@(x.Aplicacao != null ? x.Aplicacao.Exibicao : null)">
+                                                            <small><b>Aplicação:</b> </small>
+                                                            @x.AplicacaoId
+                                                        </li>
+
+                                                        <li title="@(x.Filial != null ? x.Filial.Nome : null)">
+                                                            <small><b>Filial:</b> </small>
+                                                            @x.FilialId
+                                                        </li>
+
+                                                    </ul>
+                                                    <a href="@Url.Action("Details", "DSeguranca", new { id = x.Usuario.Id })"><i class="fa fa-eye"></i></a>
+                                                    <a href="javascript:void(0);" title="Enviar mensagem" class="enviar-notificacao" data-id="@x.Id"><i class="fa fa-send"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+
+                            <div class="space-4"></div>
+
+                        </div>
+
+
+                    </div><!-- /.widget-main -->
+                </div><!-- /.widget-body -->
+            </div><!-- /.widget-box -->
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="col-sm-12 infobox-container">
+            <!-- #section:pages/dashboard.infobox -->
+            <a href="javascript:void(0);" class="visualizar-usuarios infobox infobox-green">
+                <div class="infobox-icon">
+                    <i class="ace-icon fa fa-users"></i>
+                </div>
+
+                <div class="infobox-data">
+                    <span class="infobox-data-number">@Model.Count()</span>
+                    <div class="infobox-content">usuários online</div>
+                </div>
+
+                <!-- #section:pages/dashboard.infobox.stat -->
+                <!-- /section:pages/dashboard.infobox.stat -->
+            </a>
+
+            <a href="javascript:void(0);" class="visualizar-aplicacoes infobox infobox-blue">
+                <div class="infobox-icon">
+                    <i class="ace-icon fa fa-cubes"></i>
+                </div>
+
+                <div class="infobox-data">
+                    <span class="infobox-data-number">@Model.Where(w => w.AplicacaoId != null && w.Aplicacao != null).Select(s => s.Aplicacao).GroupBy(g => g.Id).Select(s => s.FirstOrDefault()).Count()</span>
+                    <div class="infobox-content">aplicações utilizadas</div>
+                </div>
+            </a>
+
+            <a href="javascript:void(0);" class="infobox infobox-orange enviar-notificacao">
+                <div class="infobox-icon">
+                    <i class="ace-icon fa fa-envelope"></i>
+                </div>
+
+                <div class="infobox-data">
+                    <span class="infobox-data-number">#</span>
+                    <div class="infobox-content">notificar agora</div>
+                </div>
+            </a>
+
+            <!-- /section:pages/dashboard.infobox -->
+            <div class="space-6"></div>
+
+
+            <!-- /section:pages/dashboard.infobox.dark -->
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Seguranca != null)
+{
+    <div id="visualizar-permissao" class="modal fade">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                    <div class="widget-box transparent" id="recent-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title lighter smaller">
+                                <i class="ace-icon fa fa-shield orange"></i> Permissões atribuídas
+                            </h4>
+
+                            <div class="widget-toolbar no-border">
+                                <ul class="nav nav-tabs" id="recent-tab">
+                                    <li class="active">
+                                        <a id="ver-aplicacoes" aria-expanded="true" data-toggle="tab" href="#aplicacoes-tab" class="not-show-loading">Aplicações</a>
+                                    </li>
+
+                                    <li class="">
+                                        <a id="ver-grupos" aria-expanded="false" data-toggle="tab" href="#grupos-tab" class="not-show-loading">Grupos</a>
+                                    </li>
+
+                                    <li class="">
+                                        <a id="ver-recursos" aria-expanded="false" data-toggle="tab" href="#recursos-tab" class="not-show-loading">Recursos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-4">
+                                <div class="tab-content padding-8">
+                                    <div id="aplicacoes-tab" class="tab-pane active">
+
+                                        <!-- #section:pages/dashboard.coligadas -->
+                                        <ul id="coligadas" class="item-list ui-sortable">
+                                            @foreach (var c in ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoSet.Where(w => w.Ativo && !w.Abstrata))
+                                            {
+                                                <li class="@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoId == c.Id ? "item-green" : "item-red") clearfix ui-sortable-handle">
+                                                    <label class="inline">
+                                                        <span class="lbl">@c.Exibicao <small>(@c.Nome)</small> </span>
+                                                    </label>
+
+                                                    <div class="pull-right easy-pie-chart percentage">
+                                                        <span class="percent"><big>@c.Sigla</big></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div id="grupos-tab" class="tab-pane">
+
+                                        <!-- #section:pages/dashboard.filiais -->
+                                        <ul id="filiais" class="item-list ui-sortable">
+                                            @foreach (var c in ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Usuario.GrupoSet)
+                                            {
+                                                <li class="@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoId == c.AplicacaoId ? "item-green" : "item-red") clearfix ui-sortable-handle">
+                                                    <label class="inline">
+                                                        <span class="lbl"> @c.Nome</span>
+                                                    </label>
+
+                                                    <div class="pull-right easy-pie-chart percentage">
+                                                        <span class="percent"><big>@c.Id</big></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div id="recursos-tab" class="tab-pane">
+
+                                        <!-- #section:pages/dashboard.niveis -->
+                                        <ul id="niveis" class="item-list ui-sortable">
+                                            @foreach (var c in ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).GrupoSet.SelectMany(s => s.PermissaoSet).Select(s => s.Recurso).Where(w => w.Ativo))
+                                            {
+                                                <li class="@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).AplicacaoId == c.AplicacaoId || ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Aplicacao.AplicacaoSet.Select(s=>s.Id).Contains(c.AplicacaoId) ? "item-green" : "item-red") clearfix ui-sor">
+                                                    <label class="inline">
+                                                        <span class="lbl"> @c.Exibicao <small>(@c.Nome)</small></span>
+                                                    </label>
+
+                                                    <div class="pull-right easy-pie-chart percentage">
+                                                        <span class="percent"><big>@c.Id</big></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div><!-- /.widget-main -->
+                        </div><!-- /.widget-body -->
+                    </div>
+
+
+
+
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="visualizar-contexto" class="modal fade">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                    <div class="widget-box transparent" id="recent-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title lighter smaller">
+                                <i class="ace-icon fa fa-flag blue"></i> Contexto disponíveis
+                            </h4>
+
+                            <div class="widget-toolbar no-border">
+                                <ul class="nav nav-tabs" id="recent-tab">
+                                    <li class="active">
+                                        <a aria-expanded="true" data-toggle="tab" href="#coligadas-tab" class="not-show-loading">Coligadas</a>
+                                    </li>
+
+                                    <li class="">
+                                        <a aria-expanded="false" data-toggle="tab" href="#filiais-tab" class="not-show-loading">Filiais</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-4">
+                                <div class="tab-content padding-8">
+                                    <div id="coligadas-tab" class="tab-pane active">
+
+                                        <!-- #section:pages/dashboard.coligadas -->
+                                        <ul id="coligadas" class="item-list ui-sortable">
+                                            @foreach (var c in ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Usuario.UsuarioFilialSet.Select(s => new { ColigadaId = s.ColigadaId, Nome = "#Filial", }).Distinct())
+                                            {
+                                                <li class="@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).ColigadaId == c.ColigadaId ? "item-green" : "item-red") clearfix ui-sortable-handle">
+                                                    <label class="inline">
+                                                        <span class="lbl"> @c.Nome</span>
+                                                    </label>
+
+                                                    <div class="pull-right easy-pie-chart percentage">
+                                                        <span class="percent"><big>@c.ColigadaId</big></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div id="filiais-tab" class="tab-pane">
+
+                                        <!-- #section:pages/dashboard.filiais -->
+                                        <ul id="filiais" class="item-list ui-sortable">
+                                            @foreach (var c in ((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).Usuario.UsuarioFilialSet.Select(s => new { FilialId = s.FilialId, Nome = "#Filial", }).Distinct())
+                                            {
+                                                <li class="@(((LVSA.Security.Application.Models.Seguranca)ViewBag.Seguranca).FilialId == c.FilialId ? "item-green" : "item-red") clearfix ui-sortable-handle">
+                                                    <label class="inline">
+                                                        <span class="lbl"> @c.Nome</span>
+                                                    </label>
+
+                                                    <div class="pull-right easy-pie-chart percentage">
+                                                        <span class="percent"><big>@c.FilialId</big></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+                            </div><!-- /.widget-main -->
+                        </div><!-- /.widget-body -->
+                    </div>
+
+
+
+
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+
+<div id="visualizar-usuarios" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- dialog body -->
+            <div class="modal-body" style="max-height: 400px; overflow: auto;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Usuário</th>
+                            <th>Tipo usuário</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var u in Model.OrderByDescending(o => o.UltimaAtividade).Select(s => s.Usuario))
+                        {
+                            <tr>
+                                <td>@u.Id</td>
+                                <td>@u.Nome</td>
+                                <td>@(u.TipoUsuario == null ? "Normal" : u.TipoUsuario.Nome)</td>
+                                <td>
+                                    <a href="@Url.Action("Details", "DSeguranca", new { id = u.Id })" title="Visualizar"><i class="fa fa-eye"></i></a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" title="Enviar mensagem" class="enviar-notificacao" data-id="@u.Id"><i class="fa fa-send"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="visualizar-aplicacoes" class="modal fade">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("Index", "DSeguranca", FormMethod.Post))
+        {
+            <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sigla</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*@foreach (var u in Model.Grupo.UsuarioSet.Where(w => w.UsuarioFilialSet.Where(w1 => w1.FilialId == (short?)ViewBag.FilialId && w1.CODTIPOCURSO == (short?)ViewBag.CODTIPOCURSO).Count() == 0))*@
+                            @foreach (var u in Model.Where(w => w.AplicacaoId != null && w.Aplicacao != null).Select(s => s.Aplicacao).GroupBy(g => g.Id).Select(s => s.First()))
+                            {
+                                <tr>
+                                    <td>@u.Sigla</td>
+                                    <td>@u.Nome</td>
+                                    <td>@u.Descricao</td>
+                                    <td class="text-right"></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button id="Reniciar" name="Reniciar" type="submit" value="True" class="btn btn-warning">Reniciar aplicações <i class="fa fa-refresh"></i></button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div id="enviar-notificacao" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title"><i class="fa fa-send"></i> Enviar <small>mensagem</small></h4>
+            </div>
+            <!-- dialog body -->
+            <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Título</label>
+                        <div class="col-md-8">
+                            <input id="title-enviar-notificacao" type="text" class="form-control" value="@Seguranca.Usuario.Nome.Split(' ')[0] @(!string.IsNullOrWhiteSpace(Seguranca.Usuario.Setor) ? "(" + Seguranca.Usuario.Setor.Trim() + ")" : "") diz:" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Mensagem</label>
+                        <div class="col-md-8">
+                            <input id="mensagem-enviar-notificacao" required type="text" class="form-control" />
+                            <label class="help-block">Se a mensagem não for preenchida a notificação não será feita</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Obter resposta</label>
+                        <div class="col-md-8">
+                            <div class="radio-inline">
+                                <label>
+                                    <input class="ace" name="ObterResposta" type="radio" value="True" />
+                                    <span class="lbl"> Sim</span>
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input class="ace" name="ObterResposta" checked type="radio" value="False" />
+                                    <span class="lbl"> Não</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Aplicação</label>
+                        <div class="col-md-8">
+                            @Html.DropDownList("Aplicacoes", new SelectList(Model.Where(w => w.AplicacaoId != null && w.Aplicacao != null).Select(s => s.Aplicacao).GroupBy(g => g.Id).Select(s => s.First()), "Link", "Exibicao"), "Todas aplicações", new { @class = "form-control", @id = "Aplicacoes" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button id="send-enviar-notificacao" data-dismiss="modal" type="button" class="btn btn-success">Enviar <i class="fa fa-send"></i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts {
+
+
+    @if (ViewBag.Seguranca != null)
+    {
+        <script>
+            $(function () {
+                $('a.visualizar-contexto').click(function () {
+                    $("#visualizar-contexto").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+
+
+
+                $('a.ver-grupos').click(function () {
+
+                    $('#ver-aplicacoes').parent('li').removeClass('active');
+                    $('#ver-recursos').parent('li').removeClass('active');
+                    $('#ver-grupos').parent('li').addClass('active');
+
+                    $("#visualizar-permissao").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+
+                $('a.ver-recursos').click(function () {
+
+                    $('#ver-aplicacoes').parent('li').removeClass('active');
+                    $('#ver-grupos').parent('li').removeClass('active');
+                    $('#ver-recursos').parent('li').addClass('active');
+
+                    $("#visualizar-permissao").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+
+                $('a.ver-aplicacoes').click(function () {
+
+                    $('#ver-grupos').parent('li').removeClass('active');
+                    $('#ver-recursos').parent('li').removeClass('active');
+                    $('#ver-aplicacoes').parent('li').addClass('active');
+
+                    $("#visualizar-permissao").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+
+                $('a.ver-recursos').click(function () {
+
+                    $("#visualizar-permissao").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+            });
+
+
+        </script>
+    }
+    <script>
+
+        var gstalkerhub = null;
+
+        $(function () {
+
+            gconnection = $.hubConnection('@System.Web.Configuration.WebConfigurationManager.AppSettings["Address_SignalR"]');
+
+            gconnection.qs = { 'token': '@TempData["Provider"]' };
+
+            var whereiam = function (idusuario, action, controller, uri, minutes) {
+                alerta('eta');
+                $('ul#stalker').prepend('<li class="item item-grey"> <label class="inline" style="font-size:10px;"> <span> <b>'+ idusuario +'</b> ('+ controller +','+ action +') </span> </label> <br/> <small><span class="label label-info">'+ uri +'</span></small> <small><span class="pull-right">sessão em '+ minutes +' minutos</span></small> </li>')
+            }
+
+            gstalkerhub = gconnection.createHubProxy('StalkerHub');
+
+            gstalkerhub.on('WhereIam', whereiam);
+
+            //gconnection.start().done(function () {
+            //    console.log('conexao estabelida');
+            //});
+
+            
+
+            $('a.enviar-notificacao').click(function () {
+
+                var id = $(this).data('id');
+
+                $('#enviar-notificacao').modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+                
+
+                
+
+
+                $('#send-enviar-notificacao').off('click');
+                $('#send-enviar-notificacao').on('click', function () {
+                    if ($('#mensagem-enviar-notificacao').val().length) {
+
+                        var title = $('#title-enviar-notificacao').val();
+                        var message = $('#mensagem-enviar-notificacao').val();
+
+                        $('#mensagem-enviar-notificacao').val('');
+                        $('#title-enviar-notificacao').val('@Seguranca.Usuario.Nome.Split(' ')[0] @(!string.IsNullOrWhiteSpace(Seguranca.Usuario.Setor) ? "(" + Seguranca.Usuario.Setor.Trim() + ")" : "") diz:');
+
+                        if ($('#Aplicacoes').val().length) {
+                            var tconnection = $.hubConnection($('#Aplicacoes').val() + '/signalr');
+                            tconnection.qs = { 'token': '@TempData["Provider"]' };
+                            tgritterhub = tconnection.createHubProxy('GritterHub');
+                            tconnection.start().done(function () {
+                                console.log('Comunicação temporária estabelecida...');
+                                if ($('input[name="ObterResposta"]:checked').val() == "True")
+                                    lgritterhub.invoke('Ask', id, title, message);
+                                else
+                                    lgritterhub.invoke('Information', id, title, message);
+                            });
+                        } else {
+                            if ($('input[name="ObterResposta"]:checked').val() == "True")
+                                ggritterhub.invoke('Ask', id, title, message);
+                            else
+                                ggritterhub.invoke('Information', id, title, message);
+                        }
+                    }
+                });
+            });
+
+            $('a.visualizar-usuarios').click(function () {
+
+                $("#visualizar-usuarios").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+            });
+
+            $('a.visualizar-aplicacoes').click(function () {
+
+                $("#visualizar-aplicacoes").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+            });
+
+
+        });
+    </script>
+}
+
+

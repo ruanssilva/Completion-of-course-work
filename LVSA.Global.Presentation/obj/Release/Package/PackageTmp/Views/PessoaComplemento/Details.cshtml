@@ -1,0 +1,188 @@
+﻿@model LVSA.Global.Application.ViewModels.PessoaFisicaComplementoViewModel
+
+@{
+    ViewBag.Title = "Detalhes da pessoa";
+    ViewBag.Description = "Detalhes da pessoa";
+}
+
+<div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+
+            <div class="profile-user-info profile-user-info-striped">
+
+                @if (Model.Imagem != null)
+                {
+                    <div class="profile-info-row">
+                        <div class="profile-info-name">
+                            Foto
+                        </div>
+                        <div class="profile-info-value">
+                            <img style="max-width:80px;border-radius:20px;border: 2px solid #fff;" src="data:image;base64,@System.Convert.ToBase64String(Model.Imagem.Valor)" />
+                        </div>
+                    </div>
+                }
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        Nome
+                    </div>
+                    <div class="profile-info-value">
+                        @Model.Pessoa.Nome
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        Sexo
+                    </div>
+                    <div class="profile-info-value">
+                        @(Model.Pessoa.Masculino == true ? "Masculino" : (Model.Pessoa.Masculino == false ? "Feminino" : ""))
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        Data de nascimento
+                    </div>
+                    <div class="profile-info-value">
+                        @(Model.Pessoa.DataNascimento != null ? Model.Pessoa.DataNascimento.Value.ToShortDateString() : "")
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-6">
+            <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.UsuarioId)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @(Model.UsuarioId != null && Model.UsuarioId > 0 ? "Sim" : "Não")
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Facebook)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Facebook)
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Twitter)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Twitter)
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Instagram)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Instagram)
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.GooglePlus)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.GooglePlus)
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.RacaCorId)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @(Model.RacaCor != null ? Model.RacaCor.Nome : "")
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.CidadeNaturalidadeId)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @(Model.CidadeNaturalidade != null ? Model.CidadeNaturalidade.Nome : "")
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Telefone1)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Telefone1)
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Telefone2)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Telefone2)
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @Html.DisplayFor(model => model.Email)
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.EscolaridadeId)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @(Model.Escolaridade != null ? Model.Escolaridade.Nome : "")
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.TitulacaoId)
+                    </div>
+
+                    <div class="profile-info-value">
+                        @(Model.Titulacao != null ? Model.Titulacao.Nome : "")
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", "PessoaComplemento", new { id = Model.PessoaId })" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Details", "Pessoa", new { id = Model.PessoaId })" class="btn btn-default" title="Voltar para aplicações">Voltar para detalhes <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

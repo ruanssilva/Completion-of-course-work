@@ -1,0 +1,5 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Domain\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Domain\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Domain\obj\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Domain\obj\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Domain\obj\Release\LVSA.Base.Domain.csprojResolveAssemblyReference.cache

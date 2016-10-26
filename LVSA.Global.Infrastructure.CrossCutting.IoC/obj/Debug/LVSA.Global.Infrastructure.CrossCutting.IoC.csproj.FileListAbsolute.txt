@@ -1,0 +1,32 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Ninject.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Ninject.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Ninject.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Ninject.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\bin\Debug\Dapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC\obj\Debug\LVSA.Global.Infrastructure.CrossCutting.IoC.pdb

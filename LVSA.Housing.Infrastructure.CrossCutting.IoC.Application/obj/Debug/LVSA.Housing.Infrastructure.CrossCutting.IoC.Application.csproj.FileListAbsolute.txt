@@ -1,0 +1,48 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll.config
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\Ninject.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\AutoMapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\Ninject.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\AutoMapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Base.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\Ninject.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\AutoMapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Base.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\Ninject.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\AutoMapper.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\bin\Debug\LVSA.Security.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\obj\Debug\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.pdb

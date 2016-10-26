@@ -1,0 +1,58 @@
+﻿@model LVSA.Financial.Application.ViewModels.LancamentoViewModel
+
+@{
+    ViewBag.Title = "Lançamento";
+    ViewBag.Description = "Detalhes do lançamento";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NFiscalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NFiscal.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCustoId)
+        </dt>
+
+        <dd>
+            @Model.CCusto.Codigo - @Model.CCusto.Nome
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLancamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataLancamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model LVSA.Financial.Application.ViewModels.CCustoViewModel
+
+@{
+    ViewBag.Title = "Centro de custo";
+    ViewBag.Description = "Remover centro de custo";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover esta centro de custo?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaCCustoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaCCustoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

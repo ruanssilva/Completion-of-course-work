@@ -1,0 +1,220 @@
+﻿@model IEnumerable<LVSA.Noticia.Application.ViewModels.NoticiaViewModel>
+
+@{
+    ViewBag.Title = "Notícia";
+    ViewBag.Description = "Listar notícias";
+}
+
+<div class="pull-left">
+    <a href="~/Noticia/Create" class="btn btn-white btn-success btn-bold" title="Novo">Criar <i class="fa fa-plus"></i></a>
+</div>
+
+<div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+</div>
+
+<div class="table-header">
+    Resultados para notícias
+</div>
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subtitulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                Exibindo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subtitulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td title="@(item.Ativo ? item.PublicadoEm+ " até "+ @item.ExpiraEm : "Inativo")">
+                    @(item.PublicadoEm <= DateTime.Now && item.ExpiraEm >= DateTime.Now && item.Ativo ? "Sim" : "Não")
+                </td>
+                <td class="text-right">
+                    <div class="hidden-sm hidden-xs action-buttons">
+                        <a class="grey" href="@Url.Action("Nivel", "Noticia", new { id = item.Id })" title="Níveis">
+                            <i class="ace-icon fa fa-flag bigger-130"></i>
+                        </a>
+
+                        <a class="blue" href="@Url.Action("Details", "Noticia", new { id = item.Id })" title="Visualizar">
+                            <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                        </a>
+
+                        <a class="green" href="@Url.Action("Edit", "Noticia", new { id = item.Id })" title="Editar">
+                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                        </a>
+
+                        <a class="red" href="@Url.Action("Delete", "Noticia", new { id = item.Id })" title="Deletar">
+                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                        </a>
+                    </div>
+
+                    <div class="hidden-md hidden-lg">
+                        <div class="inline pos-rel">
+                            <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                <li>
+                                    <a href="@Url.Action("Nivel", "Noticia", new { id = item.Id })" class="tooltip-info" data-rel="tooltip" title="Níveis">
+                                        <span class="grey">
+                                            <i class="ace-icon fa fa-flag bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Details", "Noticia", new { id = item.Id })" class="tooltip-info" data-rel="tooltip" title="Visualizar">
+                                        <span class="blue">
+                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Edit", "Noticia", new { id = item.Id })" class="tooltip-success" data-rel="tooltip" title="Editar">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Delete", "Noticia", new { id = item.Id })" class="tooltip-error" data-rel="tooltip" title="Deletar">
+                                        <span class="red">
+                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (ViewBag.Noticia != null && ViewBag.Filiais != null)
+{
+    var noticia = (LVSA.Noticia.Presentation.ViewModels.NoticiaViewModel)ViewBag.Noticia;
+
+    <div id="Niveis" class="modal fade">
+        <div class="modal-dialog">
+            @using (Html.BeginForm("Nivel", "Noticia", FormMethod.Post))
+            {
+                <div class="modal-content">
+                    <!-- dialog body -->
+                    <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="widget-box transparent" id="recent-box">
+                            <div class="widget-header">
+                                <h4 class="widget-title lighter smaller">
+                                    <i class="ace-icon fa fa-flag blue"></i> Contexto notícia
+                                </h4>
+
+                                <div class="widget-toolbar no-border">
+                                    <ul class="nav nav-tabs" id="recent-tab">
+
+                                        <li class="active">
+                                            <a aria-expanded="false" data-toggle="tab" href="#niveis-tab" class="not-show-loading">Níveis de ensino</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main padding-4">
+                                    <div class="tab-content padding-8">
+
+                                        <div id="niveis-tab" class="tab-pane active">
+
+                                            <div class="dd">
+
+                                                @foreach (var t in ((IEnumerable<LVSA.Security.Application.ViewModels.FilialViewModel>)ViewBag.Filiais))
+                                                {
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item dd2-item" data-id="0">
+                                                            <div class="dd-handle dd2-handle">
+                                                                <span class="normal-icon ace-icon @(noticia.FilialIdSet.Contains(t.Id) ? "green" : "red") bigger-130">@t.Id</span>
+
+                                                                <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                                            </div>
+                                                            <div class="dd2-content">
+
+                                                                <div class="checkbox pull-left" style="margin-top:0!important;margin-bottom:0!important;">
+                                                                    <label style="padding-left:10px!important;">
+                                                                        <input class="Recurso ace" name="FilialIdSet[]" @(noticia.FilialIdSet.Contains(t.Id) ? "checked" : "") type="checkbox" value="@t.Id">
+                                                                        <span class="lbl "> <small>@t.Nome</small> </span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="pull-right">
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                }
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div><!-- /.widget-main -->
+                            </div><!-- /.widget-body -->
+                        </div>
+
+
+
+                    </div>
+                    <!-- dialog buttons -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Salvar <i class="fa fa-save"></i></button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    @section scripts {
+        <script>
+            $(function () {
+                $("#Niveis").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+            });
+        </script>
+    }
+}

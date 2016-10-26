@@ -1,0 +1,77 @@
+﻿@model LVSA.Report.Application.ViewModels.InstrucaoViewModel
+
+@{
+    ViewBag.Title = "Instrução";
+    ViewBag.Description = "Detalhes da instrução";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>@Html.DisplayNameFor(model=>model.Code)</legend>
+                    @Html.TextAreaFor(model => model.Code, htmlAttributes: new { @id = "view-csharp", @class = "form-control" })
+                    <br />
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/clike.js"></script>
+    <script>
+
+        if ($("#view-csharp").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-csharp"), {
+                mode: 'text/x-csharp',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+    </script>
+}

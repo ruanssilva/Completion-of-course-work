@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LVSA.Security.Domain.Agrupamento" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAABAAAAAAIAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Agrupamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.Aplicacao" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAABAgAAAAAAAAAAAAgABAAAAAAQQAEAAAA=</HashCode>
+      <FileName>Aplicacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.AplicacaoAcesso" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAQAAAAAAhAAABAAAAAAAAAAAAAiAA=</HashCode>
+      <FileName>AplicacaoAcesso.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Security.Domain.AplicacaoDependencia" Collapsed="true">
+    <Position X="22" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>AplicacaoDependencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.Grupo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAABAAAAgAAAAABAAABAAgAAAAAAAAEAiAA=</HashCode>
+      <FileName>Grupo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Security.Domain.Parametrizacao" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQCAAAAAAAAAAAAAAAJABAAABAAAABAAAAA=</HashCode>
+      <FileName>Parametrizacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.Parametro" Collapsed="true">
+    <Position X="16.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAABBAAAAAgAAAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Parametro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.PerfilContexto" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAABAAIBAAAAAAAAEAAAAiAA=</HashCode>
+      <FileName>PerfilContexto.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Security.Domain.Permissao" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAAABAAAABAAAAAAIAAAAAAgABEAAAAAAA=</HashCode>
+      <FileName>Permissao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.Recurso" Collapsed="true">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAQABAAAAAAAAAAAAAEBAAEAAAAAAAAEAAEQ=</HashCode>
+      <FileName>Recurso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.TipoRecurso" Collapsed="true">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>TipoRecurso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.TipoUsuario" Collapsed="true">
+    <Position X="21.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>TipoUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Security.Domain.Usuario" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAgAAgAAAAAAAAAgAAABAAAIAAAAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Base.Domain.Auditoria" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComAtivo" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComExclusaoLogica" Collapsed="true">
+    <Position X="27.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComExclusaoLogicaComAtivo" Collapsed="true">
+    <Position X="27.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.Services.ServiceBase&lt;TEntity&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Domain.IColigadaContexto" Collapsed="true">
+    <Position X="1.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Domain.IFilialContexto" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Domain.IOpcionalContexto" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Domain.ITipoCursoContexto" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Repository.IRepositoryBase&lt;TEntity&gt;" Collapsed="true">
+    <Position X="7.25" Y="5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Repository.ReadOnly.IReadOnlyRepositoryBase&lt;TEntity&gt;" Collapsed="true">
+    <Position X="7.25" Y="6" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="LVSA.Base.Domain.Interfaces.Services.IServiceBase&lt;TEntity&gt;" Collapsed="true">
+    <Position X="7.25" Y="4.25" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

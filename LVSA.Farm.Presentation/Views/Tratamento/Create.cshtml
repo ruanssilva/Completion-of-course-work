@@ -1,0 +1,141 @@
+﻿@model LVSA.Farm.Application.ViewModels.TratamentoViewModel
+
+@{
+    ViewBag.Title = "Tratamento";
+    ViewBag.Description = "Novo tratamento";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.DoencaId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.DoencaId, new SelectList(ViewBag.DoencaSet, "Id", "Nome", null), "Selecione", htmlAttributes: new { @class = "chosen-select form-control" })
+                @Html.ValidationMessageFor(model => Model.DoencaId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dias, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Dias, new { @class = "form-control maskdecimal", @data_suffix = " dias", @data_precision = "0" })
+                @Html.ValidationMessageFor(model => model.Dias, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ativo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, true, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Sim</span>
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, false, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Não</span>
+                    </label>
+                </div><br />
+                @Html.ValidationMessageFor(model => model.Ativo)
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-1">
+                <a id="add" href="javascript:void(0);" class="btn btn-sm btn-white btn-success">Adicionar dosagem <i class="fa fa-plus"></i></a>
+                <div class="space-6"></div>
+                <a id="delete" href="javascript:void(0);" class="btn btn-sm btn-white btn-danger ">Retirar dosagem &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-minus"></i></a>
+
+                <div class="space-20"></div>
+            </div>
+            <div class="col-md-9">
+                <div id="dosagens">
+                    @Html.Partial("PartialView/Dosagem", Model)
+                </div>
+            </div>
+
+        </div>
+
+        
+
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+
+        $(function () {
+            $('a#add').click(function () {
+
+                var data = $(this).parents('form:first').serialize() + "&adicionar=true";
+
+                LVSA.Ajax.Request({ url: '@Url.Action("Dosagem", "Tratamento")', data: data })
+                        .Post()
+                        .success(function (data) {
+
+                            if (data.length) {
+                                $('#dosagens').html(data);
+
+                                LVSA.CDN.Plugins.Chosen();
+                            }
+                        });
+
+
+
+
+            });
+            $('a#delete').click(function () {
+
+                var data = $(this).parents('form:first').serialize() + "&remover=true";
+
+                LVSA.Ajax.Request({ url: '@Url.Action("Dosagem", "Tratamento")', data: data })
+                        .Post()
+                        .success(function (data) {
+
+                            if (data.length) {
+                                $('#dosagens').html(data);
+
+                                LVSA.CDN.Plugins.Chosen();
+                            }
+                        });
+
+
+
+            });
+        });
+    </script>
+}

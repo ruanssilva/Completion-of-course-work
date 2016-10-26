@@ -1,0 +1,17 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\obj\Release\LVSA.Noticia.Application.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Noticia.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Noticia.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Base.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Noticia.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Security.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Security.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Base.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Noticia.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Security.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\LVSA.Security.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\AutoMapper.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\obj\Release\LVSA.Noticia.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\obj\Release\LVSA.Noticia.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Noticia.Application\bin\Release\AutoMapper.dll

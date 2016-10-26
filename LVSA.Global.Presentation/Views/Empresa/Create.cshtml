@@ -1,0 +1,115 @@
+﻿@model LVSA.Global.Application.ViewModels.PessoaJuridicaViewModel
+
+@{
+    ViewBag.Title = "Empresa";
+    ViewBag.Description = "Novo empresa";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Nome, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Logradouro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Logradouro, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Logradouro)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumeroResidencial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.NumeroResidencial, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NumeroResidencial)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Complemento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Complemento, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Complemento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.BairroId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.BairroId, new SelectList(ViewBag.BairroSet, "Id", "Nome", Model.BairroId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })
+                @Html.ValidationMessageFor(model => Model.BairroId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.CidadeId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CidadeId, new SelectList(ViewBag.CidadeSet, "Id", "Nome", Model.CidadeId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })
+                @Html.ValidationMessageFor(model => Model.CidadeId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RazaoSocial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.RazaoSocial, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.RazaoSocial)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cnpj, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Cnpj, htmlAttributes: new { @class = "form-control", @data_mask = "$99.999.999/9999-99" })
+                @Html.ValidationMessageFor(model => model.Cnpj)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InscricaoEstadual, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.InscricaoEstadual, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.InscricaoEstadual)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InscricaoMunicipal, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.InscricaoMunicipal, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.InscricaoMunicipal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataFundacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataFundacao, htmlAttributes: new { @class = "form-control", @data_mask = "$99/99/9999" })
+                @Html.ValidationMessageFor(model => model.DataFundacao)
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para listagem <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

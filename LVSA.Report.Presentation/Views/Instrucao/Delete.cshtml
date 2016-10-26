@@ -1,0 +1,42 @@
+﻿@model LVSA.Report.Application.ViewModels.InstrucaoViewModel
+
+@{
+    ViewBag.Title = "Instrução";
+    ViewBag.Description = "Remover instrução";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover este pasto?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

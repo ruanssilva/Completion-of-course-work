@@ -1,0 +1,30 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Base.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Base.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\bin\Release\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Infrastructure.Data\obj\Release\LVSA.Housing.Infrastructure.Data.pdb

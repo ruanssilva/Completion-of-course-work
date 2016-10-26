@@ -1,0 +1,114 @@
+﻿@model LVSA.Global.Application.ViewModels.PessoaFisicaViewModel
+
+@{
+    ViewBag.Title = "Pessoa";
+    ViewBag.Description = "Nova pessoa";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Nome, htmlAttributes: new { @class="form-control" })
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Logradouro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Logradouro, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Logradouro)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumeroResidencial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.NumeroResidencial, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NumeroResidencial)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Complemento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Complemento, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Complemento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.BairroId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.BairroId, new SelectList(ViewBag.BairroSet, "Id", "Nome", Model.BairroId), "Selecione", htmlAttributes: new { @class = "chosen-select form-control" })
+                @Html.ValidationMessageFor(model => Model.BairroId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.CidadeId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CidadeId, new SelectList(ViewBag.CidadeSet, "Id", "Nome", Model.CidadeId), "Selecione", htmlAttributes: new { @class = "chosen-select form-control" })
+                @Html.ValidationMessageFor(model => Model.CidadeId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataNascimento, htmlAttributes: new { @class = "form-control datepicker-date", @data_mask = "$99/99/9999" })
+                @Html.ValidationMessageFor(model => model.DataNascimento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sexo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    @Html.RadioButtonFor(model => model.Sexo, 'M', htmlAttributes: new { @id = "optionsradio-m" })
+                    <label for="optionsradio-m">
+                        Masculino
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    @Html.RadioButtonFor(model => model.Sexo, 'F', htmlAttributes: new { @id = "optionsradio-f" })
+                    <label for="optionsradio-f">
+                        Feminino
+                    </label>
+                </div><br />
+                @Html.ValidationMessageFor(model => model.Sexo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cpf, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Cpf, htmlAttributes: new { @class = "form-control", @data_mask = "$999.999.999-99" })
+                @Html.ValidationMessageFor(model => model.Cpf)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rg, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Rg, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Rg)
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para listagem <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}

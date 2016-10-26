@@ -1,0 +1,95 @@
+﻿@model IEnumerable<LVSA.Security.Application.ViewModels.UsuarioViewModel>
+
+@{
+    ViewBag.Title = "Lista de usuário";
+}
+
+<div class="page-header">
+    <h1>
+        Usuário
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Lista de usuário
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="panel panel-default">
+    <div class="panel-footer">
+
+        <div class="pull-left">
+            @*<a href="~/Usuario/Create" class="btn btn-default"><small>Novo</small> <i class="fa fa-asterisk"></i> </a>*@
+        </div>
+
+        <div class="pull-right tableTools-container"></div>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="main-box clearfix">
+
+
+            <div class="main-box-body clearfix">
+                <table class="table table-condensed table-hover datatable">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Id)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nome)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.EmailConfirmado)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Bloqueado)
+                            </th>
+                            <th class="text-right"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @(item.EmailConfirmado ? "Sim" : "Não")
+                                </td>
+                                <td>
+                                    @(item.Bloqueado ? "Sim" : "Não")
+                                </td>
+                                <td class="hidden-print text-right">
+                                    <div class="">
+
+                                        <a class="btn btn-link grey" href="~/Usuario/Grupo/@item.Id" title="Grupos">
+                                            <i class="icon fa fa-users"></i>
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+﻿@model LVSA.Report.Presentation.ViewModels.UsuarioAppViewModel
+@{
+    ViewBag.Title = "Grupos de usuário";
+}
+
+
+<div class="page-header">
+    <h1>
+        Usuário
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Grupos do usuário
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div>
+
+    @Html.HiddenFor(model => model.Id)
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Usuário
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+    </dl>
+</div>
+
+@using (Html.BeginForm("Grupo", "Usuario", FormMethod.Post))
+{
+
+    <div class="panel panel-default">
+        <div class="panel-footer">
+
+            <div class="pull-left">
+            </div>
+
+            <div class="pull-right tableTools-container"></div>
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-box clearfix">
+
+
+                <div class="main-box-body clearfix">
+
+                    <table class="table datatable table-hover" data-filter="false" data-pagination="false">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Descrição
+                                </th>
+                                <th class="text-right hidden-print"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @Html.EditorFor(model => model.Grupos)
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-footer">
+            <div class="pull-left">
+                <button type="submit" class="btn btn-success" name="Salvar"><i class="fa fa-save"></i> Salvar</button> |
+                <a href="~/Usuario" class="btn btn-default btn-white"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+        </div>
+    </div>
+}

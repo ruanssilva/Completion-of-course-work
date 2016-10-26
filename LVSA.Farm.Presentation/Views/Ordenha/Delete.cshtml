@@ -1,0 +1,56 @@
+﻿@model LVSA.Farm.Application.ViewModels.OrdenhaViewModel
+
+@{
+    ViewBag.Title = "Ordenha";
+    ViewBag.Description = "Remover ordenha de vaca leiteira";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover este medicamento?</h5>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Horario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Horario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

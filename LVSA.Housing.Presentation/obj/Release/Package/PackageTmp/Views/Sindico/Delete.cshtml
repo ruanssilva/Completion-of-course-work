@@ -1,0 +1,73 @@
+﻿@model LVSA.Housing.Application.ViewModels.SindicoViewModel
+
+@{
+    ViewBag.Title = "Síndico";
+    ViewBag.Description = "remover síndico";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover este síndico?</h5>
+<div>
+    <hr />
+    <div class="profile-user-info profile-user-info-striped">
+
+        @if (Model.Pessoa.PessoaComplemento != null && Model.Pessoa.PessoaComplemento.Imagem != null)
+        {
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    Foto
+                </div>
+                <div class="profile-info-value">
+                    <img style="max-width:80px;border-radius:20px;border: 2px solid #fff;" src="data:image;base64,@System.Convert.ToBase64String(Model.Pessoa.PessoaComplemento.Imagem.Valor)" />
+                </div>
+            </div>
+
+        }
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Pessoa.Nome)
+            </div>
+            <div class="profile-info-value">
+                @Model.Pessoa.Nome
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Pessoa.DataNascimento)
+            </div>
+            <div class="profile-info-value">
+                @(Model.Pessoa.DataNascimento != null ? Model.Pessoa.DataNascimento.Value.ToString("dd/MM/yyyy") : null)
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Pessoa.Sexo)
+            </div>
+            <div class="profile-info-value">
+                @(Model.Pessoa.Sexo == 'F' ? "Feminino" : (Model.Pessoa.Sexo == 'M' ? "Masculino" : string.Empty))
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Ativo)
+            </div>
+            <div class="profile-info-value">
+                @(Model.Ativo ? "Sim" : "Não")
+            </div>
+        </div>
+
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

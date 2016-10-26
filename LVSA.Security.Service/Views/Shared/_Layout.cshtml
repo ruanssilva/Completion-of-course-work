@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <style>
+        body {
+            background-color: #312f45;
+        }
+
+        .logo {
+            width: 700px;
+            position: absolute;
+            left: 25%;
+            right: 25%;
+            top: 25%;
+            bottom: 25%;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div id="divLogo">
+        <img class="logo" id="logoUbec" src="http://volt.LVSA.br/logo_LVSA.png" />
+    </div>
+
+    @RenderBody()
+
+</body>
+</html>

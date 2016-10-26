@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D4C4134-C68C-4334-80FD-6DB075838048}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Housing.Domain</RootNamespace>
+    <AssemblyName>LVSA.Housing.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aviso.cs" />
+    <Compile Include="Bloco.cs" />
+    <Compile Include="Condominio.cs" />
+    <Compile Include="CustoMoradia.cs" />
+    <Compile Include="Interfaces\Infra\IContextManager.cs" />
+    <Compile Include="Interfaces\Repository\IAvisoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IBlocoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICondominioRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICustoMoradiaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMoradiaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMoradorRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMultaMoradorRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMultaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPresencaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IReuniaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ISindicoRepository.cs" />
+    <Compile Include="Interfaces\Services\IAvisoService.cs" />
+    <Compile Include="Interfaces\Services\IBlocoService.cs" />
+    <Compile Include="Interfaces\Services\ICondominioService.cs" />
+    <Compile Include="Interfaces\Services\ICustoMoradiaService.cs" />
+    <Compile Include="Interfaces\Services\IMoradiaService.cs" />
+    <Compile Include="Interfaces\Services\IMoradorService.cs" />
+    <Compile Include="Interfaces\Services\IMultaMoradorService.cs" />
+    <Compile Include="Interfaces\Services\IMultaService.cs" />
+    <Compile Include="Interfaces\Services\IPresencaService.cs" />
+    <Compile Include="Interfaces\Services\IReuniaoService.cs" />
+    <Compile Include="Interfaces\Services\ISindicoService.cs" />
+    <Compile Include="Moradia.cs" />
+    <Compile Include="Morador.cs" />
+    <Compile Include="Multa.cs" />
+    <Compile Include="MultaMorador.cs" />
+    <Compile Include="Presenca.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reuniao.cs" />
+    <Compile Include="Services\AvisoService.cs" />
+    <Compile Include="Services\BlocoService.cs" />
+    <Compile Include="Services\CondominioService.cs" />
+    <Compile Include="Services\CustoMoradiaService.cs" />
+    <Compile Include="Services\MoradiaService.cs" />
+    <Compile Include="Services\MoradorService.cs" />
+    <Compile Include="Services\MultaMoradorService.cs" />
+    <Compile Include="Services\MultaService.cs" />
+    <Compile Include="Services\PresencaService.cs" />
+    <Compile Include="Services\ReuniaoService.cs" />
+    <Compile Include="Services\SindicoService.cs" />
+    <Compile Include="Sindico.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\1.0\Class Diagram\Diagram.cd" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_Add.sequencediagram" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_All.sequencediagram" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_Delete.sequencediagram" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_Find.sequencediagram" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_GetById.sequencediagram" />
+    <None Include="Documentation\1.0\Sequence Diagram\ServiceBase_Update.sequencediagram" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_Add.sequencediagram.layout">
+      <DependentUpon>ServiceBase_Add.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_All.sequencediagram.layout">
+      <DependentUpon>ServiceBase_All.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_Delete.sequencediagram.layout">
+      <DependentUpon>ServiceBase_Delete.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_Find.sequencediagram.layout">
+      <DependentUpon>ServiceBase_Find.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_GetById.sequencediagram.layout">
+      <DependentUpon>ServiceBase_GetById.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation\1.0\Sequence Diagram\ServiceBase_Update.sequencediagram.layout">
+      <DependentUpon>ServiceBase_Update.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\Domain\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

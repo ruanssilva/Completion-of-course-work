@@ -1,0 +1,94 @@
+﻿@{
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+
+    ViewBag.Title = "Aplicações disponíveis";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+
+    LVSA.Security.Application.Models.Seguranca Seguranca = ((LVSA.Security.Application.Models.Seguranca)TempData["Seguranca"]);
+}
+
+
+<br /><br />
+
+<br />
+<br />
+<br />
+
+<div class="row">
+    @foreach (var a in ((IEnumerable<LVSA.Security.Application.ViewModels.AplicacaoViewModel>)ViewBag.AplicacaoSet).Where(w => w.Ativo && !w.Abstrata && !w.Desktop))
+    {
+        <div class="col-lg-2 col-md-3 col-sm-6 text-center action-buttons" style="margin-bottom:20px;">
+            @using (Html.BeginForm("Index", "App", new { id = a.Id }, FormMethod.Post))
+            {
+                if (a.Blank)
+                {
+                    <a href="@a.Link" target="_blank" class="btn btn-link " title="@a.Descricao" style="text-decoration:none;">
+                        <i class="ace-icon @a.Icon" style="font-size:115px;color:#fff;"></i>
+                        <h1 style="margin-top:0px;font-size:15px;color:#fff;">@a.Exibicao</h1>
+                    </a>
+                }
+                else
+                {
+                    <button type="submit" class="submit btn btn-link" title="@a.Descricao" style="text-decoration:none;width:200px; height:200px;">
+                        <i class="ace-icon @a.Icon" style="font-size:115px;color:#fff;"></i>
+                        <h1 style="margin-top:0px;font-size:15px;color:#fff;">@a.Exibicao</h1>
+                    </button>
+                }
+            }
+        </div>
+        
+    }
+</div>
+
+@section footer {
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content" style="border:none!important; color:#000!important;">
+                <span class="smaller-90">
+                    © @DateTime.Now.Year - Housing @@ Leonelleo
+                </span>
+            </div>
+
+            <!-- /section:basics/footer -->
+        </div>
+    </div>
+}
+
+
+<div class="navbar-fixed-top align-right">
+    <div class="pull-left">
+        <br />
+        &nbsp;
+        <span style="color:#fff;" title="@Seguranca.Filial.Nome"> Filial: @Seguranca.Filial.Id</span>
+        &nbsp;
+        <span class="white"></span>
+    </div>
+
+    <div class="pull-right">
+        <br />
+        @if (Seguranca.FilialSet.Count() > 1)
+        {
+            <a style="color:#fff;" href="@Url.Action("Index","Contexto")">alterar contexto</a>
+        }
+        &nbsp;
+        &nbsp;
+
+        <a style="color:#fff;" href="@Url.Action("Logout","Login")">sair</a>
+        &nbsp;
+        &nbsp;
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('a.submit').click(function () {
+
+                alert('teste');
+
+                $(this).parents('form').submit();
+            });
+        });
+    </script>
+}

@@ -1,0 +1,124 @@
+﻿@model LVSA.Farm.Application.ViewModels.PiqueteViewModel
+
+@{
+    ViewBag.Title = "Piquete";
+    ViewBag.Description = "Remover piquete";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente remover este piquete?</h5>
+<div>
+    <hr />
+    <div class="profile-user-info profile-user-info-striped">
+
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Nome)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.Nome)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.Descricao)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.PastoId)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.Pasto.Nome)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.M2)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.M2)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Comprimento)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.Comprimento)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Largura)
+            </div>
+            <div class="profile-info-value">
+                @Html.DisplayFor(model => model.Largura)
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Ativo)
+            </div>
+            <div class="profile-info-value">
+                @(Model.Ativo ? "Sim" : "Não")
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                Anexo
+            </div>
+            <div class="profile-info-value">
+                @if (Model.RetratoSet != null && Model.RetratoSet.Count() > 0)
+                {
+                    <ul class="ace-thumbnails clearfix">
+                        @{int count = 0;}
+                        @foreach (var x in Model.RetratoSet)
+                        {
+                            <li>
+                                <a class="cboxElement not-show-loading" href="data:image;base64,@System.Convert.ToBase64String(x.Valor)" data-rel="colorbox">
+                                    <img src="data:image;base64,@System.Convert.ToBase64String(x.Valor)" width="150" height="150" />
+                                    <div class="tags">
+                                        <!-- #section:pages/gallery.tags -->
+                                        <span class="label-holder">
+                                            <span class="label label-info arrowed">clique para ampliar</span>
+                                        </span>
+
+                                        <!-- /section:pages/gallery.tags -->
+                                    </div>
+                                </a>
+                            </li>
+                            count++;
+                        }
+
+                    </ul>
+
+                }
+            </div>
+        </div>
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

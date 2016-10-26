@@ -1,0 +1,161 @@
+﻿@model LVSA.Security.Application.ViewModels.AplicacaoViewModel
+
+@{
+    ViewBag.Title = "Aplicação";
+    ViewBag.Description = "Criar aplicação";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sigla, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Sigla, new { htmlAttributes = new { @class = "form-control", @required="" } })
+                @Html.ValidationMessageFor(model => model.Sigla, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", @required = "" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Exibicao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Exibicao, new { htmlAttributes = new { @class = "form-control", @required = "" } })
+                @Html.ValidationMessageFor(model => model.Exibicao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Icon, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Icon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Icon, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.Ativo)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(!Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.Desktop)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Desktop)" @(Model.Desktop ? "checked" : "") id="@Html.IdFor(model => model.Desktop)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.Desktop, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Desktop)" @(!Model.Desktop ? "checked" : "") id="@Html.IdFor(model => model.Desktop)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.Desktop, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.Blank)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Blank)" @(Model.Blank ? "checked" : "") id="@Html.IdFor(model => model.Blank)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.Blank, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Blank)" @(!Model.Blank ? "checked" : "") id="@Html.IdFor(model => model.Blank)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.Blank, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.Abstrata)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Abstrata)" @(Model.Abstrata ? "checked" : "") id="@Html.IdFor(model => model.Abstrata)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.Abstrata, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.Abstrata)" @(!Model.Abstrata ? "checked" : "") id="@Html.IdFor(model => model.Abstrata)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.Abstrata, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AplicacaoIdSet, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.ListBoxFor(model => model.AplicacaoIdSet, new SelectList(ViewBag.AplicacaoSet, "Id", "Exibicao", Model.AplicacaoIdSet), new { @class = "form-control chosen-select", @data_placeholder = "Selecione aplicações..." })
+                    @Html.ValidationMessageFor(model => model.AplicacaoIdSet, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para listagem">Voltar para listagem <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}

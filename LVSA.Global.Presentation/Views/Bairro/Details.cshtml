@@ -1,0 +1,34 @@
+﻿@model LVSA.Global.Application.ViewModels.BairroViewModel
+
+@{
+    ViewBag.Title = "Bairro";
+    ViewBag.Description = "Visualizar bairro";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CidadeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.Nome)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", "Bairro", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para aplicações">Voltar para bairro <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

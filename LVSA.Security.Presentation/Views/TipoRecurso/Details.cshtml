@@ -1,0 +1,44 @@
+﻿@model LVSA.Security.Application.ViewModels.TipoRecursoViewModel
+
+@{
+    ViewBag.Title = "Tipo de recurso";
+    ViewBag.Description = "Visualizar tipo de recurso";
+}
+
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="~/TipoRecurso/Edit/@Model.Id" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="~/TipoRecurso" class="btn btn-default" title="Voltar para aplicações">Voltar para tipos de recurso <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

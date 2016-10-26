@@ -1,0 +1,99 @@
+﻿@model LVSA.Housing.Presentation.ViewModels.MultaMoradorAppViewModel
+
+@{
+    ViewBag.Title = "Multa/Advertência";
+    ViewBag.Description = "Baixa de multa/advertência";
+}
+
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente baixar este custo?</h5>
+<div class="form-horizontal">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Morador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Morador.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Multa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataReferencia)
+        </dt>
+
+        <dd>
+            @Model.DataReferencia.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </dt>
+
+        <dd>
+            @(Model.DataVencimento != null ? Model.DataVencimento.Value.ToString("dd/MM/yyyy") : null)
+        </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.Id)
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CCustoId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CCustoId, new SelectList(ViewBag.CCustoSet, "Id", "Nome", (object)Model.CCustoId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })<br />
+                @Html.ValidationMessageFor(model => Model.CCustoId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataPagamento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataPagamento, htmlAttributes: new { @class = "form-control datepicker-date", @data_mask = "$99/99/9999" })
+                @Html.ValidationMessageFor(model => model.DataPagamento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        if (Model.DataVencimento == null || (Model.DataVencimento.Value.Date < DateTime.Now.Date))
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => model.Juros, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Juros, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Juros, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        }
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger"><i class="fa fa-level-down"></i> Baixar</button> |
+                <a href="~/Multar/Details/@Model.Id" class="btn btn-default"><i class="fa fa-arrow-left"></i> Ir para detalhes</a>
+
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,95 @@
+﻿@model LVSA.Housing.Application.ViewModels.MultaMoradorViewModel
+
+@{
+    ViewBag.Title = "Multa/Advertência";
+    ViewBag.Title = "Detalhes da multa/advertência";
+}
+
+<div>
+
+    <div class="profile-user-info profile-user-info-striped">
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.MoradorId)
+            </div>
+            <div class="profile-info-value">
+                @Model.Morador.Pessoa.Nome
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.MultaId)
+            </div>
+            <div class="profile-info-value">
+                @Model.Multa.Nome
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Valor)
+            </div>
+            <div class="profile-info-value">
+                @Model.Valor
+            </div>
+        </div>
+
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Desconto)
+            </div>
+            <div class="profile-info-value">
+                @Model.Desconto
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Juros)
+            </div>
+            <div class="profile-info-value">
+                @Model.Juros
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </div>
+            <div class="profile-info-value">
+                @Model.Descricao
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.DataReferencia)
+            </div>
+            <div class="profile-info-value">
+                @Model.DataReferencia.ToString("dd/MM/yyyy")
+            </div>
+        </div>
+        <div class="profile-info-row">
+            <div class="profile-info-name">
+                @Html.DisplayNameFor(model => model.DataVencimento)
+            </div>
+            <div class="profile-info-value">
+                @(Model.DataVencimento != null ? Model.DataVencimento.Value.ToString("dd/MM/yyyy") : null)
+            </div>
+        </div>
+        @if (Model.DataPagamento != null)
+        {
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                   @Html.DisplayNameFor(model => model.DataPagamento)
+                </div>
+                <div class="profile-info-value">
+                    @(Model.DataPagamento != null ? Model.DataPagamento.Value.ToString("dd/MM/yyyy") : null)
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Index")" title="Voltar para lista" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+    </div>
+</div>

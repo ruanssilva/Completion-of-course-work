@@ -1,0 +1,12 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Domain\bin\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Domain\bin\Debug\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\bin\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\bin\Debug\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\bin\Debug\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\bin\Debug\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Domain\obj\Debug\LVSA.Financial.Domain.pdb

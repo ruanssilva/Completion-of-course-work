@@ -1,0 +1,57 @@
+﻿@model LVSA.Farm.Application.ViewModels.TerrenoViewModel
+
+@{
+    ViewBag.Title = "Terreno";
+    ViewBag.Title = "Informações sobre terreno";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Largura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Largura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comprimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comprimento)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit")" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> 
+    </div>
+</div>

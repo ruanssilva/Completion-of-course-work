@@ -1,0 +1,218 @@
+﻿@model LVSA.Report.Presentation.ViewModels.CuboAppViewModel
+
+@{
+    ViewBag.Title = "Novo cubo";
+}
+
+<div class="page-header">
+    <h1>
+        Cubo
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Novo cubo
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        @if (Model.Consulta == null || Model.Instrucao == null)
+        {
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ConsultaId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => Model.ConsultaId, new SelectList(ViewBag.ConsultaSet, "Id", "Codigo", "CategoriaConsulta.Nome", (object)Model.ConsultaId), "Selecione", htmlAttributes: new { @class = "select2" })
+                            @Html.ValidationMessageFor(model => Model.ConsultaId)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.InstrucaoId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => Model.InstrucaoId, new SelectList(ViewBag.InstrucaoSet, "Id", "Codigo", "CategoriaInstrucao.Nome", (object)Model.InstrucaoId), "Selecione", htmlAttributes: new { @class = "select2" })
+                            @Html.ValidationMessageFor(model => Model.InstrucaoId)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.ConsultaId)
+            @Html.HiddenFor(model => model.InstrucaoId)
+            @Html.HiddenFor(model => model.Consulta.Id)
+            @Html.HiddenFor(model => model.Instrucao.Id)
+
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.TextAreaFor(model => model.TSQLApp, htmlAttributes: new { @id = "view-sql" })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Consulta.TSQL, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-6">
+                    @Html.TextAreaFor(model => model.CodeApp, htmlAttributes: new { @id = "view-csharp" })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Instrucao.Code, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Consulta.Parametros)
+
+                    <button type="submit" name="test" class="btn btn-danger"><i class="fa fa-bar-chart-o"></i> Testar</button>
+
+                </div>
+                <div class="col-md-6">
+                    @if (Model.ShowResult)
+                    {
+                        <div class="row">
+
+                            <span class="label label-danger"><i class="fa fa-clock-o"></i> @Model.Time ms</span>
+
+
+                            <span class="label label-success"><i class="fa fa-database"></i> @Model.Rows registros</span>
+
+                        </div>
+
+                    }
+                </div>
+            </div>
+
+
+            <hr />
+            @Html.ValidationMessageFor(model => Model.ShowResult)
+
+
+        }
+
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoriaCuboId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CategoriaCuboId, new SelectList(ViewBag.CategoriaCuboSet, "Id", "Nome", (object)Model.CategoriaCuboId), "Selecione", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => Model.CategoriaCuboId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Icon, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Icon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Icon, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-footer">
+                <div class="pull-left">
+                    @if (Model.Consulta != null && Model.Instrucao != null)
+                    {
+                        <button type="submit" class="btn btn-success" name="Salvar"><i class="fa fa-save"></i> Salvar</button>
+
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-warning" name="search"><i class="fa fa-search"></i> Buscar</button>
+                    }
+                    |
+                    <a href="~/Cubo/Create" class="btn btn-danger btn-white"><i class="fa fa-history"></i> Limpar</a> |
+                    <a href="~/Cubo" class="btn btn-default btn-white"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+                </div>
+
+                <div class="clearfix">
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/clike.js"></script>
+    <script src="~/Content/CodeMirror/js/sql.js"></script>
+    <script>
+
+        if ($("#view-csharp").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-csharp"), {
+                mode: 'text/x-csharp',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+        if ($("#code-csharp").length) {
+            var editor = CodeMirror.fromTextArea(document.getElementById("code-csharp"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "text/x-csharp",
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+        if ($("#view-sql").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-sql"), {
+                mode: 'text/x-sql',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+    </script>
+}

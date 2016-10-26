@@ -1,0 +1,18 @@
+﻿@model LVSA.Report.Application.ViewModels.GrupoViewModel
+
+<tr class="">
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.Nome)
+
+    <td>
+        @Html.EditorFor(model => model.Selecionado)
+    </td>
+    <td>
+        @Model.Nome
+    </td>
+    <td>
+        @Model.Descricao
+    </td>
+    <td class="text-right hidden-print"></td>
+</tr>

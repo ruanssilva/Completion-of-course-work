@@ -1,0 +1,41 @@
+﻿@model LVSA.Global.Application.ViewModels.BairroViewModel
+
+@{
+    ViewBag.Title = "Bairro";
+    ViewBag.Description = "Deletar bairro";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente deletar este bairro?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CidadeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.Nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="~/Bairro" class="btn btn-default" title="Voltar para aplicações">Voltar para listagem <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

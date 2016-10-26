@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0480451-CDDB-43AA-81C5-9AAEA99F9CC9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Housing.Presentation</RootNamespace>
+    <AssemblyName>LVSA.Housing.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IISExpressSSLPort />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlocoController.cs" />
+    <Compile Include="Controllers\CondominioController.cs" />
+    <Compile Include="Controllers\CustoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeuCustoController.cs" />
+    <Compile Include="Controllers\MinhaMoradiaController.cs" />
+    <Compile Include="Controllers\MinhaMultaController.cs" />
+    <Compile Include="Controllers\MoradiaController.cs" />
+    <Compile Include="Controllers\MoradorController.cs" />
+    <Compile Include="Controllers\MoradorControllerBase.cs" />
+    <Compile Include="Controllers\MultaController.cs" />
+    <Compile Include="Controllers\MultarController.cs" />
+    <Compile Include="Controllers\ReuniaoController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\SindicoController.cs" />
+    <Compile Include="Controllers\SindicoControllerBase.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SegurancaApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AtaViewModel.cs" />
+    <Compile Include="ViewModels\CustoMoradiaAppViewModel.cs" />
+    <Compile Include="ViewModels\MultaMoradorAppViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="favicon.png" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Reuniao\Presenca.cshtml" />
+    <Content Include="Views\Reuniao\Ata.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+    <Folder Include="Views\MoradorControllerBase\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\SindicoControllerBase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Application\LVSA.Base.Application.csproj">
+      <Project>{1504e48f-fbde-45c7-a321-a3a73faa6dc6}</Project>
+      <Name>LVSA.Base.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Base.Presentation\LVSA.Base.Presentation.csproj">
+      <Project>{bb2669fb-6371-4d56-ba5d-b694edacf9d6}</Project>
+      <Name>LVSA.Base.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Financial.Application\LVSA.Financial.Application.csproj">
+      <Project>{cd276747-6bc0-4e61-9865-5dd8217ebf37}</Project>
+      <Name>LVSA.Financial.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Financial.Domain\LVSA.Financial.Domain.csproj">
+      <Project>{4c8aaa5a-b39a-4a92-8f31-6c4377880270}</Project>
+      <Name>LVSA.Financial.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Financial.Infrastructure.CrossCutting.IoC.Application\LVSA.Financial.Infrastructure.CrossCutting.IoC.Application.csproj">
+      <Project>{11d7cd30-c0d1-4e6c-9b46-2c91a8db3e36}</Project>
+      <Name>LVSA.Financial.Infrastructure.CrossCutting.IoC.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Financial.Infrastructure.CrossCutting.IoC.Domain\LVSA.Financial.Infrastructure.CrossCutting.IoC.Domain.csproj">
+      <Project>{d98af73a-b775-4758-a61d-bdbc841def61}</Project>
+      <Name>LVSA.Financial.Infrastructure.CrossCutting.IoC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Global.Application\LVSA.Global.Application.csproj">
+      <Project>{25a1560c-7e27-46a9-9d3d-bc073782de4a}</Project>
+      <Name>LVSA.Global.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Global.Domain\LVSA.Global.Domain.csproj">
+      <Project>{91eb9ed2-b6e6-42bd-9cfa-b95252bf3b56}</Project>
+      <Name>LVSA.Global.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Global.Infrastructure.CrossCutting.IoC.Application\LVSA.Global.Infrastructure.CrossCutting.IoC.Application.csproj">
+      <Project>{97bd8449-5601-4f88-99b4-008668af83c0}</Project>
+      <Name>LVSA.Global.Infrastructure.CrossCutting.IoC.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.csproj">
+      <Project>{e26ecd4f-2136-40cc-8ed3-ae0dabd3620e}</Project>
+      <Name>LVSA.Global.Infrastructure.CrossCutting.IoC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Housing.Application\LVSA.Housing.Application.csproj">
+      <Project>{a7c1d551-b6d9-4f7c-ad70-f80dece69fc6}</Project>
+      <Name>LVSA.Housing.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Housing.Domain\LVSA.Housing.Domain.csproj">
+      <Project>{5d4c4134-c68c-4334-80fd-6db075838048}</Project>
+      <Name>LVSA.Housing.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.csproj">
+      <Project>{47da3355-9102-4a14-9740-b09b32a2b68b}</Project>
+      <Name>LVSA.Housing.Infrastructure.CrossCutting.IoC.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Housing.Infrastructure.CrossCutting.IoC.Domain\LVSA.Housing.Infrastructure.CrossCutting.IoC.Domain.csproj">
+      <Project>{45e25f1d-3c8d-41f9-b71b-f0d9ef88044b}</Project>
+      <Name>LVSA.Housing.Infrastructure.CrossCutting.IoC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Noticia.Application\LVSA.Noticia.Application.csproj">
+      <Project>{4e2d0c61-00e2-4966-a2a9-7ee91c9b35ec}</Project>
+      <Name>LVSA.Noticia.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Noticia.Domain\LVSA.Noticia.Domain.csproj">
+      <Project>{0d24132b-6960-4f04-a59e-0700585a0394}</Project>
+      <Name>LVSA.Noticia.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application.csproj">
+      <Project>{f2acf7c0-1e9b-4c38-ae9e-fc43817be896}</Project>
+      <Name>LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain.csproj">
+      <Project>{7a0baeb9-e5b9-4870-b6ed-02038f8b4990}</Project>
+      <Name>LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Noticia.Presentation\LVSA.Noticia.Presentation.csproj">
+      <Project>{19868be6-5b7a-4a76-8706-d55fcb796e1d}</Project>
+      <Name>LVSA.Noticia.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Security.Application\LVSA.Security.Application.csproj">
+      <Project>{eb8d9277-1f8c-4425-b774-568c00fb2e92}</Project>
+      <Name>LVSA.Security.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Security.Domain\LVSA.Security.Domain.csproj">
+      <Project>{387a935c-60e6-4bef-8a43-8c90a1376817}</Project>
+      <Name>LVSA.Security.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Condominio\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Condominio\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bloco\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bloco\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bloco\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bloco\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bloco\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sindico\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sindico\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sindico\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sindico\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sindico\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Moradia\Morador.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Morador\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Morador\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Morador\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Morador\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Morador\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Custo\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Custo\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Custo\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Custo\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Custo\Baixa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MinhaMoradia\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MeuCusto\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MeuCusto\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MeuCusto\Comprovante.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reuniao\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reuniao\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reuniao\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reuniao\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reuniao\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Multa\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Multa\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Multa\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Multa\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Multa\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\HousingPublish.pubxml" />
+    <Content Include="Views\Multar\Index.cshtml" />
+    <Content Include="Views\Multar\Create.cshtml" />
+    <Content Include="Views\Multar\Baixa.cshtml" />
+    <Content Include="Views\Multar\Details.cshtml" />
+    <Content Include="Views\Multar\Delete.cshtml" />
+    <Content Include="Views\MinhaMulta\Comprovante.cshtml" />
+    <Content Include="Views\MinhaMulta\Details.cshtml" />
+    <Content Include="Views\MinhaMulta\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51605</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/LVSA.Housing.Presentation</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

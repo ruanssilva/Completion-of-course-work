@@ -1,0 +1,64 @@
+﻿@model LVSA.Report.Application.ViewModels.GrupoViewModel
+
+@{
+    ViewBag.Title = "Deletar grupo";
+}
+
+<div class="page-header">
+    <h1>
+        Grupo
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Deletar grupo
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div>
+    <h4>Atenção! Você realmente deseja deletar esse registro?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="panel panel-default">
+        <div class="panel-footer">
+            <div class="pull-left">
+                <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o"></i> Deletar</button> |
+                <a href="~/Grupo" class="btn btn-default btn-white"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+        </div>
+    </div>
+    }
+</div>

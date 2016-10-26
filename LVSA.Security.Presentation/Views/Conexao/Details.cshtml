@@ -1,0 +1,43 @@
+﻿@model LVSA.Security.Application.ViewModels.ConexaoViewModel
+
+@{
+    ViewBag.Title = "Conexão";
+    ViewBag.Description = "Visualizar conexão";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectionString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConnectionString)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="~/Conexao/Edit/@Model.Id" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="~/Conexao" class="btn btn-default" title="Voltar para aplicações">Voltar para conexões <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

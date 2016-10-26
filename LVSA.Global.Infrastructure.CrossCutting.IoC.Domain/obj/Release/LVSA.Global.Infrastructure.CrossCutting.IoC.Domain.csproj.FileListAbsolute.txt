@@ -1,0 +1,39 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.Web.Common.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Dapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.Web.Common.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Dapper.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Dapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Base.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.Web.Common.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Base.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Ninject.Web.Common.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\bin\Release\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain\obj\Release\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb

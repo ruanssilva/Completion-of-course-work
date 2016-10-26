@@ -1,0 +1,49 @@
+﻿@model LVSA.Report.Application.ViewModels.CategoriaConsultaViewModel
+
+@{
+    ViewBag.Title = "Detalhes da categoria consulta";
+}
+
+<div class="page-header">
+    <h1>
+        Categoria consulta
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Detalhes da categoria consulta
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+</div>
+<div class="panel panel-default">
+    <div class="panel-footer">
+        <div class="pull-left">
+            <a href="~/CategoriaConsulta/Edit/@Model.Id" class="btn btn-warning"><i class="fa fa-pencil"></i> Editar</a> |
+            <a href="~/CategoriaConsulta" class="btn btn-default btn-white"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+        </div>
+
+        <div class="clearfix">
+
+        </div>
+    </div>
+</div>

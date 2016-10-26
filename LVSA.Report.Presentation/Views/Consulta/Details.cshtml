@@ -1,0 +1,90 @@
+﻿@model LVSA.Report.Application.ViewModels.ConsultaViewModel
+
+@{
+    ViewBag.Title = "Consulta";
+    ViewBag.Description = "Detalhes da consulta";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+        <dt>
+
+        </dt>
+        <dd>
+            
+        </dd>
+    </dl>
+
+    <div class="form-group">
+        <div class="col-md-6">
+            <fieldset>
+                <legend>@Html.DisplayNameFor(model => model.TSQL)</legend>
+                @Html.TextAreaFor(model => model.TSQL, htmlAttributes: new { @id = "view-sql", @class = "form-control" })
+                <br />
+            </fieldset>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/clike.js"></script>
+    <script src="~/Content/CodeMirror/js/sql.js"></script>
+    <script>
+
+        if ($("#view-sql").length) {
+            var view = CodeMirror.fromTextArea(document.getElementById("view-sql"), {
+                mode: 'text/x-sql',
+                lineNumbers: true,
+                readOnly: true,
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+    </script>
+}

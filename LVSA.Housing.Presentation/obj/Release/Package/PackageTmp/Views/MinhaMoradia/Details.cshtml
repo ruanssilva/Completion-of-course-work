@@ -1,0 +1,160 @@
+﻿@model LVSA.Housing.Application.ViewModels.MoradiaViewModel
+
+@{
+    ViewBag.Title = "Minha moradia";
+    ViewBag.Description = "Detalhes da minha moradia";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.BlocoId)
+                    </div>
+                    <div class="profile-info-value">
+                        @Model.Bloco.Nome
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </div>
+                    <div class="profile-info-value">
+                        @Model.Nome
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Sigla)
+                    </div>
+                    <div class="profile-info-value">
+                        @Model.Sigla
+                    </div>
+                </div>
+                <div class="profile-info-row">
+                    <div class="profile-info-name">
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </div>
+                    <div class="profile-info-value">
+                        @Model.Descricao
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabbable">
+                <ul class="nav nav-tabs" id="myTab">
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            Moradores &nbsp;
+                            <i class="ace-icon fa fa-caret-down bigger-110 width-auto"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-info">
+                            @foreach (var m in Model.Moradores.Where(w => w.Pessoa != null))
+                            {
+                                string[] nome = @m.Pessoa.Nome.Split(' ');
+                                <li>
+
+
+
+                                    <a data-toggle="tab" class="not-show-loading" href="#@("morador" + m.Id)">@nome[0]</a>
+                                </li>
+
+                            }
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    @foreach (var m in Model.Moradores.Where(w => w.Pessoa != null))
+                    {
+                        string[] nome = @m.Pessoa.Nome.Split(' ');
+                        <div id="@("morador" + m.Id)" class="tab-pane fade">
+
+
+                            <div class="clearfix"></div>
+                            <div class="profile-user-info profile-user-info-striped">
+
+                                @if (m.Pessoa.PessoaComplemento != null && m.Pessoa.PessoaComplemento.Imagem != null)
+                                {
+                                    <div class="profile-info-row">
+                                        <div class="profile-info-name">
+                                            Foto
+                                        </div>
+                                        <div class="profile-info-value">
+                                            <img style="max-width:80px;border-radius:20px;border: 2px solid #fff;" src="data:image;base64,@System.Convert.ToBase64String(m.Pessoa.PessoaComplemento.Imagem.Valor)" />
+                                        </div>
+                                    </div>
+                                }
+
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        Nome
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @m.Pessoa.Nome
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        Cidade
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @(m.Pessoa.PessoaComplemento != null ? (m.Pessoa.PessoaComplemento.CidadeNaturalidade != null ? m.Pessoa.PessoaComplemento.CidadeNaturalidade.Nome : null) : null)
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        E-mail
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @(m.Pessoa.PessoaComplemento != null ? m.Pessoa.PessoaComplemento.Email : null)
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        Telefone
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @(m.Pessoa.PessoaComplemento != null ? m.Pessoa.PessoaComplemento.Telefone1 : null)
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        Ativo
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @(m.Ativo ? "Sim" : "Não")
+                                    </div>
+                                </div>
+                                <div class="profile-info-row">
+                                    <div class="profile-info-name">
+                                        Responsável financeiro
+                                    </div>
+                                    <div class="profile-info-value">
+                                        @(m.ResponsavelFinanceiro ? "Sim" : "Não")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+
+        <a href="@Url.Action("Index","Home")" class="btn btn-default"><i class="fa fa-arrow-left"></i> Ir para página inicial</a>
+
+    </div>
+</div>

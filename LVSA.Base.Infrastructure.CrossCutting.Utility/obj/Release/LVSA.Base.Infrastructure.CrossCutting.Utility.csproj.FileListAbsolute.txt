@@ -1,0 +1,5 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.Utility\bin\Release\LVSA.Base.Infrastructure.CrossCutting.Utility.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.Utility\bin\Release\LVSA.Base.Infrastructure.CrossCutting.Utility.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.Utility\obj\Release\LVSA.Base.Infrastructure.CrossCutting.Utility.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.Utility\obj\Release\LVSA.Base.Infrastructure.CrossCutting.Utility.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.Utility\obj\Release\LVSA.Base.Infrastructure.CrossCutting.Utility.pdb

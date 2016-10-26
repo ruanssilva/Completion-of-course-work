@@ -1,0 +1,168 @@
+﻿@model LVSA.Security.Application.ViewModels.ParametroViewModel
+
+@{
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+
+    ViewBag.Title = "Parâmetro";
+    ViewBag.Description = "Criar parâmetro";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", @required = "" } })
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control", @required = "" } })
+                        @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.Ativo)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(Model != null && Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model=>model.Ativo)" @(Model != null && !Model.Ativo ? "checked" : "") id="@Html.IdFor(model=>model.Ativo)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">@Html.DisplayNameFor(model => model.TSQLAtivo)</label>
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.TSQLAtivo)" @(Model != null && Model.TSQLAtivo ? "checked" : "") id="@Html.IdFor(model => model.TSQLAtivo)" type="radio" value="True" />
+                        <span class="lbl"> Sim</span>
+                        @Html.ValidationMessageFor(model => model.TSQLAtivo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input class="ace" name="@Html.NameFor(model => model.TSQLAtivo)" @(Model != null && !Model.TSQLAtivo ? "checked" : "") id="@Html.IdFor(model => model.TSQLAtivo)" type="radio" value="False" />
+                        <span class="lbl"> Não</span>
+                        @Html.ValidationMessageFor(model => model.TSQLAtivo, "", new { @class = "text-danger" })
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="sem-tsql" class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Mascara, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Mascara, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="help-block">Ex.: 99/99/9999, A06999999...</span>
+                        @Html.ValidationMessageFor(model => model.Mascara, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Regex, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Regex, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Regex, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="com-tsql" class="form-group">
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.TSQL, new { @id = "code-sql", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TSQL, "", new { @class = "text-danger" })
+                <span class="help-block">User o F11 para full screen</span>
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="~/Parametro" class="btn btn-default" title="Voltar para lista">Voltar para parâmetros <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+@section styles {
+    <link href="@(serverCDN)Content/Plugins/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="@(serverCDN)Content/Plugins/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/codemirror.js"></script>
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/fullscreen.js"></script>
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/sql.js"></script>
+    <script>
+
+        if ($("#code-sql").length) {
+            var editor = CodeMirror.fromTextArea(document.getElementById("code-sql"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "text/x-sql",
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+        $(function () {
+            $('input[name="TSQLAtivo"]').change(function () {
+                if ($('input[name="TSQLAtivo"]:checked').val() == "True") {
+                    $('#sem-tsql').hide();
+                    $('#com-tsql').fadeIn();
+                }
+                else {
+                    $('#com-tsql').hide();
+                    $('#sem-tsql').fadeIn();
+                }
+            });
+
+            $('input[name="TSQLAtivo"]').trigger('change');
+        });
+
+    </script>
+}

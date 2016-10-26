@@ -1,0 +1,20 @@
+﻿@model LVSA.Base.Presentation.ViewModels.ParamViewModel
+
+<label class="block clearfix">
+    <span class="block input-icon input-icon-right">
+        @Html.HiddenFor(model => model.Key)
+        @if (!Model.TSQLAtivo)
+        {
+            @Html.TextBoxFor(model => model.Value, new { @class = "form-control " + (Model.Multi ? "field-tags" : ""), @placeholder = Model.Exibicao, @data_mask = !Model.Multi && !string.IsNullOrWhiteSpace(Model.Mascara) ? "$" + Model.Mascara : "#" })
+        }
+        else if (Model.Multi)
+        {
+            @Html.ListBoxFor(model => model.Values, new SelectList(Model.Collection, "Value", "Display", "GroupField", (object)Model.Values), new { @class = "form-control chosen-select", @data_placeholder = Model.Exibicao })
+        }
+        else
+        {
+            @Html.DropDownListFor(model => model.Value, new SelectList(Model.Collection, "Value", "Display", "GroupField", (object)Model.Value), Model.Exibicao, new { @class = "form-control chosen-select" })
+        }
+        <small><span class="text-danger">@(Model.Obrigatorio ? "Este parâmetro é obrigatório" : "Este parâmetro é opcional") </span></small>
+    </span>
+</label>

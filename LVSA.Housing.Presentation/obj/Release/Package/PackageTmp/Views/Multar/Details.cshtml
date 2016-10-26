@@ -1,0 +1,108 @@
+﻿@model LVSA.Housing.Application.ViewModels.MultaMoradorViewModel
+
+@{
+    ViewBag.Title = "Multa/Advertência";
+    ViewBag.Description = "Detalhes da multa/advertência";
+}
+
+
+<div class="form-actions no-color">
+    <div>
+        @if (Model.DataPagamento == null)
+        {
+            <a href="~/Multar/Baixa/@Model.Id" class="btn btn-danger"><i class="fa fa-level-down"></i> Baixar</a>
+        }
+        else
+        {
+            <a href="javascript:void(0);" class="btn btn-danger active"><i class="fa fa-level-down"></i> <small>Baixado</small></a>
+        }
+
+
+    </div>
+</div>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MoradorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Morador.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Multa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desconto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desconto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Juros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Juros)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataReferencia)
+        </dt>
+
+        <dd>
+            @Model.DataReferencia.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </dt>
+
+        <dd>
+            @(Model.DataVencimento != null ? Model.DataVencimento.Value.ToString("dd/MM/yyyy") : null)
+        </dd>
+
+        @if (Model.DataPagamento != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.DataPagamento)
+            </dt>
+
+            <dd>
+                @(Model.DataPagamento != null ? Model.DataPagamento.Value.ToString("dd/MM/yyyy") : null)
+            </dd>
+        }
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

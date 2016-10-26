@@ -1,0 +1,13 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\Ninject.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\Ninject.Web.Common.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\Ninject.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\bin\Release\Ninject.Web.Common.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\obj\Release\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\obj\Release\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.IoC.Application\obj\Release\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.pdb

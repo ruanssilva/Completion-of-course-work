@@ -1,0 +1,71 @@
+﻿@model LVSA.Noticia.Presentation.ViewModels.NoticiaViewModel
+
+@{
+    ViewBag.Title = Model.Titulo;
+    ViewBag.Description = Model.Subtitulo;
+}
+
+<span>
+    publicado por <b>@Model.Autor</b>
+</span>
+
+<span class="pull-right">@Model.PublicadoEm.ToLongDateString()</span>
+
+<br />
+<br />
+
+@(new HtmlString(Model.Texto))
+
+<br />
+
+@if (Model.Tags != null)
+{
+    foreach (var x in Model.Tags.Split(','))
+    {
+        <label class="label label-info">@x</label>
+    }
+}
+
+<br />
+<br />
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-12">
+            @if (Model.ImagemSet != null && Model.ImagemSet.Count() > 0)
+            {
+                <ul class="ace-thumbnails clearfix">
+                    @{int count = 0;}
+                    @foreach (var x in Model.ImagemSet)
+                    {
+                        <li>
+                            <a class="cboxElement not-show-loading" href="data:image;base64,@System.Convert.ToBase64String(x.Valor)" data-rel="colorbox">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(x.Valor)" width="150" height="150" />
+                                <div class="tags">
+                                    <!-- #section:pages/gallery.tags -->
+                                    <span class="label-holder">
+                                        <span class="label label-info arrowed">clique para ampliar</span>
+                                    </span>
+
+                                    <!-- /section:pages/gallery.tags -->
+                                </div>
+                            </a>
+                        </li>
+                        count++;
+                    }
+
+                </ul>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", "Noticia", new { id = Model.Id })" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="~/Noticia" class="btn btn-default" title="Voltar para notícias">Voltar para notícias <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

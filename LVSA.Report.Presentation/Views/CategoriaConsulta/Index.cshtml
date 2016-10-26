@@ -1,0 +1,80 @@
+﻿@model IEnumerable<LVSA.Report.Application.ViewModels.CategoriaConsultaViewModel>
+
+@{
+    ViewBag.Title = "Lista de categoria consulta";
+}
+
+<div class="page-header">
+    <h1>
+        Categoria consulta
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Lista de categoria consulta
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="panel panel-default">
+    <div class="panel-footer">
+
+        <div class="pull-left">
+            <a href="~/CategoriaConsulta/Create" class="btn btn-default"><small>Novo</small> <i class="fa fa-asterisk"></i> </a>
+        </div>
+
+        <div class="pull-right tableTools-container"></div>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="main-box clearfix">
+
+
+            <div class="main-box-body clearfix">
+
+                <table class="table datatable table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nome)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ativo)
+                            </th>
+                            <th class="text-right hidden-print"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ativo)
+                                </td>
+                                <td class="text-right hidden-print">
+                                    <div class="">
+                                        <a class="btn btn-link blue" href="~/CategoriaConsulta/Details/@item.Id" title="Visualizar">
+                                            <i class="icon fa fa-search-plus"></i>
+                                        </a>
+                                        <a class="btn btn-link green" href="~/CategoriaConsulta/Edit/@item.Id" title="Editar">
+                                            <i class="icon fa fa-pencil-square-o"></i>
+                                        </a>
+                                        <a class="btn btn-link red" href="~/CategoriaConsulta/Delete/@item.Id" title="Deletar">
+                                            <i class="icon fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

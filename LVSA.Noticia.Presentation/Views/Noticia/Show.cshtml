@@ -1,0 +1,86 @@
+﻿@model IEnumerable<LVSA.Noticia.Application.ViewModels.NoticiaViewModel>
+
+@{
+    ViewBag.Title = "Notícia";
+    ViewBag.Description = "Notícias publicadas";
+}
+
+<div class="row">
+    @foreach (var x in Model)
+    {
+        <div class="col-md-2">
+
+            <ul class="ace-thumbnails clearfix pull-right">
+
+                <li>
+                    <a class="cboxElement not-show-loading" href="data:image;base64,@System.Convert.ToBase64String(x.ImagemSet.Select(s=> s.Valor).FirstOrDefault())" data-rel="colorbox">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(x.ImagemSet.Select(s=> s.Valor).FirstOrDefault())" width="150" height="150" />
+                        <div class="tags">
+                            <!-- #section:pages/gallery.tags -->
+                            @*<span class="label-holder">
+                            <span class="label label-info arrowed">clique para ampliar</span>
+                        </span>*@
+
+                            <!-- /section:pages/gallery.tags -->
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+
+
+        </div>
+        <div class="col-md-4">
+            <h3 style="margin:0;"><a href="@Url.Action("Visualizar", "Noticia", new { id = x.Id })">@x.Titulo </a></h3>
+            <h4>@x.Subtitulo </h4>
+
+            
+
+            @(new HtmlString(x.Texto))
+
+            <br />
+            <br />
+            
+            
+
+            @if (x.ImagemSet != null && x.ImagemSet.Count() > 0)
+            {
+                <ul class="ace-thumbnails clearfix ">
+                    @foreach (var y in x.ImagemSet)
+                    {
+                        <li>
+                            <a class="cboxElement not-show-loading" href="data:image;base64,@System.Convert.ToBase64String(y.Valor)" data-rel="colorbox">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(y.Valor)" width="35" height="35" />
+                                <div class="tags">
+                                    <!-- #section:pages/gallery.tags -->
+                                    @*<span class="label-holder">
+                                            <span class="label label-info arrowed">clique para ampliar</span>
+                                        </span>*@
+
+                                    <!-- /section:pages/gallery.tags -->
+                                </div>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+
+            }
+            
+            <br />
+            
+            <span class=""><small>publicado em @x.PublicadoEm por <b>@x.Autor</b></small></span>
+
+
+
+
+        </div>
+        
+        <div class="space-20"></div>
+
+    }
+</div>
+

@@ -1,0 +1,80 @@
+﻿@model LVSA.Housing.Application.ViewModels.CustoMoradiaViewModel
+
+@{
+    ViewBag.Title = "Conta";
+    ViewBag.Description = "Comprovante do conta";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MoradiaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moradia.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desconto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desconto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Juros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Juros)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataReferencia)
+        </dt>
+
+        <dd>
+            @Model.DataReferencia.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </dt>
+
+        <dd>
+            @(Model.DataVencimento != null ? Model.DataVencimento.Value.ToString("dd/MM/yyyy") : null)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPagamento)
+        </dt>
+
+        <dd>
+            @(Model.DataPagamento != null ? Model.DataPagamento.Value.ToString("dd/MM/yyyy") : null)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Index")" title="Voltar para lista" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+    </div>
+</div>

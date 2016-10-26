@@ -1,0 +1,6 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\bin\LVSA.CDN.Presentation.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\bin\LVSA.CDN.Presentation.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\bin\LVSA.CDN.Presentation.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\obj\Release\LVSA.CDN.Presentation.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\obj\Release\LVSA.CDN.Presentation.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.CDN.Presentation\obj\Release\LVSA.CDN.Presentation.csprojResolveAssemblyReference.cache

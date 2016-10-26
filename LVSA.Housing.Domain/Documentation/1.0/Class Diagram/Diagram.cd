@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LVSA.Housing.Domain.Auditoria">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAE=</HashCode>
+      <FileName>Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Housing.Domain.AuditoriaComAtivo">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Housing.Domain.AuditoriaComExclusaoLogica">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Housing.Domain.AuditoriaComExclusaoLogicaComAtivo" Collapsed="true">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogicaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Aviso">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABiAAAAAQCAAAAAAAAQBABAAAAAAAAAAAAAgAAgABA=</HashCode>
+      <FileName>Aviso.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Bloco">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABiAAAAAQCBAAAAAAAAAIAAAAgAAAAAAAAACAEAAAA=</HashCode>
+      <FileName>Bloco.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Condominio">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAQABAAAAAAAAAAQAAAAAACAAAAAAAAEAAAA=</HashCode>
+      <FileName>Condominio.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.CustoMoradia">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAABAAQABAEAAAAAAAAAEIAAAABAAAAQAQACAAAA=</HashCode>
+      <FileName>CustoMoradia.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Moradia">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiQAAAAQABAAAAAAAEAAQAAAgAAAAAAAAACAEAAAA=</HashCode>
+      <FileName>Moradia.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Morador">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAiAABAAQAAAAAEAAAAAAAAIAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Morador.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Multa">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAQABAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Multa.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.MultaMorador">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAQADIEAAAAACAAQEAAAAABAAAAQAQACAAAA=</HashCode>
+      <FileName>MultaMorador.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Reuniao">
+    <Position X="4.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABiQAAAAQCBAAAACAAAAAAAAAQAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Reuniao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Housing.Domain.Sindico">
+    <Position X="11.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAQAAAAAEAAAAAAQAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Sindico.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LVSA.Report.Application.ViewModels.CuboViewModel>
+
+@{
+    ViewBag.Title = "Lista de cubo";
+    ViewBag.Description = "Lista de cubo";
+}
+
+
+<div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+</div>
+
+<div class="table-header">
+    Resultados para cubos disponíveis
+</div>
+
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th class="text-right hidden-print"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td class="text-right hidden-print">
+                        <div class="">
+                            <a class="btn btn-link blue" href="~/Cubo/Run/@item.Id" title="Executar">
+                                <i class="icon fa fa-play"></i> <i class="icon @item.Icon"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

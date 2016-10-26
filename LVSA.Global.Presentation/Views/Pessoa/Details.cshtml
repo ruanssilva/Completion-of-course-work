@@ -1,0 +1,108 @@
+﻿@model LVSA.Global.Application.ViewModels.PessoaFisicaViewModel
+@{
+    ViewBag.Title = "Pessoa";
+    ViewBag.Description = "Visualizar pessoa";
+}
+
+
+<div>
+
+
+    <div class="pull-left">
+        <a href="~/PessoaComplemento/Details/@Model.Id" class="btn btn-primary btn-white"><i class="fa fa-plus"></i> Complementos</a>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logradouro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroResidencial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroResidencial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BairroId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CidadeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @(Model.DataNascimento == null ? String.Empty : Model.DataNascimento.Value.ToString("dd/MM/yyyy"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+
+        <dd>
+            @(Model.Sexo == 'M' ? "Masculino" : (Model.Sexo == 'F' ? "Feminino" : string.Empty))
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", "Pessoa", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para aplicações">Voltar para bairro <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

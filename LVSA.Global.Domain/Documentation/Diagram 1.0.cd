@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LVSA.Global.Domain.Auditoria" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAE=</HashCode>
+      <FileName>Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.AuditoriaComAtivo">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.AuditoriaComExclusaoLogica">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.AuditoriaComExclusaoLogicaComAtivo">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogicaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.Bairro">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABiAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>Bairro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Global.Domain.Cidade">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAQAAAAAAAAAQAAAACAAAAAAAAAAAAgEAAAg=</HashCode>
+      <FileName>Cidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.ColigadaComplemento">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAgCAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColigadaComplemento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.Escolaridade">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Escolaridade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.Estado">
+    <Position X="9" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACIAAAAQQAAAAAAAAAAAAAABAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.FilialComplemento">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAgSAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FilialComplemento.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Global.Domain.Imagem">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAEAAAA=</HashCode>
+      <FileName>Imagem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Global.Domain.Pais">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Pais.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.Pessoa" Collapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABiAAAAAAAAACIAAAAAAACAAAAAAEAAAAQAAAEAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Global.Domain.PessoaFisica">
+    <Position X="5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAIAAAIIAAAAAAAAAACAAAA=</HashCode>
+      <FileName>PessoaFisica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.PessoaFisicaComplemento">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAgAIIQgCAAgAIFAAAAAAAAAIAAFDAAggBAAAAAAAA=</HashCode>
+      <FileName>PessoaFisicaComplemento.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Global.Domain.PessoaJuridica">
+    <Position X="2.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>PessoaJuridica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.RacaCor">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>RacaCor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Global.Domain.Titulacao">
+    <Position X="6.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Titulacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

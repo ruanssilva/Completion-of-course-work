@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\LVSA.CDN.Presentation</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/LVSA.CDN.Presentation.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/UBEC.CDN.Presentation.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/ajax-loader-dark.gif">
+      <publishTime>09/10/2015 08:28:47</publishTime>
+    </File>
+    <File Include="Content/Images/ajax-loader-light.gif">
+      <publishTime>09/10/2015 15:37:43</publishTime>
+    </File>
+    <File Include="Content/Images/ajax-loader.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/bg-dark.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/bg-loader-dark.png">
+      <publishTime>09/10/2015 15:28:25</publishTime>
+    </File>
+    <File Include="Content/Images/bg-loader.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/bg_moto_cinza.png">
+      <publishTime>11/05/2015 09:59:42</publishTime>
+    </File>
+    <File Include="Content/Images/logo_lvsa.png">
+      <publishTime>10/05/2015 20:31:39</publishTime>
+    </File>
+    <File Include="Content/Images/logo_ubec.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/logo_ubec_branco.png">
+      <publishTime>09/08/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Images/logo_ubec_cinza.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/logo_ubec_laranja.png">
+      <publishTime>10/05/2015 20:31:39</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/css/codemirror.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/css/fullscreen.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/js/clike.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/js/codemirror.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/js/fullscreen.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/CodeMirror/js/sql.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/MaskMoney/jquery.maskMoney.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/SignalR/jquery.signalR-2.2.0.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/Unobtrusive/jquery.validate.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Plugins/Unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>06/01/2016 14:59:04</publishTime>
+    </File>
+    <File Include="Content/Scripts/LVSA.js">
+      <publishTime>04/27/2016 08:50:15</publishTime>
+    </File>
+    <File Include="Content/Scripts/UBEC.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Styles/LVSA.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Styles/UBEC.css">
+      <publishTime>10/09/2015 15:39:20</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar1.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar2.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar3.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar4.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/avatar5.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/profile-pic.jpg">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/avatars/user.jpg">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace - Cópia.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace-fonts.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace-ie.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace-part2.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace-rtl.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace-skins.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ace.onpage-help.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap-datetimepicker.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap-duallistbox.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap-editable.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap-multiselect.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap-timepicker.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/bootstrap.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/chosen-sprite%402x.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/chosen-sprite.png">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/chosen.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/colorbox.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/colorpicker.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/datepicker.css">
+      <publishTime>08/09/2015 08:19:35</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/daterangepicker.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/dropzone.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/font-awesome.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/fullcalendar.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/fullcalendar.print.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/border.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/border1.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/border2.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/controls.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderBottomCenter.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderBottomLeft.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderBottomRight.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderMiddleLeft.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderMiddleRight.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderTopCenter.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderTopLeft.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/ie6/borderTopRight.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/loading.gif">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/loading_background.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/meteorshower.jpg">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/meteorshower2.jpg">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/overlay.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/pattern.jpg">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/pattern.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/spritemap%402x.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/images/spritemap.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/img/alpha.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/img/hue.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/img/saturation.png">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/jquery-ui.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/jquery-ui.custom.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/jquery.contextmenu.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/jquery.gritter.css">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ace-features.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ace-nav.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ace-responsive.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ace-rtl.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ace.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/basic.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/alerts.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/badges.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/bootstrap.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/breadcrumbs.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/button-groups.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/buttons.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/carousel.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/close.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/code.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/component-animations.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/dropdowns.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/forms.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/glyphicons.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/grid.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/input-groups.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/jumbotron.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/labels.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/list-group.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/media.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/alerts.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/background-variant.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/border-radius.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/buttons.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/center-block.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/clearfix.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/forms.less">
+      <publishTime>08/09/2015 08:19:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/gradients.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/grid-framework.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/grid.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/hide-text.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/image.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/labels.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/list-group.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/nav-divider.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/nav-vertical-align.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/opacity.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/pagination.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/panels.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/progress-bar.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/reset-filter.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/resize.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/responsive-visibility.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/size.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/tab-focus.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/table-row.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/text-emphasis.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/text-overflow.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/mixins/vendor-prefixes.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/modals.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/navbar.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/navs.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/normalize.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/pager.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/pagination.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/panels.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/popovers.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/print.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/progress-bars.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/responsive-embed.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/responsive-utilities.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/scaffolding.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/tables.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/theme.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/thumbnails.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/tooltip.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/type.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/utilities.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/variables.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bootstrap/wells.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/breadcrumbs.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/bs3-reset.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/buttons.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/dropdown.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/dropdown/colorpicker.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/dropdown/navbar-dropdown.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/dropdown/navbar-tabbed-dropdown.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/ext/bootstrap-tag.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/fonts-rel.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/fonts.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/footer.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/form.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/form/checkbox.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/form/file.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/gallery.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/general.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/icon-animated.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/infobox.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/items.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/label-badge.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/mixins.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/modal.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/collapsible.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/navbar-menu-form.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/toggle-button.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/user-buttons-move-down.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/user-buttons.less">
+      <publishTime>08/09/2015 08:19:37</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/user-dropdown-position.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/navbar/user-menu.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/onpage-help.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/other.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.error.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.inbox.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.invoice.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.login.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.pricing.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.profile.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/page.timeline.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/print.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/progressbar.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/scroll.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/searchbox.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/active.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/compact.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/ff_fix.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/highlight.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/horizontal.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/hover.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/min.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/multiple.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/old-toggle-button.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/responsive-1.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/responsive-2.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/responsive-3.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/shortcuts-toggle.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/sidebar-fixed.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/sidebar/sub-arrow.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/empty.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/no-skin.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/skin-1.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/skin-2.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/skin-3.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/skins/skins.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/tab-accordion.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/tables.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-calendar.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-chosen.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-colorbox.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-dataTables.less">
+      <publishTime>08/09/2015 08:19:38</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-date.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-dropzone.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-duallist-multiselect.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-editable.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-fuelux.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-gritter.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-jqgrid.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-jquery-ui.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-nestable.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-raty.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-select2.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-slider.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-typeahead.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/thirdparty-wysiwyg.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/tooltip-popover.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/utility.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/variables.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/less/widget.less">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/pace.css">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/prettify.css">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/select2-spinner.gif">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/select2.css">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/select2.png">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/select2x2.png">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/css/ui.jqgrid.css">
+      <publishTime>08/09/2015 08:19:39</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/fontawesome-webfont.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/fontawesome-webfont.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/fontawesome-webfont.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/FontAwesome.otf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/OpenSans-300.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/OpenSans-400.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/fonts/readme">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/back_disabled.png">
+      <publishTime>08/09/2015 08:19:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/back_enabled.png">
+      <publishTime>08/09/2015 08:19:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/back_enabled_hover.png">
+      <publishTime>08/09/2015 08:19:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/email1.png">
+      <publishTime>08/09/2015 08:19:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/email2.png">
+      <publishTime>08/09/2015 08:19:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/email3.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/email4.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/forward_disabled.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/forward_enabled.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/forward_enabled_hover.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-1.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-2.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-3.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-4.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-5.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/image-6.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-1.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-2.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-3.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-4.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-5.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/gallery/thumb-6.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/news.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/newsletter.jpg">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/sort_asc.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/sort_asc_disabled.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/sort_both.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/sort_desc.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/sort_desc_disabled.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/spritemap%402x.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/images/spritemap.png">
+      <publishTime>08/09/2015 08:19:41</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/img/clear.png">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/img/glyphicons-halflings-white.png">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/img/glyphicons-halflings.png">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/img/loading.gif">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace-elements.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace-extra.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.ajax-content.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.auto-container.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.auto-padding.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.onpage-help.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.searchbox-autocomplete.js">
+      <publishTime>02/10/2015 15:21:36</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.settings-rtl.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.settings-skin.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.sidebar-scroll-1.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.sidebar-scroll-2.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.sidebar.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.submenu-hover.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.touch-drag.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.widget-box.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/ace.widget-on-reload.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.aside.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.colorpicker.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.fileinput.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.onpage-help.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.scroller.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.spinner.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.treeview.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.typeahead.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.wizard.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/elements.wysiwyg.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/readme">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/ace/scripts.json">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/additional-methods.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootbox.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootstrap-colorpicker.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootstrap-multiselect.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootstrap-tag.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootstrap-wysiwyg.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/bootstrap.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/chosen.jquery.js">
+      <publishTime>08/09/2015 08:19:42</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/extensions/pagination/select.js">
+      <publishTime>09/09/2015 08:38:10</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/extensions/TableTools/swf/copy_csv_xls.swf">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/jquery.dataTables.bootstrap.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dataTables/jquery.dataTables.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/bootstrap-datepicker.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/bootstrap-datepicker.pt-BR.js">
+      <publishTime>05/10/2015 11:33:08</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/bootstrap-datetimepicker.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/bootstrap-timepicker.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/daterangepicker.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/moment.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/date-time/pt-br.js">
+      <publishTime>05/10/2015 12:41:50</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/dropzone.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/excanvas.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/flot/jquery.flot.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/flot/jquery.flot.pie.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/flot/jquery.flot.resize.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/fuelux/fuelux.spinner.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/fuelux/fuelux.tree.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/fuelux/fuelux.wizard.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/fullcalendar.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/html5shiv.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-ar.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-bg.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-bg1251.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-cat.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-cn.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-cs.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-da.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-de.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-dk.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-el.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-en.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-es.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-fa.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-fi.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-fr.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-gl.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-he.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-hr.js">
+      <publishTime>08/09/2015 08:19:43</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-hr1250.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-hu.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-id.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-is.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-it.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-ja.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-kr.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-lt.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-mne.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-nl.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-no.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-pl.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-pt-br.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-pt.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-ro.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-ru.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-sk.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-sr-latin.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-sr.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-sv.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-th.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-tr.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-tw.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-ua.js">
+      <publishTime>08/09/2015 08:19:44</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/i18n/grid.locale-vi.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jqGrid/jquery.jqGrid.src.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery-ui.custom.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery-ui.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.autosize.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.bootstrap-duallistbox.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.colorbox.js">
+      <publishTime>05/10/2015 17:01:40</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.contextmenu.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.easypiechart.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.gritter.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.hotkeys.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.inputlimiter.1.3.1.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.knob.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.maskedinput.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.maskedinput_.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.mobile.custom.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.mousewheel.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.nestable.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.raty.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.slimscroll.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.sparkline.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.ui.touch-punch.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery.validate.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/jquery1x.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/markdown/bootstrap-markdown.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/markdown/markdown.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/markdown/to-markdown.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/pace.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/prettify.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/respond.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/select2.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/spin.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/typeahead.jquery.js">
+      <publishTime>08/09/2015 08:19:45</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/x-editable/ace-editable.js">
+      <publishTime>08/09/2015 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Templates/Ace/assets/js/x-editable/bootstrap-editable.js">
+      <publishTime>08/09/2015 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Templates/Material/css/app.css">
+      <publishTime>04/12/2016 17:22:00</publishTime>
+    </File>
+    <File Include="Content/Templates/Material/css/app.min.1.css">
+      <publishTime>04/12/2016 17:21:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

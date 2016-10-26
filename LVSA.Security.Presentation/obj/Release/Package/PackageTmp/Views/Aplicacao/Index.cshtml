@@ -1,0 +1,308 @@
+﻿@model IEnumerable<LVSA.Security.Application.ViewModels.AplicacaoViewModel>
+
+@{
+    ViewBag.Title = "Aplicação";
+    ViewBag.Description = "Listar aplicações";
+}
+
+<div class="pull-left">
+    <a href="~/Aplicacao/Create" class="btn btn-white btn-success btn-bold" title="Novo">Criar <i class="fa fa-plus"></i></a>
+    <a href="~/Concessao/Aplicacao" class="btn btn-white btn-warning btn-bold">Liberar acesso <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="clearfix">
+    <div class="pull-right tableTools-container"></div>
+</div>
+
+<div class="table-header">
+    Resultados para aplicações
+</div>
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sigla)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exibicao)
+            </th>
+            <th class="col-md-4">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th class="action-header"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.OrderBy(o => o.Nome))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sigla)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Exibicao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td class="text-right">
+                    <div class="hidden-sm hidden-xs action-buttons">
+                        <a class="grey" href="@Url.Action("Parametros", "Aplicacao", new { id = item.Id })" title="Parâmetros">
+                            <i class="ace-icon fa fa-cogs bigger-130"></i>
+                        </a>
+
+                        <a class="blue" href="~/Recurso/Index/Aplicacao/@item.Id" title="Recursos">
+                            <i class="ace-icon fa fa-sitemap bigger-130"></i>
+                        </a>
+
+                        <a class="blue" href="~/Aplicacao/Details/@item.Id" title="Visualizar">
+                            <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                        </a>
+
+                        <a class="green" href="~/Aplicacao/Edit/@item.Id" title="Editar">
+                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                        </a>
+
+                        <a class="red" href="~/Aplicacao/Delete/@item.Id" title="Deletar">
+                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                        </a>
+                    </div>
+
+                    <div class="hidden-md hidden-lg">
+                        <div class="inline pos-rel">
+                            <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                <li>
+                                    <a href="@Url.Action("Parametros", "Aplicacao", new { id = item.Id })" class="tooltip-info" data-rel="tooltip" title="Parâmetros">
+                                        <span class="grey">
+                                            <i class="ace-icon fa fa-cogs bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="~/Recurso/Index/Aplicacao/@item.Id" class="tooltip-info" data-rel="tooltip" title="Recursos">
+                                        <span class="blue">
+                                            <i class="ace-icon fa fa-sitemap bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="~/Aplicacao/Details/@item.Id" class="tooltip-info" data-rel="tooltip" title="Visualizar">
+                                        <span class="blue">
+                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="~/Aplicacao/Edit/@item.Id" class="tooltip-success" data-rel="tooltip" title="Editar">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="~/Aplicacao/Delete/@item.Id" class="tooltip-error" data-rel="tooltip" title="Deletar">
+                                        <span class="red">
+                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (ViewBag.Parametro != null && ViewBag.Aplicacao != null)
+{
+    var parametro = (LVSA.Security.Application.ViewModels.ParametroViewModel)ViewBag.Parametro;
+    var aplicacao = (LVSA.Security.Application.ViewModels.AplicacaoViewModel)ViewBag.Aplicacao;
+
+    <div id="Parametro" class="modal fade">
+        <div class="modal-dialog">
+            @using (Html.BeginForm("Parametro", "Aplicacao", new { aplicacao = aplicacao.Id }))
+            {
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"><i class="fa fa-plus"></i> Novo <small>parâmetro</small></h4>
+                    </div>
+                    <!-- dialog body -->
+                    <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Parâmetro</label>
+                                <div class="col-md-8">
+                                    @Html.DropDownList("Id", new SelectList(ViewBag.ParametroSet, "Id", "Nome", parametro.Id), "Selecione...", new { @class = "form-control", @required = "" })
+                                    @Html.ValidationMessage("Id", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Código</label>
+                                <div class="col-md-8">
+                                    @Html.TextBox("Codigo", parametro.Codigo, new { @class = "form-control", @required = "" })
+                                    @Html.ValidationMessage("Codigo", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Exibição</label>
+                                <div class="col-md-8">
+                                    @Html.TextBox("Exibicao", parametro.Exibicao, new { @class = "form-control", @required = "" })
+                                    @Html.ValidationMessage("Exibicao", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Sequência</label>
+                                <div class="col-md-8">
+                                    @Html.TextBox("Sequencia", parametro.Sequencia, new { @class = "form-control", @required = "" })
+                                    @Html.ValidationMessage("Sequencia", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="Obrigatorio" name="Obrigatorio" @(parametro.Obrigatorio ? "checked" : "") type="checkbox" class="ace" value="True" />
+                                            <span class="lbl"> Obrigatório</span>
+                                            @Html.ValidationMessage("Obrigatorio", "", new { @class = "text-danger" })
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="Multi" name="Multi" @(parametro.Multi ? "checked" : "") type="checkbox" class="ace" value="True" />
+                                            <span class="lbl"> Multivalorável</span>
+                                            @Html.ValidationMessage("Multi", "", new { @class = "text-danger" })
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- dialog buttons -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Salvar <i class="fa fa-save"></i></button>
+                        <a href="@Url.Action("Parametros", "Aplicacao", new { id = aplicacao.Id })" class="btn btn-default">Voltar <i class="fa fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+    @section scripts {
+        <script>
+            $(function () {
+                $("#Parametro").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+            });
+        </script>
+    }
+}
+else if (ViewBag.Aplicacao != null)
+{
+    var aplicacao = (LVSA.Security.Application.ViewModels.AplicacaoViewModel)ViewBag.Aplicacao;
+
+    <div id="Parametros" class="modal fade">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                    @if (aplicacao.ParametroSet != null && aplicacao.ParametroSet.Count() > 0)
+                    {
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sequencial</th>
+                                    <th>Parâmetro</th>
+                                    <th>Multivalorável</th>
+                                    <th>Obrigatório</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var u in aplicacao.ParametroSet)
+                                {
+                                    <tr title="@u.TSQL">
+                                        <td><b>@u.Sequencia</b></td>
+                                        <td>@u.Exibicao <small>[ @u.Nome ]</small></td>
+                                        <td>@(u.Multi ? "Sim" : "Não")</td>
+                                        <td>@(u.Obrigatorio ? "Sim" : "Não")</td>
+                                        <td class="text-right">
+                                            <a href="@Url.Action("Parametro", "Aplicacao", new { aplicacao = aplicacao.Id, parametro = u.Codigo })" class="red"><i class="fa fa-remove"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <h5>Não há parâmetros definidos para a aplicação</h5>
+                    }
+
+
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                    <a href="@Url.Action("Parametro", "Aplicacao", new { aplicacao = aplicacao.Id })" class="btn btn-success">Novo <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @section scripts {
+        <script>
+            $(function () {
+                $("#Parametros").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+            });
+        </script>
+    }
+}

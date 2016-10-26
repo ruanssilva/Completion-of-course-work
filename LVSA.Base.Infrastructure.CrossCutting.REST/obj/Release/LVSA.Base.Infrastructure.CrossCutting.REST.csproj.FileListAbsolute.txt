@@ -1,0 +1,7 @@
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\bin\Release\LVSA.Base.Infrastructure.CrossCutting.REST.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\bin\Release\LVSA.Base.Infrastructure.CrossCutting.REST.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\bin\Release\Newtonsoft.Json.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\bin\Release\Newtonsoft.Json.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\obj\Release\LVSA.Base.Infrastructure.CrossCutting.REST.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\obj\Release\LVSA.Base.Infrastructure.CrossCutting.REST.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Base.Infrastructure.CrossCutting.REST\obj\Release\LVSA.Base.Infrastructure.CrossCutting.REST.pdb

@@ -1,0 +1,91 @@
+﻿@model LVSA.Security.Application.ViewModels.AplicacaoViewModel
+
+@{
+    ViewBag.Title = "Aplicação";
+    ViewBag.Description = "Visualizar aplicação";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exibicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exibicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icon)
+        </dt>
+
+        <dd>
+            <i class="@Model.Icon"></i> <i>@Html.DisplayFor(model => model.Icon)</i>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desktop)
+        </dt>
+
+        <dd>
+            @(Model.Desktop ? "Sim" : "Não")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abstrata)
+        </dt>
+
+        <dd>
+            @(Model.Abstrata ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="~/Aplicacao/Edit/@Model.Id" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="~/Aplicacao" class="btn btn-default" title="Voltar para aplicações">Voltar para aplicações <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

@@ -1,0 +1,311 @@
+﻿@model LVSA.Security.Presentation.ViewModels.AgrupamentosViewModel
+
+@{
+    string serverAPI = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.Security.Service"];
+
+    ViewBag.Title = "Agrupamento";
+    ViewBag.Description = "Grupos do usuário";
+
+    object htmlAtrr = new { };
+
+    if (Model != null && Model.Usuario != null && ViewBag.GrupoSet != null)
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required", @disabled = "disabled" };
+    }
+    else
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required" };
+    }
+
+}
+
+@using (Html.BeginForm("Usuario", "Agrupamento", FormMethod.Post, new { @id = "Filtro" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="FilialId">Filial</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("FilialId", new SelectList(ViewBag.FilialSet, "Id", "Nome", "Coligada.Nome", (short?)ViewBag.FilialId), "Selecione filial...", htmlAtrr)
+                        @Html.ValidationMessage("FilialId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="AplicacaoId">Aplicação</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("AplicacaoId", new SelectList(ViewBag.AplicacaoSet ?? new List<LVSA.Security.Application.ViewModels.AplicacaoViewModel> { }, "Id", "Exibicao", (int?)ViewBag.AplicacaoId), "Selecione aplicação...", htmlAtrr)
+                        @Html.ValidationMessage("AplicacaoId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="col-md-6">
+                @if (Model != null && Model.Usuario != null)
+                {
+                    <div id="Usuario" class="form-group">
+                        <label class="control-label col-md-4" for="CODUSUARIO">Usuário</label>
+                        <div class="col-md-8">
+                            <div class="input-group">
+
+                                @Html.HiddenFor(model => model.Usuario.Id)
+                                @Html.HiddenFor(model => model.Usuario.Id)
+
+                                @Html.Hidden("CODUSUARIO", Model.Usuario.Id)
+
+                                <input type="text" value="@Model.Usuario.Id – @Model.Usuario.Nome" readonly class="form-control required @(!Model.Usuario.Ativo ? "red" : "")" />
+                                <span class="input-group-btn">
+                                    <button id="Alterar" class="btn btn-sm btn-warning" type="button" @(ViewBag.GrupoSet != null ? "disabled" : "")>
+                                        Alterar
+                                        <i class="ace-icon fa fa-retweet bigger-110"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <span class="red">@(!Model.Usuario.Ativo ? "Este usuário está inativo" : "")</span>
+                        </div>
+                    </div>
+                }
+                <div id="Pesquisa" class="form-group" style="@(Model != null && Model.Usuario != null ? "display:none;" : "")">
+                    <label class="control-label col-md-4" for="Pesquisa">Pesquisa</label>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <input id="Pesquisa" name="Pesquisa" type="text" class="form-control required" value="@ViewBag.Pesquisa" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-sm btn-primary" type="submit" value="Pesquisa">
+                                    Buscar
+                                    <i class="ace-icon fa fa-search bigger-110"></i>
+                                </button>
+                            </span>
+                        </div>
+                        @Html.ValidationMessage("CODUSUARIO", new { @class = "text-danger" })
+                        <span class="help-block">Pesquise por código de acesso ou nome do usuário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selecionar-filtro" class="form-actions no-color" style="@(Model != null && Model.Usuario != null && ViewBag.GrupoSet != null ? "display:none;" : "")">
+            <div>
+                <button type="submit" class="btn btn-white btn-primary btn-bold" title="Selecionar fitro">Pesquisar <i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <br />
+
+    if (Model != null && Model.Usuario != null && ViewBag.GrupoSet != null)
+    {
+        <div id="filtrado">
+
+            <div class="pull-left">
+                @if (((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Count() != 0)
+                {
+                    <a id="Marcar" href="javascript:void(0);" class="btn btn-white btn-success btn-bold" title="Atualizar">Todos <i class="fa fa-check-square-o"></i></a>
+                    <a id="Desmarcar" href="javascript:void(0);" class="btn btn-white btn-danger btn-bold" title="Atualizar">Nenhum <i class="fa fa-square-o"></i></a>
+                }
+                <button id="alterar-filtro" type="button" class="btn btn-default btn-bold btn-white" title="Alterar filtro">Alterar pesquisa <i class="fa fa-retweet"></i></button>
+                @if (((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Count() == 0)
+                {
+                    <label class="red"> &nbsp; Não há grupo cadastrado para a pesquisa</label>
+                }
+            </div>
+
+            <div class="clearfix">
+            </div>
+            @if (((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Count() != 0)
+            {
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="dd">
+
+                            @{
+                int cont = 0;
+                            }
+
+                            @foreach (var u in ((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Select(s => s.Aplicacao).Distinct())
+                            {
+                                <ol class="dd-list">
+                                    <li class="dd-item dd2-item" data-id="0">
+                                        <div class="dd2-handle">
+                                            <i class="normal-icon ace-icon @u.Icon blue bigger-130"></i>
+
+                                            <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                        </div>
+                                        <div class="dd2-content">
+                                            @u.Exibicao
+                                        </div>
+                                        <ol class="dd-list">
+                                            @foreach (var e in ((IEnumerable<LVSA.Security.Application.ViewModels.GrupoViewModel>)ViewBag.GrupoSet).Where(w => w.AplicacaoId == u.Id))
+                                            {
+                                                <li class="dd-item dd2-item" data-id="@e.Id">
+                                                    <div class="dd2-handle">
+                                                        <i class="normal-icon ace-icon fa fa-users @(Model.Usuario.GrupoSet != null && Model.Usuario.GrupoSet.Select(s => s.Id).Contains(@e.Id) ? "green" : "red") bigger-130"></i>
+
+
+                                                        <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                                    </div>
+                                                    <div class="dd2-content">
+                                                        <input type="hidden" name="GrupoSet[@cont].Id" value="@e.Id" />
+                                                        <div class="checkbox" style="margin-top:0!important;margin-bottom:0!important;">
+                                                            <label>
+                                                                <input class="Grupo ace" name="GrupoSet[@cont].Selecionado" @(Model.Usuario.GrupoSet != null && Model.Usuario.GrupoSet.Select(s => s.Id).Contains(@e.Id) ? "checked" : "") type="checkbox" value="True">
+                                                                <span class="lbl "> @e.Nome</span>
+                                                            </label>
+                                                        </div>
+
+
+                                                    </div>
+                                                </li>
+                                                cont++;
+                                            }
+                                        </ol>
+                                    </li>
+                                </ol>
+                            }
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+
+
+                <div class="form-actions no-color">
+                    <div>
+                        <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                        <a id="Cancelar" href="javascript:void(0);" class="btn btn-default" title="Cancelar">Cancelar <i class="fa fa-remove"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    }
+
+}
+
+
+
+@if (ViewBag.UsuarioSet != null)
+{
+    <div id="Usuarios" class="modal fade">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title"><i class="fa fa-search"></i> Pesquisar <small>usuário</small></h4>
+                </div>
+                <!-- dialog body -->
+                <div class="modal-body" style="max-height: 400px; overflow: auto;">
+                    @foreach (var u in (IEnumerable<LVSA.Security.Application.ViewModels.UsuarioViewModel>)ViewBag.UsuarioSet)
+                    {
+                        using (Html.BeginForm("Usuarios", "Agrupamento", new { id = u.Id, codigo = u.Id }, FormMethod.Post, new { @class = "escolha" }))
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input onclick="this.form.submit();" type="radio">
+                                    <span class="lbl">@u.Id – @u.Nome</span>
+                                </label>
+                            </div>
+                        }
+                    }
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+
+@section scripts {
+    <script>
+    $(function () {
+        $('button#Alterar').click(function () {
+            $('input[Name="CODUSUARIO"]').val('');
+            $('#Usuario').hide();
+            $('#Pesquisa').show();
+        });
+
+
+
+        if ($("#Usuarios").length) {
+
+            $('form.escolha input[type="radio"]').click(function () {
+                $('form.escolha input[type="radio"]').attr('disabled', true);
+                $(this).attr('disabled', false);
+            });
+
+            $("#Usuarios").modal({
+                "backdrop": "static",
+                "keyboard": true,
+                "show": true
+            });
+        }
+
+        $('#alterar-filtro, #Cancelar').click(function () {
+            $('#filtrado').remove();
+
+            $('form#Filtro select, button#Alterar').each(function () {
+                $(this).attr('disabled', false).trigger('update');
+            });
+
+            $('#selecionar-filtro').show();
+        });
+
+        if ($('#filtrado').length) {
+            $('a#Marcar').click(function () {
+                $('input[type="checkbox"].Grupo').prop('checked', true);
+            });
+            $('a#Desmarcar').click(function () {
+                $('input[type="checkbox"].Grupo').prop('checked', false);
+            });
+        }
+
+        $('select[Name="FilialId"]').change(function () {
+
+            $('select[Name="AplicacaoId"]').find("option:selected").prop("selected", false).trigger('update');
+            $('select[Name="GrupoId"]').html('<option value="">Selecione grupo...</option>').trigger('update');
+
+            if ($(this).val().length > 0) {
+
+                $('select[Name="AplicacaoId"]').html('<option value="">Carregando...</option>').prop('disabled', true).trigger('update');
+
+                var id = $(this).val();
+
+                LVSA.Ajax.Request({ type: 'POST', url: '@(serverAPI)api/aplicacao/' + id, data: {}, headers: { 'Authorization': 'Bearer @TempData["Provider"]' } })
+                    .Get()
+                    .success(function (data) {
+                        if (data != null && data.length > 0) {
+                            $('select[Name="AplicacaoId"]').html('<option value="">Selecione aplicação...</option>');
+                            $.each(data, function (index, value) {
+                                $('select[Name="AplicacaoId"]').append('<option ' + (data.length == 1 ? "selected" : "") + ' value="' + value.Id + '"> ' + value.Exibicao + '</option>')
+                            });
+                            if (data.length == 1)
+                                $('select[Name="AplicacaoId"]').trigger('change');
+                        }
+                        else
+                            $('select[Name="AplicacaoId"]').html('<option value="">Ops! Sem resultados</option>');
+                    })
+                    .error(function () {
+                        LVSA.CDN.Plugins.Gritter.Error("Ops! Ocorreu um erro", "Não foi possível carregar o campo. Tente novamente mais tarde ou contacte o administrador", true, true);
+                        $('select[Name="AplicacaoId"]').html('<option value="">Falha no carregamento</option>');
+                    })
+                    .complete(function () {
+                        $('select[Name="AplicacaoId"]').prop('disabled', false).trigger('update');
+                    });
+
+            }
+        });
+
+    });
+    </script>
+}

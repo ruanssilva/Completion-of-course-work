@@ -1,0 +1,50 @@
+﻿@model LVSA.Security.Application.ViewModels.TipoRecursoViewModel
+
+@{
+    ViewBag.Title = "Tipo de recurso";
+    ViewBag.Description = "Deletar tipo de recurso";
+}
+
+<h4 class="red">Atenção!</h4>
+<h5>Deseja realmente deletar este tipo de recurso?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-danger" title="Deletar">Deletar <i class="fa fa-trash-o"></i></button> |
+                <a href="~/TipoRecurso" class="btn btn-default" title="Voltar para aplicações">Voltar para tipos de recurso <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

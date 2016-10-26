@@ -1,0 +1,425 @@
+﻿@model LVSA.Security.Presentation.ViewModels.UsuariosViewModel
+
+@{
+    ViewBag.Title = "Usuário";
+    ViewBag.Description = "Pesquisar usuário";
+}
+
+@using (Html.BeginForm("Index", "Usuario", FormMethod.Post, new { @id = "Pesquisa" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="Pesquisa">Pesquisa</label>
+                    <div class="col-md-8">
+                        <input id="Pesquisa" name="Pesquisa" type="text" class="form-control" required @(!string.IsNullOrWhiteSpace(ViewBag.pesquisa) ? "disabled" : "") value="@ViewBag.Pesquisa" />
+                        @Html.ValidationMessage("Pesquisa", new { @class = "text-danger" })
+                        <span class="help-block">Pesquise por código de acesso ou nome do usuário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selecionar-filtro" class="form-actions no-color" style="@(!string.IsNullOrWhiteSpace(ViewBag.Pesquisa) ? "display:none;" : "")">
+            <div>
+                <button type="submit" class="btn btn-white btn-primary btn-bold" title="Selecionar fitro">Pesquisar <i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.Pesquisa) && ViewBag.UsuarioSet != null)
+{
+    <div id="filtro">
+
+        <div class="pull-left">
+            <a href="javascript:location.reload();" class="btn btn-white btn-success btn-bold" title="Atualizar">Atualizar <i class="fa fa-refresh"></i></a>
+            <button id="alterar-filtro" type="button" class="btn btn-default btn-bold btn-white" title="Alterar filtro">Alterar pesquisa <i class="fa fa-retweet"></i></button>
+        </div>
+
+        <div class="clearfix">
+            <div class="pull-right tableTools-container"></div>
+        </div>
+
+        <div class="table-header">
+            Resultados para usuários
+        </div>
+
+
+        <table class="table datatable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Usuario.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Usuario.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Usuario.Ativo)
+                    </th>
+
+                    <th class="action-header"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in (IEnumerable<LVSA.Security.Application.ViewModels.UsuarioViewModel>)ViewBag.UsuarioSet)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @(item.Ativo ? "Sim" : "Não")
+                        </td>
+
+                        <td class="text-right">
+                            <div class="hidden-sm hidden-xs action-buttons">
+
+                                <a class="orange" href="~/Agrupamento/Usuario/@item.Id" title="Agrupar">
+                                    <i class="ace-icon fa fa-users bigger-130"></i>
+                                </a>
+
+                                <a class="blue" href="~/Usuario/Details/Pesquisa/@item.Id/@item.Id" title="Visualizar">
+                                    <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                </a>
+
+                                <a class="green" href="~/Usuario/Edit/Pesquisa/@item.Id/@item.Id" title="Editar">
+                                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                </a>
+
+                            </div>
+
+                            <div class="hidden-md hidden-lg">
+                                <div class="inline pos-rel">
+                                    <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                        <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                        <li>
+                                            <a href="~/Agrupamento/Usuario/@item.Id" class="tooltip-info" data-rel="tooltip" title="Agrupar">
+                                                <span class="orange">
+                                                    <i class="ace-icon fa fa-users bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Usuario/Details/Pesquisa/@item.Id/@item.Id" class="tooltip-info" data-rel="tooltip" title="Visualizar">
+                                                <span class="blue">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Usuario/Edit/Pesquisa/@item.Id/@item.Id" class="tooltip-success" data-rel="tooltip" title="Editar">
+                                                <span class="green">
+                                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+}
+
+
+
+@if (Model.Usuario != null)
+{
+    if (ViewBag.Details != null && (bool)ViewBag.Details)
+    {
+        <div id="Details" class="modal fade">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"><i class="fa fa-search"></i> Visualizar <small>usuário</small></h4>
+                    </div>
+                    <!-- dialog body -->
+                    <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usuario.Id)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Usuario.Id)
+                            </dd>
+
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usuario.Nome)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Usuario.Nome)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usuario.Email)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Usuario.Email)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usuario.Ativo)
+                            </dt>
+
+                            <dd>
+                                @(Model.Usuario.Ativo ? "Sim" : "Não")
+                            </dd>
+
+
+
+                        </dl>
+
+                        <div class="widget-box transparent" id="recent-box">
+                            <div class="widget-header">
+                                <h4 class="widget-title lighter smaller">
+                                    <i class="ace-icon fa fa-flag blue"></i> Contexto disponíveis
+                                </h4>
+
+                                <div class="widget-toolbar no-border">
+                                    <ul class="nav nav-tabs" id="recent-tab">
+                                        <li class="active">
+                                            <a aria-expanded="true" data-toggle="tab" href="#coligadas-tab" class="not-show-loading">Coligadas</a>
+                                        </li>
+
+                                        <li class="">
+                                            <a aria-expanded="false" data-toggle="tab" href="#filiais-tab" class="not-show-loading">Filiais</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main padding-4">
+                                    <div class="tab-content padding-8">
+                                        <div id="coligadas-tab" class="tab-pane active">
+
+                                            <!-- #section:pages/dashboard.coligadas -->
+                                            <ul id="coligadas" class="item-list ui-sortable">
+                                                @foreach (var c in Model.Usuario.UsuarioFilialSet.Select(s => new { ColigadaId = s.ColigadaId, Nome = "#nome", }).Distinct())
+                                                {
+                                                    <li class="item-grey clearfix ui-sortable-handle">
+                                                        <label class="inline">
+                                                            <span class="lbl"> @c.Nome</span>
+                                                        </label>
+
+                                                        <div class="pull-right easy-pie-chart percentage">
+                                                            <span class="percent"><big>@c.ColigadaId</big></span>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+
+                                        </div>
+
+                                        <div id="filiais-tab" class="tab-pane">
+
+                                            <!-- #section:pages/dashboard.filiais -->
+                                            <ul id="filiais" class="item-list ui-sortable">
+                                                @foreach (var c in Model.Usuario.UsuarioFilialSet.Select(s => new { FilialId = s.FilialId, Nome = "#nome", }).Distinct())
+                                                {
+                                                    <li class="item-grey clearfix ui-sortable-handle">
+                                                        <label class="inline">
+                                                            <span class="lbl"> @c.Nome</span>
+                                                        </label>
+
+                                                        <div class="pull-right easy-pie-chart percentage">
+                                                            <span class="percent"><big>@c.FilialId</big></span>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- /.widget-main -->
+                            </div><!-- /.widget-body -->
+                        </div>
+
+
+
+
+                    </div>
+                    <!-- dialog buttons -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                        <a href="~/Usuario/Edit/Pesquisa/@Model.Usuario.Id/@Model.Usuario.Id" class="btn btn-warning">Editar <i class="fa fa-edit"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <div id="CreateOrEdit" class="modal fade">
+            <div class="modal-dialog">
+                @using (Html.BeginForm("Action", "Usuario", new { id = Model.Usuario.Id, codigo = Model.Usuario.Id }, FormMethod.Post))
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title"><i class="fa fa-edit"></i> @(Model.Usuario.Id > 0 ? "Novo" : "Editar") <small>usuário</small></h4>
+                        </div>
+                        <!-- dialog body -->
+                        <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                            @Html.AntiForgeryToken()
+
+                            
+
+                            <div class="form-horizontal">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Usuario.Codigo, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Usuario.Codigo, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Usuario.Codigo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Usuario.Nome, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Usuario.Nome, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Usuario.Nome, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Usuario.Email, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Usuario.Email, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Usuario.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.Usuario.Ativo)</label>
+                                    <div class="col-md-8">
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Usuario.Ativo)" @(Model.Usuario.Ativo ? "checked" : "") id="@Html.IdFor(model => model.Usuario.Ativo)" type="radio" value="True" />
+                                                <span class="lbl"> Sim</span>
+                                                @Html.ValidationMessageFor(model => model.Usuario.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Usuario.Ativo)" @(!Model.Usuario.Ativo ? "checked" : "") id="@Html.IdFor(model => model.Usuario.Ativo)" type="radio" value="False" />
+                                                <span class="lbl"> Não</span>
+                                                @Html.ValidationMessageFor(model => model.Usuario.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.Usuario.Bloqueado)</label>
+                                    <div class="col-md-8">
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Usuario.Bloqueado)" @(Model.Usuario.Bloqueado ? "checked" : "") id="@Html.IdFor(model => model.Usuario.Bloqueado)" type="radio" value="True" />
+                                                <span class="lbl"> Sim</span>
+                                                @Html.ValidationMessageFor(model => model.Usuario.Bloqueado, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Usuario.Bloqueado)" @(!Model.Usuario.Bloqueado ? "checked" : "") id="@Html.IdFor(model => model.Usuario.Bloqueado)" type="radio" value="False" />
+                                                <span class="lbl"> Não</span>
+                                                @Html.ValidationMessageFor(model => model.Usuario.Bloqueado, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Usuario.TipoUsuarioId, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Usuario.TipoUsuarioId, new SelectList(ViewBag.TipoUsuarioSet, "Id", "Nome", Model.Usuario.TipoUsuarioId), "Selecione...", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Usuario.TipoUsuarioId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <!-- dialog buttons -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Salvar <i class="fa fa-save"></i></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+
+}
+
+@section scripts {
+    <script>
+        $(function () {
+            if ($('#CreateOrEdit').length)
+                $("#CreateOrEdit").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+            if ($("#Details").length)
+                $("#Details").modal({
+                    "backdrop": "static",
+                    "keyboard": true,
+                    "show": true
+                });
+
+            $('#alterar-filtro').click(function () {
+                $('#filtro').remove();
+
+                $('form#Pesquisa select, form#Pesquisa input[type="text"]').each(function () {
+                    $(this).attr('disabled', false);
+                });
+
+                $('#selecionar-filtro').show();
+            });
+        });
+    </script>
+}

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="e086dc48-c88b-4ca4-ac37-4966ab519f0d" name="MoradorAppService_ObterTodos" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="30a58b90-e6fa-4ec5-98ee-f862d99ef5c0" name="MoradorAppService_ObterTodos" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="ccb1d0c0-24b5-4cae-9100-a26f159d5b85" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="417a1425-140e-44db-83d2-43d76e0968bc" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="161196ea-f4a5-4c11-9688-b06afecc1403" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="643140b7-e020-4ff0-ae10-5cfc13c1e360" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="db7e87e8-0d7a-42f5-a2bb-ee6b013349b2" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="7fe459b3-1ff7-461a-ba91-58549f1c8fec" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="2c5ef72d-5ec1-429d-b7b0-49165bf3c20b" LastKnownName="ExecutionOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="161196ea-f4a5-4c11-9688-b06afecc1403" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="76a0d79f-2a13-43b9-a2f6-2d2be7c91bb3" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="ee93f3a5-badf-4456-8e4f-eb71ba287215" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="643140b7-e020-4ff0-ae10-5cfc13c1e360" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="db7e87e8-0d7a-42f5-a2bb-ee6b013349b2" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="cd873e0b-5db7-4ebd-93be-995372e0af1d" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="2c5ef72d-5ec1-429d-b7b0-49165bf3c20b" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="7fe459b3-1ff7-461a-ba91-58549f1c8fec" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="e547646c-8751-4cf8-9aad-bb69ef48924c" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="31ec73a3-e34c-487a-aa63-6a256c22f2b9" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="0a82b925-b04b-4b7e-a576-9aac9bae18de" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="7fe459b3-1ff7-461a-ba91-58549f1c8fec" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="99ed3cc6-25cc-4f4b-a33c-68b4bf2e64f9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e547646c-8751-4cf8-9aad-bb69ef48924c" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="42af0700-c6b8-4e2e-8b7e-9be815f433c8" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="521c4741-14cf-4f85-94c4-94c352b2b150" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="727181c4-9d56-4618-bb20-829da7756aed" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="eb5a6e1e-ecf5-4ddc-92c8-a9a41f05f368" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1e454be0-5447-450b-9eca-0188511e4d5a" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="727181c4-9d56-4618-bb20-829da7756aed" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="7ca99f9f-34f3-4d8d-a9ba-083897738586" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="31ec73a3-e34c-487a-aa63-6a256c22f2b9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="eb5a6e1e-ecf5-4ddc-92c8-a9a41f05f368" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0a82b925-b04b-4b7e-a576-9aac9bae18de" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1e454be0-5447-450b-9eca-0188511e4d5a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="521c4741-14cf-4f85-94c4-94c352b2b150" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="acbf240f-3d6f-433d-91b8-b73b3a1efdd1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="2c5ef72d-5ec1-429d-b7b0-49165bf3c20b" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8f898cf3-ba12-4a0a-8c48-e7acc6c5cdef" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="417a1425-140e-44db-83d2-43d76e0968bc" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2133a081-7dad-45b6-81a6-768c27d1ee9f" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" LastKnownName="this : MoradorAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="cb55bdf7-100a-4527-84c6-0143c5ac1d80" name="this : MoradorAppService" isActor="false" lifelineDisplayName="this : MoradorAppService" referencedInstance="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=MoradorAppService ObjectInstance=&quot;Object instance 1&quot;)" referencedType="LVSA‎.Housing‎.Application‎.MoradorAppService">
+            <referencesInternal>
+              <reference Id="107f4f90-4a14-4dc9-b8e2-531fc356569f" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=MoradorAppService)&quot;)" tag="DGQL" />
+              <reference Id="c77638bf-41b5-42a6-837a-126173908114" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=MoradorAppService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="161196ea-f4a5-4c11-9688-b06afecc1403" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="417a1425-140e-44db-83d2-43d76e0968bc" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="07ae2996-edae-4b74-8f03-ec1c3b5dc1e8" name="this._service : IServiceBase&lt;TEntity&gt;" isActor="false" lifelineDisplayName="this._service : IServiceBase&lt;TEntity&gt;" referencedInstance="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3 GenericArguments=[(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=0),(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=1),(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=2)]) Member=_service ObjectInstance=&quot;Object instance 80&quot;)" referencedType="LVSA‎.Housing‎.Domain‎.Interfaces‎.Services‎.IServiceBase‎&lt;‎&gt;">
+            <referencesInternal>
+              <reference Id="faa41e82-73cd-4843-a0fd-da2aeed4b368" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Domain.Interfaces.Services)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))&quot;)" tag="DGQL" />
+              <reference Id="837f8139-5c79-48f8-ad03-857354759cc7" handle="(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="727181c4-9d56-4618-bb20-829da7756aed" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="521c4741-14cf-4f85-94c4-94c352b2b150" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="60e4ec03-6f21-4e29-a016-7edea7015828" name="ObterTodos" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="115a05b6-cbe0-4ee3-a2f7-6e0487cb3322" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=MoradorAppService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=MoradorAppService Member=ObterTodos)&quot;)" tag="DGQL" />
+              <reference Id="4a17a01e-f25f-4613-9b7c-f29f273823c7" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=MoradorAppService Member=ObterTodos)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="ee93f3a5-badf-4456-8e4f-eb71ba287215" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="643140b7-e020-4ff0-ae10-5cfc13c1e360" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="6a1ae6b4-b3d1-45dd-8311-774cc569dab7" name="Filtrar" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="Filtrar(f =&gt; true)">
+            <referencesInternal>
+              <reference Id="41bda7be-f70e-41f6-931f-27507e8ded93" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) Member=(Name=Filtrar OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/System.Core.dll&amp;quot; Namespace=System.Linq.Expressions Type=(Name=Expression GenericParameterCount=1 GenericArguments=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=(Name=Func GenericParameterCount=2 GenericArguments=[(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=1),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Boolean)]))]))]))&quot;)" tag="DGQL" />
+              <reference Id="e03605fe-4e63-46a8-a032-af88dbbf47e1" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) Member=(Name=Filtrar OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/System.Core.dll&quot; Namespace=System.Linq.Expressions Type=(Name=Expression GenericParameterCount=1 GenericArguments=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=2 GenericArguments=[(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=1),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Boolean)]))]))]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="db7e87e8-0d7a-42f5-a2bb-ee6b013349b2" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="e547646c-8751-4cf8-9aad-bb69ef48924c" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="f2545db2-d437-4009-8920-0aef3d79346e" name="IServiceBase‎&lt;TEntity‎&gt;.Find" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_service.Find(filter)">
+            <referencesInternal>
+              <reference Id="0c61d0e7-3de3-400f-bc6c-e91cbadcac63" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Domain.Interfaces.Services)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) Member=(Name=Find OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/System.Core.dll&amp;quot; Namespace=System.Linq.Expressions Type=(Name=Expression GenericParameterCount=1 GenericArguments=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=(Name=Func GenericParameterCount=2 GenericArguments=[(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) ParameterIdentifier=0),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Boolean)]))]))]))&quot;)" tag="DGQL" />
+              <reference Id="ee620384-e8c5-4393-99b7-22aa1f73089e" handle="(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) Member=(Name=Find OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/System.Core.dll&quot; Namespace=System.Linq.Expressions Type=(Name=Expression GenericParameterCount=1 GenericArguments=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=2 GenericArguments=[(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) ParameterIdentifier=0),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Boolean)]))]))]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="31ec73a3-e34c-487a-aa63-6a256c22f2b9" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="eb5a6e1e-ecf5-4ddc-92c8-a9a41f05f368" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="3eb4347b-1a9c-476f-be55-acaa445a96e3" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1e454be0-5447-450b-9eca-0188511e4d5a" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="0a82b925-b04b-4b7e-a576-9aac9bae18de" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="76a0d79f-2a13-43b9-a2f6-2d2be7c91bb3" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="2133a081-7dad-45b6-81a6-768c27d1ee9f" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="99ed3cc6-25cc-4f4b-a33c-68b4bf2e64f9" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8f898cf3-ba12-4a0a-8c48-e7acc6c5cdef" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="7ca99f9f-34f3-4d8d-a9ba-083897738586" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="acbf240f-3d6f-433d-91b8-b73b3a1efdd1" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

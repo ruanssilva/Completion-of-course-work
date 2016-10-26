@@ -1,0 +1,69 @@
+﻿@model LVSA.Housing.Presentation.ViewModels.MultaMoradorAppViewModel
+
+@{
+    ViewBag.Title = "Multa/Advertência";
+    ViewBag.Title = "Aplicar multa/advertência";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.MoradorIdSet, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.ListBoxFor(model => model.MoradorIdSet, new SelectList(ViewBag.MoradorSet, "Id", "Pessoa.Nome", Model.MoradorIdSet), htmlAttributes: new { @class = "form-control chosen-select ", @data_placeholder="Selecione..." })
+                <br />@Html.ValidationMessageFor(model => model.MoradorIdSet, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MultaId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.MultaId, new SelectList(ViewBag.MultaSet, "Id", "Nome", (object)Model.MultaId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })
+                <br />@Html.ValidationMessageFor(model => Model.MultaId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Desconto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Desconto, new { htmlAttributes = new { @class = "form-control maskmoney" } })
+                @Html.ValidationMessageFor(model => model.Desconto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Descricao, htmlAttributes: new { @class = "form-control maskmoney" })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataReferencia, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataReferencia, htmlAttributes: new { @class = "form-control datepicker-date", @data_mask = "$99/99/9999" })
+                @Html.ValidationMessageFor(model => model.DataReferencia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataVencimento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataVencimento, htmlAttributes: new { @class = "form-control datepicker-date", @data_mask = "$99/99/9999" })
+                @Html.ValidationMessageFor(model => model.DataVencimento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Aplicar">Aplicar <i class="fa fa-check"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}

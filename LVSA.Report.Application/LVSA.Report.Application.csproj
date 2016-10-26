@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE9712C8-7D1E-4B23-99A5-4BDD682E2A4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Report.Application</RootNamespace>
+    <AssemblyName>LVSA.Report.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppServiceBase.cs" />
+    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="CategoriaConsultaAppService.cs" />
+    <Compile Include="CategoriaCuboAppService.cs" />
+    <Compile Include="CategoriaInstrucaoAppService.cs" />
+    <Compile Include="ConsultaAppService.cs" />
+    <Compile Include="CuboAppService.cs" />
+    <Compile Include="GrupoAppService.cs" />
+    <Compile Include="InstrucaoAppService.cs" />
+    <Compile Include="Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Interfaces\ICategoriaConsultaAppService.cs" />
+    <Compile Include="Interfaces\ICategoriaCuboAppService.cs" />
+    <Compile Include="Interfaces\ICategoriaInstrucaoAppService.cs" />
+    <Compile Include="Interfaces\IConsultaAppService.cs" />
+    <Compile Include="Interfaces\ICuboAppService.cs" />
+    <Compile Include="Interfaces\IGrupoAppService.cs" />
+    <Compile Include="Interfaces\IInstrucaoAppService.cs" />
+    <Compile Include="Interfaces\IParametroAppService.cs" />
+    <Compile Include="Interfaces\IUsuarioGrupoAppService.cs" />
+    <Compile Include="ParametroAppService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioGrupoAppService.cs" />
+    <Compile Include="ViewModels\CategoriaConsultaViewModel.cs" />
+    <Compile Include="ViewModels\CategoriaCuboViewModel.cs" />
+    <Compile Include="ViewModels\CategoriaInstrucaoViewModel.cs" />
+    <Compile Include="ViewModels\ConsultaViewModel.cs" />
+    <Compile Include="ViewModels\CuboViewModel.cs" />
+    <Compile Include="ViewModels\GrupoViewModel.cs" />
+    <Compile Include="ViewModels\InstrucaoViewModel.cs" />
+    <Compile Include="ViewModels\ParametroViewModel.cs" />
+    <Compile Include="ViewModels\GrupoAcessoCuboViewModel.cs" />
+    <Compile Include="ViewModels\UsuarioGrupoViewModel.cs" />
+    <Compile Include="ViewModels\ValorViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Application\LVSA.Base.Application.csproj">
+      <Project>{1504e48f-fbde-45c7-a321-a3a73faa6dc6}</Project>
+      <Name>LVSA.Base.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Report.Domain\LVSA.Report.Domain.csproj">
+      <Project>{7261c834-dd53-4269-ad39-a8e597965c82}</Project>
+      <Name>LVSA.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Security.Application\LVSA.Security.Application.csproj">
+      <Project>{eb8d9277-1f8c-4425-b774-568c00fb2e92}</Project>
+      <Name>LVSA.Security.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LVSA.Security.Domain\LVSA.Security.Domain.csproj">
+      <Project>{387a935c-60e6-4bef-8a43-8c90a1376817}</Project>
+      <Name>LVSA.Security.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

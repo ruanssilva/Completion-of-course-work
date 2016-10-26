@@ -1,0 +1,157 @@
+﻿@model LVSA.Security.Presentation.ViewModels.ConcessoesViewModel
+
+@{
+    string serverAPI = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.Security.Service"];
+
+    ViewBag.Title = "Aplicação";
+    ViewBag.Description = "Acesso às aplicações";
+
+    object htmlAtrr = new { };
+
+    if (Model != null && ViewBag.AplicacaoSet != null)
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required", @disabled = "" };
+    }
+    else
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required" };
+    }
+}
+
+@using (Html.BeginForm("Aplicacao", "Concessao", FormMethod.Post, new { @id = "Filtro" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="FilialId">Filial</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("FilialId", new SelectList(ViewBag.FilialSet, "Id", "Nome", "Coligada.Nome", (short?)ViewBag.FilialId), "Selecione filial...", htmlAtrr)
+                        @Html.ValidationMessage("FilialId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selecionar-filtro" class="form-actions no-color" style="@(Model != null && ViewBag.AplicacaoSet != null ? "display:none;" : "")">
+            <div>
+                <button type="submit" class="btn btn-white btn-primary btn-bold" title="Selecionar fitro">Pesquisar <i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    if (Model != null && ViewBag.AplicacaoSet != null)
+    {
+        <div id="filtrado">
+
+            <div class="pull-left">
+                <a id="Marcar" href="javascript:void(0);" class="btn btn-white btn-success btn-bold" title="Atualizar">Todos <i class="fa fa-check-square-o"></i></a>
+                <a id="Desmarcar" href="javascript:void(0);" class="btn btn-white btn-danger btn-bold" title="Atualizar">Nenhum <i class="fa fa-square-o"></i></a>
+                <button id="alterar-filtro" type="button" class="btn btn-default btn-bold btn-white" title="Alterar filtro">Alterar pesquisa <i class="fa fa-retweet"></i></button>
+            </div>
+
+            <div class="clearfix">
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dd dd-draghandle">
+
+                        @{
+        int cont = 0;
+                        }
+
+
+                        <ol class="dd-list">
+                            <li class="dd-item dd2-item" data-id="0">
+                                <div class="dd2-handle">
+                                    <i class="normal-icon ace-icon fa fa-check blue bigger-130"></i>
+
+                                    <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                </div>
+                                <div class="dd2-content">
+                                    Aplicações disponíveis
+                                </div>
+                                <ol class="dd-list">
+                                    @foreach (var e in ((IEnumerable<LVSA.Security.Application.ViewModels.AplicacaoViewModel>)ViewBag.AplicacaoSet))
+                                    {
+                                        <li class="dd-item dd2-item" data-id="@e.Id">
+                                            <div class="dd2-handle">
+                                                <i class="normal-icon ace-icon @e.Icon @(Model.AplicacaoSet != null && Model.AplicacaoSet.Select(s => s.Id).Contains(@e.Id) ? "green" : "red") bigger-130"></i>
+
+
+                                                <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                            </div>
+                                            <div class="dd2-content">
+                                                <input type="hidden" name="AplicacaoSet[@cont].Id" value="@e.Id" />
+                                                <div class="checkbox" style="margin-top:0!important;margin-bottom:0!important;">
+                                                    <label style="padding-left:10px!important;">
+                                                        <input class="Grupo ace" name="AplicacaoSet[@cont].Selecionado" @(Model.AplicacaoSet != null && Model.AplicacaoSet.Select(s => s.Id).Contains(@e.Id) ? "checked" : "") type="checkbox" value="True">
+                                                        <span class="lbl "> @e.Exibicao <small>(@e.Nome)</small> </span>
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+                                        </li>
+                                        cont++;
+                                    }
+                                </ol>
+                            </li>
+                        </ol>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+
+
+
+            <div class="form-actions no-color">
+                <div>
+                    <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                    <a id="Cancelar" href="javascript:void(0);" class="btn btn-default" title="Cancelar">Cancelar <i class="fa fa-remove"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+
+    }
+}
+
+@section scripts{
+
+    <script>
+        $(function () {
+
+            $('#alterar-filtro, #Cancelar').click(function () {
+                $('#filtrado').remove();
+
+                $('form#Filtro select, button#Alterar').each(function () {
+                    $(this).attr('disabled', false).trigger('update');
+                });
+                $('#selecionar-filtro').show();
+            });
+
+            if ($('#filtrado').length) {
+                $('a#Marcar').click(function () {
+                    $('input[type="checkbox"].Grupo').prop('checked', true);
+                });
+                $('a#Desmarcar').click(function () {
+                    $('input[type="checkbox"].Grupo').prop('checked', false);
+                });
+            }
+                                   
+
+            $('#Filtro').submit(function () {
+                $('select[Name="FilialId"]').prop('disabled', false).prop('readonly', true);
+            });
+
+        });
+    </script>
+}

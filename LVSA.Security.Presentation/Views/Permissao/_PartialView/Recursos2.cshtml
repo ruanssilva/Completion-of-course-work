@@ -1,0 +1,62 @@
+﻿@model IEnumerable<LVSA.Security.Application.ViewModels.RecursoViewModel>
+
+<ol class="dd-list">
+    @foreach (var r in Model.Where(w => w.Ativo && ((long[])ViewBag.RecursoIdSet2).Contains(w.Id)).OrderBy(o => o.Exibicao))
+    {
+        <li class="dd-item dd2-item" data-id="@r.Id">
+            <div class="dd2-handle">
+                <i class="normal-icon ace-icon @r.Icon @(((long?[])ViewBag.RecursoIdSet).Contains(r.Id) ? "green" : "red") bigger-130"></i>
+
+
+                <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+            </div>
+            <div class="dd2-content">
+                <input type="hidden" name="Grupo.PermissaoSet[@TempData["Count"]].RecursoId" value="@r.Id" />
+                <div class="checkbox pull-left" style="margin-top:0!important;margin-bottom:0!important;">
+                    <label style="padding-left:10px!important;">
+                        <input class="Recurso ace" name="Grupo.PermissaoSet[@TempData["Count"]].Selecionado" @(((long?[])ViewBag.RecursoIdSet).Contains(r.Id) ? "checked" : "") type="checkbox" value="True">
+                        <span class="lbl "> @r.Exibicao</span>
+                    </label>
+                </div>
+
+                @if (r.Aplicacao.Desktop)
+                {
+                    <div class="for-desktop pull-right">
+                        <div class="checkbox-inline">
+                            <label>
+                                <input class="ace" name="Grupo.PermissaoSet[@TempData["Count"]].Read" @(((long?[])ViewBag.RecursoIdSet_Read).Contains(r.Id) ? "checked" : "") type="checkbox" value="True">
+                                <span class="lbl blue" title="Visualizar"> <i class="fa fa-eye"></i></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline ">
+                            <label>
+                                <input class="ace" name="Grupo.PermissaoSet[@TempData["Count"]].Write" @(((long?[])ViewBag.RecursoIdSet_Write).Contains(r.Id) ? "checked" : "") type="checkbox" value="True">
+                                <span class="lbl orange" title="Incluir"> <i class="fa fa-pencil"></i></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input class="ace" name="Grupo.PermissaoSet[@TempData["Count"]].Rewrite" @(((long?[])ViewBag.RecursoIdSet_Rewrite).Contains(r.Id) ? "checked" : "") type="checkbox" value="True">
+                                <span class="lbl green" title="Editar"> <i class="fa fa-edit"></i></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label>
+                                <input class="ace" name="Grupo.PermissaoSet[@TempData["Count"]].Delete" @(((long?[])ViewBag.RecursoIdSet_Delete).Contains(r.Id) ? "checked" : "") type="checkbox" value="True">
+                                <span class="lbl red" title="Deletar"> <i class="fa fa-trash-o"></i></span>
+                            </label>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            @{TempData["Count"] = ((int)TempData["Count"]) + 1;}
+
+            @if (r.RecursoSet != null && r.RecursoSet.Count > 0)
+            {
+                @Html.Partial("_PartialView/Recursos2", r.RecursoSet)
+            }
+
+        </li>
+    }
+</ol>

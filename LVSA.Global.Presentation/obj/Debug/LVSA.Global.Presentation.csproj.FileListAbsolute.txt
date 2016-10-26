@@ -1,0 +1,219 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.dll.config
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Antlr3.Runtime.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\AutoMapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Base.Presentation.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Newtonsoft.Json.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.Web.Common.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.Web.Mvc.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Helpers.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Mvc.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Optimization.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Razor.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.Razor.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\WebActivatorEx.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\WebGrease.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Owin.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.Identity.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\RazorGenerator.Mvc.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Application.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Dapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\DapperExtensions.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Base.Presentation.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Antlr3.Runtime.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\AutoMapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Newtonsoft.Json.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.Web.Common.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Ninject.Web.Mvc.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Helpers.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Mvc.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Optimization.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.Razor.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\System.Web.WebPages.Razor.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.Identity.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Report.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Financial.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Application.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\LVSA.Housing.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Dapper.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\Dapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\bin\DapperExtensions.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Presentation.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Antlr3.Runtime.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\AutoMapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Presentation.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Newtonsoft.Json.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.Web.Common.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.Web.Mvc.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Owin.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Helpers.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Mvc.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Optimization.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Razor.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.Razor.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\WebActivatorEx.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\WebGrease.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.REST.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Http.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\RazorGenerator.Mvc.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.Utility.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Net.Http.Formatting.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Presentation.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Antlr3.Runtime.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\AutoMapper.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Microsoft.Owin.Security.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Newtonsoft.Json.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.Web.Common.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Ninject.Web.Mvc.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Helpers.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Mvc.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Optimization.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Razor.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.WebPages.Razor.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.REST.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Web.Http.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.Utility.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Base.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\System.Net.Http.Formatting.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Security.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\bin\LVSA.Noticia.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Presentation\obj\Debug\LVSA.Global.Presentation.pdb

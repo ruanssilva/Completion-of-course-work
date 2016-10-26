@@ -1,0 +1,38 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\DapperExtensions.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\DapperExtensions.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\DapperExtensions.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Base.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Base.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\LVSA.Global.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\Dapper.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\DapperExtensions.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Global.Infrastructure.Data\obj\Release\LVSA.Global.Infrastructure.Data.pdb

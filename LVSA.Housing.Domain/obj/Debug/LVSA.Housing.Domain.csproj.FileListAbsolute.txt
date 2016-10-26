@@ -1,0 +1,12 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Domain\bin\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Domain\bin\Debug\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\bin\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\bin\Debug\LVSA.Housing.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\bin\Debug\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\bin\Debug\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Housing.Domain\obj\Debug\LVSA.Housing.Domain.pdb

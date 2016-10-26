@@ -1,0 +1,475 @@
+﻿@model LVSA.Security.Presentation.ViewModels.RecursosViewModel
+
+@{
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+
+    ViewBag.Title = "Aplicação";
+    ViewBag.Description = "Recursos da aplicação";
+}
+
+<div class="pull-left">
+    <button id="exportar-recursos" type="button" class="btn btn-warning btn-bold btn-white btn-export" title="Exportar recurso">Exportar <i class="fa fa-cloud-download"></i></button>
+    <button id="cancelar-exportar-recursos" type="button" class="btn btn-danger btn-bold btn-white btn-gerar" style="display:none;" title="Cancelar">Cancelar <i class="fa fa-times"></i></button>
+    <button id="download-exportar-recursos" type="button" class="btn btn-success btn-bold btn-white btn-gerar" style="display:none;" title="Gerar script">Gerar script <i class="fa fa-refresh"></i></button>
+</div>
+
+<div class="clearfix"></div>
+<br />
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="dd">
+            <ol class="dd-list">
+                <li class="dd-item dd2-item" data-id="0">
+                    <div class="dd-handle dd2-handle">
+                        <i class="normal-icon ace-icon @Model.Aplicacao.Icon blue bigger-130"></i>
+
+                        <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                    </div>
+                    <div class="dd2-content">
+                        @Model.Aplicacao.Nome
+                        <div class="pull-right">
+                            <div class="link-export checkbox-inline" style="display:none;">
+                                <label>
+                                    <input id="marcar-todos" class="ace" name="RecursoId" type="checkbox">
+                                    <span class="lbl" title=""> </span>
+                                </label>
+                            </div>
+                            <div class="link-normal">
+                                <a href="~/Recurso/Create/Aplicacao/@Model.Aplicacao.Id" title="Criar recurso na raiz"><i class="fa fa-plus green"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @{
+                        TempData["##TempRecursoId"] = Model.RecursoSet.Select(s => s.Id).ToArray();
+                    }
+
+                    @using (Html.BeginForm("Export", "Recurso", new { id = Model.Aplicacao.Id }, FormMethod.Post, new { id = "form-recursos" }))
+                    {
+                        @Html.Partial("_PartialView/Recursos1", Model.RecursoSet.Where(w => w.RecursoPaiId == null))
+                    }
+
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="col-md-6">
+
+        @if (ViewBag.Export != null)
+        {
+            <textarea id="code-sql">
+                @ViewBag.Export
+            </textarea>
+            <span class="help-block">User o F11 para full screen</span>
+        }
+
+    </div>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="~/Aplicacao" class="btn btn-default" title="Voltar para lista">Voltar para aplicações <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>
+
+
+@if (Model.Recurso != null)
+{
+    if (ViewBag.Delete != null && (bool)ViewBag.Delete)
+    {
+        <div id="Delete" class="modal fade">
+            <div class="modal-dialog">
+                @using (Html.BeginForm("Delete", "Recurso", new { id = Model.Recurso.Id }, FormMethod.Post))
+                {
+                    <div class="modal-content">
+                        <!-- dialog body -->
+                        <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                            <h4 class="red">Atenção!</h4>
+                            <h5>Deseja realmente deletar este recurso?</h5>
+                            <hr />
+
+                            @Html.AntiForgeryToken()
+
+
+                            @Html.HiddenFor(model => model.Recurso.Id)
+                            @Html.HiddenFor(model => model.Recurso.AplicacaoId)
+
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Nome)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Recurso.Nome)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Descricao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Recurso.Peso)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Peso)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Recurso.Descricao)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Exibicao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Recurso.Exibicao)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Icon)
+                                </dt>
+
+                                <dd>
+                                    <i class="@Model.Recurso.Icon"></i> @Html.DisplayFor(model => model.Recurso.Icon)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.TipoRecursoId)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Recurso.TipoRecurso.Nome)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Recurso.Ativo)
+                                </dt>
+
+                                <dd>
+                                    @(Model.Recurso.Ativo ? "Sim" : "Não")
+                                </dd>
+
+                            </dl>
+
+                        </div>
+                        <!-- dialog buttons -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger">Deletar <i class="fa fa-trash-o"></i></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else if (ViewBag.Details != null && (bool)ViewBag.Details)
+    {
+        <div id="Details" class="modal fade">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"><i class="fa fa-search"></i> Visualizar <small>recurso</small></h4>
+                    </div>
+                    <!-- dialog body -->
+                    <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Nome)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Recurso.Nome)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Descricao)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Recurso.Descricao)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Peso)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Recurso.Peso)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Exibicao)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Recurso.Exibicao)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Icon)
+                            </dt>
+
+                            <dd>
+                                <i class="@Model.Recurso.Icon"></i> @Html.DisplayFor(model => model.Recurso.Icon)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.TipoRecursoId)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Recurso.TipoRecurso.Nome)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Recurso.Ativo)
+                            </dt>
+
+                            <dd>
+                                @(Model.Recurso.Ativo ? "Sim" : "Não")
+                            </dd>
+
+                        </dl>
+
+
+                    </div>
+                    <!-- dialog buttons -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK <i class="fa fa-check"></i></button>
+                        <a href="~/Recurso/Edit/Aplicacao/@Model.Recurso.AplicacaoId/@Model.Recurso.Id" class="btn btn-warning">Editar <i class="fa fa-edit"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div id="CreateOrEdit" class="modal fade">
+            <div class="modal-dialog">
+                @using (Html.BeginForm("Action", "Recurso", FormMethod.Post))
+                {
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title"><i class="fa @(Model.Recurso.Id > 0 ? "fa-edit" : "fa-plus")"></i> @(Model.Recurso.Id > 0 ? "Editar" : "Novo") <small>recurso</small></h4>
+                        </div>
+                        <!-- dialog body -->
+                        <div class="modal-body" style="max-height: 400px; overflow: auto;">
+
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                @Html.HiddenFor(model => model.Recurso.Id)
+                                @Html.HiddenFor(model => model.Recurso.AplicacaoId)
+                                @Html.HiddenFor(model => model.Recurso.RecursoPaiId)
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Nome, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Nome, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Nome, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.TipoRecursoId, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Recurso.TipoRecursoId, new SelectList(ViewBag.TipoRecursoSet, "Id", "Nome", Model.Recurso.TipoRecursoId), "Selecione tipo recurso...", new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.TipoRecursoId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Exibicao, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Exibicao, new { @class = "form-control", @required = "" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Exibicao, "", new { @class = "text-danger" })
+                                        <span class="help-block">Pense em um nome intuitivo para reconhecimento do recurso</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Controller, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Controller, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Controller, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Action, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Action, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Action, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Icon, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Icon, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Icon, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Descricao, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextAreaFor(model => model.Recurso.Descricao, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Descricao, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Peso, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Peso, new { @class = "form-control", @data_mask="$0,9?999" })
+                                        @Html.ValidationMessageFor(model => model.Recurso.Peso, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.Recurso.Ativo)</label>
+                                    <div class="col-md-8">
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Recurso.Ativo)" @(Model.Recurso.Ativo ? "checked" : "") id="@Html.IdFor(model => model.Recurso.Ativo)" type="radio" value="True" />
+                                                <span class="lbl"> Sim</span>
+                                                @Html.ValidationMessageFor(model => model.Recurso.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input class="ace" name="@Html.NameFor(model => model.Recurso.Ativo)" @(!Model.Recurso.Ativo ? "checked" : "") id="@Html.IdFor(model => model.Recurso.Ativo)" type="radio" value="False" />
+                                                <span class="lbl"> Não</span>
+                                                @Html.ValidationMessageFor(model => model.Recurso.Ativo, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Recurso.Tags, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(model => model.Recurso.Tags, new { @class = "form-control field-tags" })
+                                        <span class="help-block">Palavras que serão utilizadas para pesquisa de recurso pelo usuário. Com a existência de parâmetros não deve ser informada.</span>
+                                        @Html.ValidationMessage("Tags", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- dialog buttons -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Salvar <i class="fa fa-save"></i></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar <i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+}
+
+@section styles {
+    <link href="@(serverCDN)Content/Plugins/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="@(serverCDN)Content/Plugins/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    @if (Model.Recurso != null)
+    {
+        if (ViewBag.Delete != null && (bool)ViewBag.Delete)
+        {
+            <script>
+                $(function () {
+                    $("#Delete").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+            </script>
+        }
+        else if (ViewBag.Details != null && (bool)ViewBag.Details)
+        {
+            <script>
+                $(function () {
+                    $("#Details").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+            </script>
+        }
+        else
+        {
+            <script>
+                $(function () {
+                    $("#CreateOrEdit").modal({
+                        "backdrop": "static",
+                        "keyboard": true,
+                        "show": true
+                    });
+                });
+            </script>
+        }
+    }
+
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/codemirror.js"></script>
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/fullscreen.js"></script>
+    <script src="@(serverCDN)Content/Plugins/CodeMirror/js/sql.js"></script>
+    <script>
+        $(function () {
+
+            if ($("#code-sql").length) {
+                var editor = CodeMirror.fromTextArea(document.getElementById("code-sql"), {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: "text/x-sql",
+                    extraKeys: {
+                        "F11": function (cm) {
+                            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                        },
+                        "Esc": function (cm) {
+                            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                        }
+                    }
+                });
+            }
+
+            $('#exportar-recursos').on('click', function () {
+                $('.link-normal, .btn-export').hide();
+                $('.link-export, .btn-gerar').fadeIn();
+            });
+            $('#cancelar-exportar-recursos').on('click', function () {
+                $('.link-normal, .btn-export').fadeIn();
+                $('.link-export, .btn-gerar').hide();
+            });
+            $('#download-exportar-recursos').on('click', function () {
+                $('#form-recursos').submit();
+            });
+            $('#marcar-todos').on('click', function () {
+                $('input[type="checkbox"].export-recurso').prop('checked', $(this).is(':checked'));
+                $('input[type="checkbox"].export-recurso').trigger('change');
+            });
+
+        });
+    </script>
+}

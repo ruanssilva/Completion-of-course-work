@@ -1,0 +1,125 @@
+﻿@model LVSA.Report.Presentation.ViewModels.InstrucaoAppViewModel
+
+@{
+    ViewBag.Title = "Instrução";
+    ViewBag.Description = "Editar instrução";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoriaInstrucaoId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.CategoriaInstrucaoId, new SelectList(ViewBag.CategoriaInstrucaoSet, "Id", "Nome", Model.CategoriaInstrucaoId), "Selecione", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => Model.CategoriaInstrucaoId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ativo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, true, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Sim</span>
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Ativo, false, htmlAttributes: new { @class = "ace" })
+                        <span class="lbl"> Não</span>
+                    </label>
+                </div>
+                <br />
+                @Html.ValidationMessageFor(model => model.Ativo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2"></label>
+            
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>@Html.DisplayNameFor(model => model.Code)</legend>
+                    @Html.TextAreaFor(model => model.CodeApp, htmlAttributes: new { @id = "code-csharp", @class = "form-control" })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.CodeApp, "", new { @class = "text-danger" })
+                </fieldset>
+            </div>
+        </div>        
+
+
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section styles {
+    <link href="~/Content/CodeMirror/css/codemirror.css" rel="stylesheet" />
+    <link href="~/Content/CodeMirror/css/fullscreen.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Content/CodeMirror/js/codemirror.js"></script>
+    <script src="~/Content/CodeMirror/js/fullscreen.js"></script>
+    <script src="~/Content/CodeMirror/js/clike.js"></script>
+    <script>
+
+        if ($("#view-csharp").length) {
+            var code = $("#view-csharp").html();
+            $("#view-csharp").html("");
+
+            var view = CodeMirror(document.getElementById("view-csharp"), {
+                value: code,
+                mode: 'text/x-csharp',
+                lineNumbers: true,
+                readOnly: true
+            });
+        }
+        if ($("#code-csharp").length) {
+            var editor = CodeMirror.fromTextArea(document.getElementById("code-csharp"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "text/x-csharp",
+                extraKeys: {
+                    "F11": function (cm) {
+                        cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                    },
+                    "Esc": function (cm) {
+                        if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                    }
+                }
+            });
+        }
+
+    </script>
+}

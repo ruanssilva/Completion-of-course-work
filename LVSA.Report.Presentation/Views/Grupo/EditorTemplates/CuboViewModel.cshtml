@@ -1,0 +1,25 @@
+﻿@model LVSA.Report.Application.ViewModels.CuboViewModel
+
+
+
+<tr class="">
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model=>model.Codigo)
+    @Html.HiddenFor(model=>model.Descricao)
+    @Html.HiddenFor(model => model.ConsultaId)
+    @Html.HiddenFor(model => model.InstrucaoId)
+        
+    <td>
+        @Html.EditorFor(model => model.Acesso)
+    </td>
+    <td>
+        @Model.Codigo
+    </td>
+    <td>
+        @Model.Descricao
+    </td>
+    <td class="text-right">
+        <i class="@Model.Icon"></i>
+    </td>
+</tr>

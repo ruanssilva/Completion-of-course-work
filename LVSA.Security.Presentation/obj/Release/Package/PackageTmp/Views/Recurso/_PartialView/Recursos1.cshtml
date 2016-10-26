@@ -1,0 +1,68 @@
+﻿@model IEnumerable<LVSA.Security.Application.ViewModels.RecursoViewModel>
+
+@if (Model != null && Model.Count() > 0)
+{
+    <ol class="dd-list">
+        @foreach (var r in Model.Where(w => ((long[])TempData["##TempRecursoId"]).Contains(w.Id)).OrderBy(o => o.Exibicao))
+        {
+            if (r.Herdado)
+            {
+                <li class="dd-item dd2-item" data-id="@r.Id" title="@r.Descricao">
+                    <div class="dd2-handle">
+                        <i class="normal-icon ace-icon @r.Icon blue bigger-130"></i>
+                        <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                    </div>
+                    <div class="dd2-content">@r.Exibicao <span class="badge pull-right badge-warning" title="@r.Aplicacao.Exibicao"><i class="fa fa-arrow-up"></i> Herdado</span></div>
+
+                    @if (r.RecursoSet != null && r.RecursoSet.Count > 0)
+                    {
+                        @Html.Partial("_PartialView/Recursos1", r.RecursoSet)
+                    }
+                </li>
+
+            }
+            else
+            {
+                <li class="dd-item dd2-item" data-id="@r.Id">
+                    <div class="dd2-handle">
+                        <i class="normal-icon ace-icon @r.Icon @(r.Ativo ? "green" : "red") bigger-130"></i>
+
+                        <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                    </div>
+                    <div class="dd2-content">
+                        @r.Exibicao
+                        <div class="pull-right">
+                            <div class="link-export checkbox-inline" style="display:none;">
+                                <label>
+                                    <input class="ace export-recurso" name="RecursoId" type="checkbox" value="@r.Id">
+                                    <span class="lbl" title=""> </span>
+                                </label>
+                            </div>
+                            <div class="link-normal">
+                                <a href="~/Recurso/Details/Aplicacao/@r.AplicacaoId/@r.Id" data-id="@r.Id" title="Visualizar"><i class="fa fa-search blue"></i> </a>
+                                <a href="~/Recurso/Create/Aplicacao/@r.AplicacaoId/@r.Id" data-id="@r.Id" title="Criar recurso filho"><i class="fa fa-plus green"></i></a>
+                                <a href="~/Recurso/Edit/Aplicacao/@r.AplicacaoId/@r.Id" data-id="@r.Id" title="Editar"><i class="fa fa-edit orange"></i></a>
+                                @{
+                                }
+                                
+
+                                @if (r.RecursoSet == null || r.RecursoSet.Where(w => ((long[])TempData["##TempRecursoId"]).Contains(w.Id)).Count() == 0)
+                                {
+                                    <a href="~/Recurso/Delete/Aplicacao/@r.AplicacaoId/@r.Id" data-id="@r.Id" title="Deletar"><i class="fa fa-trash-o red"></i></a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (r.RecursoSet != null && r.RecursoSet.Count > 0)
+                    {
+                        @Html.Partial("_PartialView/Recursos1", r.RecursoSet)
+                    }
+
+                </li>
+            }
+
+        }
+    </ol>
+}
+

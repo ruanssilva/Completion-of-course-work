@@ -1,0 +1,42 @@
+﻿@{
+    string serverAPI = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.Security.Service"];
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewBag.Title = "Escolha de contexto";
+}
+@using (Html.BeginForm("Index", "Contexto", FormMethod.Post, new { @id = "Contexto" }))
+{
+    <div class="lc-block toggled" id="l-login">
+        <p class="text-left">Você tem acesso a mais de um filial, selecione o contexto para começarmos.</p>
+
+        <div class="input-group m-b-20">
+            <span class="input-group-addon"><i class="zmdi zmdi-arrow-right"></i></span>
+            <div class="fg-line">
+                @Html.DropDownList("FilialId", new SelectList(ViewBag.FilialSet, "Id", "Nome", "Coligada.Nome", (short?)ViewBag.FilialId), "Selecione contexto...", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-login btn-danger btn-float pull-right"><i class="zmdi zmdi-arrow-forward"></i></button>
+        <button type="submit" class="btn btn-login btn-danger btn-float pull-left"><i class="zmdi zmdi-arrow-forward"></i></button>
+    </div>
+
+}
+
+
+<div style="text-align: center;">
+    <span class="white">© @DateTime.Now.Year – Housing @@ Leonelleo</span>
+</div>
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+
+
+
+        });
+
+    </script>
+}

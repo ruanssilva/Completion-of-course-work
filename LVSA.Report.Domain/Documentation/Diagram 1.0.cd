@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LVSA.Report.Domain.Auditoria">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAE=</HashCode>
+      <FileName>Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.AuditoriaComAtivo">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.AuditoriaComExclusaoLogica">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.AuditoriaComExclusaoLogicaComAtivo">
+    <Position X="11.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditoriaComExclusaoLogicaComAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.CategoriaConsulta">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CategoriaConsulta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.CategoriaCubo">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CategoriaCubo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.CategoriaInstrucao">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CategoriaInstrucao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.Consulta">
+    <Position X="10.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAQAAAQABAAAAAAgAAAAAQABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Consulta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.ConsultaParametro">
+    <Position X="3" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAChAAAAAACAAAAAAAAAAAAAAAAAABABAAA=</HashCode>
+      <FileName>ConsultaParametro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.Cubo">
+    <Position X="14.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAiAAAAAQAhACAAAAGAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Cubo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.CuboParametro">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAEBAAA=</HashCode>
+      <FileName>CuboParametro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.Grupo">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Grupo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.GrupoAcessoCubo">
+    <Position X="0.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAAAAAAAABAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>GrupoAcessoCubo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.Instrucao">
+    <Position X="12.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAQAAAQgBAAAAAAAgAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Instrucao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.InstrucaoNamespace">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQgAAAAAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InstrucaoNamespace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.Namespace">
+    <Position X="8" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Namespace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Report.Domain.Parametro">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAQIABAAAAACAAAAAAEAAAAAAAACAAAEAAAA=</HashCode>
+      <FileName>Parametro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.PermissaoCubo">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAIBAAAABAAAAAAAAAAAAAIAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>UsuarioAcessoCubo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Report.Domain.UsuarioGrupo">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAABAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuarioGrupo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

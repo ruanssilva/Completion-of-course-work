@@ -1,0 +1,70 @@
+﻿@model LVSA.Security.Application.ViewModels.ParametroViewModel
+
+@{
+    ViewBag.Title = "Parâmetro";
+    ViewBag.Description = "Visualizar parâmetro";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TSQLAtivo)
+        </dt>
+
+        <dd title="@(Model.TSQLAtivo ? Model.TSQL : "")">
+            @(Model.TSQLAtivo ? "Sim" : "Não")
+        </dd>
+
+        @if (!Model.TSQLAtivo)
+        {
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Mascara)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mascara)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Regex)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Regex)
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @(Model.Ativo ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+    <div>
+        <a href="~/Parametro/Edit/@Model.Id" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="~/Parametro" class="btn btn-default" title="Voltar para aplicações">Voltar para parâmetros <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

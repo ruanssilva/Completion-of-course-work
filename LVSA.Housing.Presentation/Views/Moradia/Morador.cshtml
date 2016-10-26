@@ -1,0 +1,153 @@
+﻿@model LVSA.Housing.Application.ViewModels.MoradorViewModel
+
+@{
+    ViewBag.Title = "Moradia";
+    ViewBag.Description = "Adicionar morador";
+}
+
+
+@if (Model == null || !(Model.PessoaId > 0))
+{
+    using (Html.BeginForm("Pessoa", "Moradia", FormMethod.Post))
+    {
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.HiddenFor(model => model.MoradiaId)
+
+            @if (ViewBag.PessoaSet == null)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Pessoa.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Pessoa.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Pessoa.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-actions no-color">
+                    <div>
+                        <button type="submit" class="btn btn-success"><i class="fa fa-search"></i> Buscar</button> |
+                        <a href="~/Moradia/Details/@Model.MoradiaId" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para moradia</a>
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PessoaId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => Model.PessoaId, new SelectList(ViewBag.PessoaSet, "Id", "Nome", (object)Model.PessoaId), "Selecione", htmlAttributes: new { @class = "form-control chosen-select" })
+                        @Html.ValidationMessageFor(model => Model.PessoaId)
+                    </div>
+                </div>
+
+                <div class="form-actions no-color">
+                    <div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Selecionar</button> |
+                        <a href="~/Moradia/Morador/@Model.MoradiaId" class="btn btn-danger"><i class="fa fa-eraser"></i> Limpar</a> |
+                        <a href="~/Moradia/Details/@Model.MoradiaId" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para moradia</a>
+                    </div>
+
+                </div>
+            }
+
+
+        </div>
+    }
+}
+else
+{
+
+    using (Html.BeginForm("Morador", "Moradia"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.HiddenFor(model => model.PessoaId)
+            @Html.HiddenFor(model => model.MoradiaId)
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pessoa.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Pessoa.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pessoa.DataNascimento)
+                </dt>
+
+                <dd>
+                    @(Model.Pessoa.DataNascimento != null ? Model.Pessoa.DataNascimento.Value.ToString("dd/MM/yyyy") : null)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pessoa.Sexo)
+                </dt>
+
+                <dd>
+                    @(Model.Pessoa.Sexo == 'F' ? "Feminino" : (Model.Pessoa.Sexo == 'M' ? "Masculino" : string.Empty))
+                </dd>
+
+            </dl>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ResponsavelFinanceiro, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="radio-inline">
+                        <label>
+                            @Html.RadioButtonFor(model => model.ResponsavelFinanceiro, true, htmlAttributes: new { @id = "optionsradio-true-1", @class = "ace" })
+                            <span class="lbl"> Sim</span>
+                        </label>
+
+                    </div>
+                    <div class="radio-inline">
+                        <label>
+                            @Html.RadioButtonFor(model => model.ResponsavelFinanceiro, false, htmlAttributes: new { @id = "optionsradio-false-1", @class = "ace" })
+                            <span class="lbl"> Não</span>
+                        </label>
+
+                    </div><br />
+                    @Html.ValidationMessageFor(model => model.ResponsavelFinanceiro)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Ativo, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="radio-inline">
+                        <label>
+                            @Html.RadioButtonFor(model => model.Ativo, true, htmlAttributes: new { @id = "optionsradio-true-1", @class = "ace" })
+                            <span class="lbl"> Sim</span>
+                        </label>
+                        
+                    </div>
+                    <div class="radio-inline">
+                        <label>
+                            @Html.RadioButtonFor(model => model.Ativo, false, htmlAttributes: new { @id = "optionsradio-false-1", @class="ace" })
+                            <span class="lbl"> Não</span>
+                        </label>
+                        
+                    </div><br/>
+                    @Html.ValidationMessageFor(model => model.Ativo)
+                </div>
+            </div>
+
+            <div class="form-actions no-color">
+                <div>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button> |
+                    <a href="~/Moradia/Morador/@Model.MoradiaId" class="btn btn-danger"><i class="fa fa-eraser"></i> Limpar</a> |
+                    <a href="~/Moradia" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para lista</a>
+                </div>
+
+            </div>
+        </div>
+    }
+}

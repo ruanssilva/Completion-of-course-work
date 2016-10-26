@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA30B3A5-BFD3-4D3C-B27C-5B0544B212FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Farm.Domain</RootNamespace>
+    <AssemblyName>LVSA.Farm.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="Aquisicao.cs" />
+    <Compile Include="Baixa.cs" />
+    <Compile Include="Diagnostico.cs" />
+    <Compile Include="Doenca.cs" />
+    <Compile Include="Dosagem.cs" />
+    <Compile Include="Dose.cs" />
+    <Compile Include="Interfaces\Repository\IAnimalRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAquisicaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IBaixaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDiagnosticoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDoencaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDosagemRepository.cs" />
+    <Compile Include="Interfaces\Repository\ILocalPesagemRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMedicacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMedicamentoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOrdenhaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPastoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPesagemRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPiqueteRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPrescricaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPrestadorRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRacaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRetratoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITerrenoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITipoAnimalRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITipoMedicamentoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITratamentoRepository.cs" />
+    <Compile Include="Interfaces\Services\IAnimalService.cs" />
+    <Compile Include="Interfaces\Services\IAquisicaoService.cs" />
+    <Compile Include="Interfaces\Services\IBaixaService.cs" />
+    <Compile Include="Interfaces\Services\IDiagnosticoService.cs" />
+    <Compile Include="Interfaces\Services\IDoencaService.cs" />
+    <Compile Include="Interfaces\Services\IDosagemService.cs" />
+    <Compile Include="Interfaces\Services\ILocalPesagemService.cs" />
+    <Compile Include="Interfaces\Services\IMedicacaoService.cs" />
+    <Compile Include="Interfaces\Services\IMedicamentoService.cs" />
+    <Compile Include="Interfaces\Services\IOrdenhaService.cs" />
+    <Compile Include="Interfaces\Services\IPastoService.cs" />
+    <Compile Include="Interfaces\Services\IPesagemService.cs" />
+    <Compile Include="Interfaces\Services\IPiqueteService.cs" />
+    <Compile Include="Interfaces\Services\IPrescricaoService.cs" />
+    <Compile Include="Interfaces\Services\IPrestadorService.cs" />
+    <Compile Include="Interfaces\Services\IRacaService.cs" />
+    <Compile Include="Interfaces\Services\IRetratoService.cs" />
+    <Compile Include="Interfaces\Services\ITerrenoService.cs" />
+    <Compile Include="Interfaces\Services\ITipoAnimalService.cs" />
+    <Compile Include="Interfaces\Services\ITipoMedicamentoService.cs" />
+    <Compile Include="Interfaces\Services\ITratamentoService.cs" />
+    <Compile Include="LocalPesagem.cs" />
+    <Compile Include="Medicacao.cs" />
+    <Compile Include="Medicamento.cs" />
+    <Compile Include="Ordenha.cs" />
+    <Compile Include="Pasto.cs" />
+    <Compile Include="Pesagem.cs" />
+    <Compile Include="Piquete.cs" />
+    <Compile Include="Prescricao.cs" />
+    <Compile Include="Prestador.cs" />
+    <Compile Include="Raca.cs" />
+    <Compile Include="Retrato.cs" />
+    <Compile Include="Services\AnimalService.cs" />
+    <Compile Include="Services\AquisicaoService.cs" />
+    <Compile Include="Services\BaixaService.cs" />
+    <Compile Include="Services\ContaminacaoService.cs" />
+    <Compile Include="Services\DiagnosticoService.cs" />
+    <Compile Include="Services\DoencaService.cs" />
+    <Compile Include="Services\DosagemService.cs" />
+    <Compile Include="Services\LocalPesagemService.cs" />
+    <Compile Include="Services\MedicacaoService.cs" />
+    <Compile Include="Services\MedicamentoService.cs" />
+    <Compile Include="Services\OrdenhaService.cs" />
+    <Compile Include="Services\PastoService.cs" />
+    <Compile Include="Services\PesagemService.cs" />
+    <Compile Include="Services\PiqueteService.cs" />
+    <Compile Include="Services\PrescricaoService.cs" />
+    <Compile Include="Services\PrestadorService.cs" />
+    <Compile Include="Services\RacaService.cs" />
+    <Compile Include="Services\RetratoService.cs" />
+    <Compile Include="Services\TerrenoService.cs" />
+    <Compile Include="Services\TipoAnimalService.cs" />
+    <Compile Include="Services\TipoMedicamentoService.cs" />
+    <Compile Include="Services\TratamentoService.cs" />
+    <Compile Include="Terreno.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoAnimal.cs" />
+    <Compile Include="TipoMedicamento.cs" />
+    <Compile Include="Tratamento.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

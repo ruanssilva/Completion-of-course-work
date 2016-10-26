@@ -1,0 +1,27 @@
+﻿@model LVSA.Farm.Application.ViewModels.DosagemViewModel
+
+@Html.HiddenFor(model => model.Id)
+
+<div class="row">
+    <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">Medicamento</label>
+        <div class="col-md-8">
+            @Html.DropDownListFor(model => model.MedicamentoId, new SelectList(ViewBag.MedicamentoSet, "Id", "Nome", Model.MedicamentoId), "Selecione", new { @class = "chosen-select form-control" })
+            @Html.ValidationMessageFor(model => model.MedicamentoId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group col-md-3">
+        <label class="col-md-6 control-label">Quantidade</label>
+        <div class="col-md-6">
+            @Html.TextBoxFor(model => model.Quantidade, new { @class = "form-control maskdecimal", @data_suffix = " ML", @data_precision = "2" })
+            @Html.ValidationMessageFor(model => model.Quantidade, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group col-md-3">
+        <label class="col-md-6 control-label">Intervalo</label>
+        <div class="col-md-6">
+            @Html.TextBoxFor(model => model.Intervalo, new { @class = "form-control maskdecimal", @data_suffix = " dias", @data_precision = "0" })
+            @Html.ValidationMessageFor(model => model.Intervalo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>

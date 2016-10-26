@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Página inicial";
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+}
+
+<div class="row" style="opacity:0.3;">
+    <div style="height:500px;background-image:url(@(serverCDN)Content/Images/bg_moto_cinza.png);background-repeat:no-repeat; background-position:center; background-size:45%;" class="col-md-12">
+
+    </div>
+</div>

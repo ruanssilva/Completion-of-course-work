@@ -1,0 +1,61 @@
+﻿@model LVSA.Report.Application.ViewModels.ParametroViewModel
+
+@Html.HiddenFor(model => model.Numero)
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.Multivaloravel)
+@Html.HiddenFor(model => model.DataType)
+
+@{
+    if (Model.Multivaloravel)
+    {
+        if (!(Model.Valor is string[]))
+        {
+            Model.Valor = new string[] { };
+        }
+    }
+}
+
+<div class="form-group">
+    <label class="col-md-2 control-label">@Html.DisplayFor(model => model.Descricao)</label>
+    <div class="col-md-10">
+        @if (Model.ValorSet != null)
+        {
+            if (Model.Multivaloravel)
+            {
+                @Html.ListBoxFor(model => model.Valor, new SelectList(Model.ValorSet, "Valor", "Exibicao", Model.Valor), htmlAttributes: new { @class = "form-control chosen-select", @data_placeholder = "Selecione..." })
+            }
+            else
+            {
+                @Html.DropDownListFor(model => Model.Valor, new SelectList(Model.ValorSet, "Valor", "Exibicao", Model.Valor), "Selecione", htmlAttributes: new { @class = "form-control chosen-select ", @data_placeholder = "Selecione..." })
+            }
+        }
+        else
+        {
+            if (Type.GetType(Model.DataType) == typeof(bool))
+            {
+                //Model.Valor = Model.Valor == "1" ? true : false;
+                <div class="checkbox-nice">
+                    <input id="@Html.IdFor(model=>model.Valor)" type="checkbox" name="@Html.NameFor(model=>model.Valor)" value="true" @((string)Model.Valor == "1" ? "checked" : "") />
+                    @*@Html.CheckBox("Valor", (string)Model.Valor == "1", htmlAttributes: new { @id = Html.IdFor(model => model.Valor).ToHtmlString() })*@
+                    <label for="@Html.IdFor(model=>model.Valor)">
+                        Sim
+                    </label>
+                </div>
+
+                @*<div class="checkbox-nice">
+                        <input id="Lembrar" type="checkbox" name="LembrarTE" value="true" />
+                        <label for="Lembrar">
+                            Lembrar-me
+                        </label>
+                    </div>*@
+
+                @*@Html.EditorFor(model => model.Valor)*@
+            }
+            else
+            {
+                @Html.TextBoxFor(model => model.Valor, htmlAttributes: new { @class = "form-control", @data_mask = "$" + Model.Mask })
+            }
+        }
+        @Html.ValidationMessageFor(model => Model.Valor)
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model LVSA.Housing.Application.ViewModels.ReuniaoViewModel
+
+@{
+    ViewBag.Title = "Reunião";
+    ViewBag.Description = "Detalhes da reunião";
+}
+
+<div>
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assunto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assunto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quando)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quando)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Onde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Onde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cancelado)
+        </dt>
+
+        <dd>
+            @(Model.Cancelado ? "Sim" : "Não")
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color">
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id})" class="btn btn-warning" title="Editar">Editar <i class="fa fa-edit"></i></a> |
+        <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+﻿@{
+    string serverCDN = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.CDN.Presentation"];
+}
+
+@if (TempData["Navbar"] != null)
+{
+    @(new HtmlString((string)TempData["Navbar"]))
+}
+
+@*<li class="purple">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+        <span class="badge badge-important">8</span>
+    </a>
+
+    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+        <li class="dropdown-header">
+            <i class="ace-icon fa fa-bell"></i>
+            8 Novas notificações
+        </li>
+
+        <li class="dropdown-content">
+            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-user"></i>
+                                Nova inscrição para bolsa social foi concluída
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-car"></i>
+                                O seu taxí foi reservado para às 18 horas
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="no-hover fa fa-envelope"></i>
+                                As mensagens do Newsletter foi enviado com sucesso
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="dropdown-footer">
+            <a href="#">
+                Marcar todas como visualizadas
+            </a>
+        </li>
+    </ul>
+</li>*@

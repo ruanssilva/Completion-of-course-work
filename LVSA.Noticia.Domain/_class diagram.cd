@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LVSA.Noticia.Domain.Imagem" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Imagem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Noticia.Domain.Noticia" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCgABAAAAAAAAAAAEAAABAAQBAAAAAAAQIAAEAiBA=</HashCode>
+      <FileName>Noticia.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LVSA.Noticia.Domain.NoticiaImagem" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAABAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoticiaImagem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Noticia.Domain.NoticiaVisualizada" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoticiaVisualizada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LVSA.Base.Domain.Auditoria" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComAtivo" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComExclusaoLogica" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LVSA.Base.Domain.AuditoriaComExclusaoLogicaComAtivo" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

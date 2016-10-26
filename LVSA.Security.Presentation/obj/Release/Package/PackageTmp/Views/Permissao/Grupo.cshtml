@@ -1,0 +1,257 @@
+﻿@model LVSA.Security.Presentation.ViewModels.PermissoesViewModel
+
+@{
+    string serverAPI = System.Web.Configuration.WebConfigurationManager.AppSettings["Address_LVSA.Security.Service"];
+
+    ViewBag.Title = "Grupo";
+    ViewBag.Description = "Permissões do grupo";
+
+    object htmlAtrr = new { };
+
+    if (ViewBag.FilialId != null && ViewBag.AplicacaoId != null && ViewBag.GrupoId != null && Model.Grupo != null && Model.Aplicacao != null)
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required", @disabled = "disabled" };
+    }
+    else
+    {
+        htmlAtrr = new { @class = "form-control chosen-select required" };
+    }
+
+}
+
+@using (Html.BeginForm("Grupo", "Permissao", FormMethod.Post, new { @id = "Filtro" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="FilialId">Filial</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("FilialId", new SelectList(ViewBag.FilialSet, "Id", "Nome", "Coligada.Nome", (short?)ViewBag.FilialId), "Selecione filial...", htmlAtrr)
+                        @Html.ValidationMessage("FilialId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="AplicacaoId">Aplicação</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("AplicacaoId", new SelectList(ViewBag.AplicacaoSet ?? new List<LVSA.Security.Application.ViewModels.AplicacaoViewModel> { }, "Id", "Exibicao", (int?)ViewBag.AplicacaoId), "Selecione aplicação...", htmlAtrr)
+                        @Html.ValidationMessage("AplicacaoId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="GrupoId">Grupo</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("GrupoId", new SelectList(ViewBag.GrupoSet ?? new List<LVSA.Security.Application.ViewModels.GrupoViewModel> { }, "Id", "Nome", (int?)ViewBag.GrupoId), "Selecione grupo...", htmlAtrr)
+                        @Html.ValidationMessage("GrupoId", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selecionar-filtro" class="form-actions no-color" style="@(ViewBag.FilialId != null && ViewBag.AplicacaoId != null && ViewBag.GrupoId != null && Model.Grupo != null && Model.Aplicacao != null ? "display:none;" : "")">
+            <div>
+                <button type="submit" class="btn btn-white btn-primary btn-bold" title="Selecionar fitro">Pesquisar <i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <br />
+
+    if (ViewBag.FilialId != null && ViewBag.AplicacaoId != null && ViewBag.GrupoId != null && Model.Grupo != null && Model.Aplicacao != null)
+    {
+        <div id="filtrado">
+
+            @Html.HiddenFor(model => model.Grupo.Id)
+
+            <div class="pull-left">
+                <a id="Marcar" href="javascript:void(0);" class="btn btn-white btn-success btn-bold" title="Atualizar">Todos <i class="fa fa-check-square-o"></i></a>
+                <a id="Desmarcar" href="javascript:void(0);" class="btn btn-white btn-danger btn-bold" title="Atualizar">Nenhum <i class="fa fa-square-o"></i></a>
+                <button id="alterar-filtro" type="button" class="btn btn-default btn-bold btn-white" title="Alterar filtro">Alterar pesquisa <i class="fa fa-retweet"></i></button>
+            </div>
+
+            <div class="clearfix">
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dd" style="max-width:none!important;">
+                        <ol class="dd-list">
+                            <li class="dd-item dd2-item" data-id="0">
+                                <div class="dd-handle dd2-handle">
+                                    <i class="normal-icon ace-icon @Model.Aplicacao.Icon blue bigger-130"></i>
+
+                                    <i class="drag-icon ace-icon fa fa-arrows bigger-125"></i>
+                                </div>
+                                <div class="dd2-content">
+                                    @Model.Aplicacao.Nome
+                                </div>
+
+                                @{
+        TempData["Count"] = 0;
+        ViewBag.RecursoIdSet = Model.Grupo.PermissaoSet.Select(s => s.RecursoId).ToArray();
+        ViewBag.RecursoIdSet2 = Model.Aplicacao.RecursoSet.Select(s => s.Id).ToArray();
+        
+        if (Model.Aplicacao.Desktop)
+        {
+            ViewBag.RecursoIdSet_Read = Model.Grupo.PermissaoSet.Where(w => w.Read).Select(s => s.RecursoId).ToArray();
+            ViewBag.RecursoIdSet_Write = Model.Grupo.PermissaoSet.Where(w => w.Write).Select(s => s.RecursoId).ToArray();
+            ViewBag.RecursoIdSet_Rewrite = Model.Grupo.PermissaoSet.Where(w => w.Rewrite).Select(s => s.RecursoId).ToArray();
+            ViewBag.RecursoIdSet_Delete = Model.Grupo.PermissaoSet.Where(w => w.Delete).Select(s => s.RecursoId).ToArray();
+        }
+                                }
+
+                                @Html.Partial("_PartialView/Recursos2", Model.Aplicacao.RecursoSet.Where(w => w.Ativo && !w.Herdado && w.RecursoPaiId == null).OrderBy(o => o.Nome))
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+
+            <div class="form-actions no-color">
+                <div>
+                    <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                    <a id="Cancelar" href="javascript:void(0);" class="btn btn-default" title="Cancelar">Cancelar <i class="fa fa-remove"></i></a>
+                </div>
+            </div>
+
+        </div>
+    }
+
+}
+
+@section scripts {
+    <script>
+    $(function () {
+
+        $('#alterar-filtro, #Cancelar').click(function () {
+            $('#filtrado').remove();
+
+            $('form#Filtro select, form#Filtro input[type="text"]').each(function () {
+                $(this).attr('disabled', false).trigger('update');
+            });
+
+            $('#selecionar-filtro').show();
+        });
+
+        if ($('#filtrado').length) {
+            $('a#Marcar').click(function () {
+                $('input[type="checkbox"].Recurso').prop('checked', true);
+                $('input[type="checkbox"].Recurso').trigger('change');
+            });
+            $('a#Desmarcar').click(function () {
+                $('input[type="checkbox"]').prop('checked', false);
+                $('input[type="checkbox"].Recurso').trigger('change');
+            });
+        }
+
+
+        $('select[Name="FilialId"]').change(function () {
+
+            $('select[Name="AplicacaoId"]').find("option:selected").prop("selected", false).trigger('update');
+            $('select[Name="GrupoId"]').html('<option value="">Selecione grupo...</option>').trigger('update');
+
+            if ($(this).val().length > 0) {
+
+                $('select[Name="AplicacaoId"]').html('<option value="">Carregando...</option>').prop('disabled', true).trigger('update');
+
+                var id = $(this).val();
+
+                LVSA.Ajax.Request({ type: 'POST', url: '@(serverAPI)api/aplicacao/' + id, data: {}, headers: { 'Authorization': 'Bearer @TempData["Provider"]' } })
+                    .Get()
+                    .success(function (data) {
+                        if (data != null && data.length > 0) {
+                            $('select[Name="AplicacaoId"]').html('<option value="">Selecione aplicação...</option>');
+                            $.each(data, function (index, value) {
+                                $('select[Name="AplicacaoId"]').append('<option ' + (data.length == 1 ? "selected" : "") + ' value="' + value.Id + '"> ' + value.Exibicao + '</option>')
+                            });
+                            if (data.length == 1)
+                                $('select[Name="AplicacaoId"]').trigger('change');
+                        }
+                        else
+                            $('select[Name="AplicacaoId"]').html('<option value="">Ops! Sem resultados</option>');
+                    })
+                    .error(function () {
+                        LVSA.CDN.Plugins.Gritter.Error("Ops! Ocorreu um erro", "Não foi possível carregar o campo. Tente novamente mais tarde ou contacte o administrador", true, true);
+                        $('select[Name="AplicacaoId"]').html('<option value="">Falha no carregamento</option>');
+                    })
+                    .complete(function () {
+                        $('select[Name="AplicacaoId"]').prop('disabled', false).trigger('update');
+                    });
+
+            }
+        });
+
+        
+
+
+
+        $('select[Name="AplicacaoId"]').change(function () {
+
+            $('select[Name="GrupoId"]').find("option:selected").prop("selected", false);
+
+            if ($(this).val().length > 0) {
+
+                var filial = $('select[Name="FilialId"]').val();
+
+                $('select[Name="GrupoId"]').html('<option value="">Carregando...</option>').prop('disabled', true).trigger('update');
+
+                var id = $(this).val();
+
+                LVSA.Ajax.Request({ type: 'POST', url: '@(serverAPI)api/grupo/' + id + '/?filial=' + filial, data: {}, headers: { 'Authorization': 'Bearer @TempData["Provider"]' } })
+                    .Get()
+                    .success(function (data) {
+                        if (data != null && data.length > 0) {
+                            $('select[Name="GrupoId"]').html('<option value="">Selecione grupo...</option>');
+                            $.each(data, function (index, value) {
+                                $('select[Name="GrupoId"]').append('<option ' + (data.length == 1 ? "selected" : "") + ' value="' + value.Id + '"> ' + value.Nome + '</option>')
+                            });
+                            if (data.length == 1)
+                                $('select[Name="GrupoId"]').trigger('change');
+                        }
+                        else
+                            $('select[Name="GrupoId"]').html('<option value="">Ops! Sem resultados</option>');
+                    })
+                    .error(function () {
+                        LVSA.CDN.Plugins.Gritter.Error("Ops! Ocorreu um erro", "Não foi possível carregar o campo. Tente novamente mais tarde ou contacte o administrador", true, true);
+                        $('select[Name="GrupoId"]').html('<option value="">Falha no carregamento</option>');
+                    })
+                    .complete(function () {
+                        $('select[Name="GrupoId"]').prop('disabled', false).trigger('update');
+                    });
+            }
+        });
+
+        //$('select[Name="GrupoId"]').change(function () {
+        //    if ($(this).val())
+        //        $('#Filtro').submit();
+        //});
+
+    });
+    </script>
+
+    @if (Model != null && Model.Aplicacao != null && Model.Aplicacao.Desktop)
+    {
+        <script>
+            $(function () {
+                $('input[type="checkbox"].Recurso').change(function () {
+                    if ($(this).is(':checked'))
+                        $(this).parents('.checkbox').next('.for-desktop').fadeIn();
+                    else
+                        $(this).parents('.checkbox').next('.for-desktop').fadeOut();
+                });
+
+                $('input[type="checkbox"].Recurso').trigger('change');
+            });
+        </script>
+    }
+}

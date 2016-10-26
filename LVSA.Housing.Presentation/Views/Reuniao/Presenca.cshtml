@@ -1,0 +1,40 @@
+﻿@model LVSA.Housing.Application.ViewModels.ReuniaoViewModel
+
+@{
+    ViewBag.Title = Model.Assunto;
+    ViewBag.Description = "Presentes na reunião";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Marque os presentes</label>
+            <div class="col-md-10">
+                @foreach (LVSA.Housing.Application.ViewModels.MoradorViewModel morador in ViewBag.MoradorSet)
+                {
+                    <div class="checkbox">
+
+                        <label>
+                            <input name="PresencaSet" type="checkbox" value="@morador.Id" @(Model.PresencaSet.Contains((long)morador.Id) ? "checked" : "") class="ace" />
+                            <span class="lbl @(Model.PresencaSet.Contains((long)morador.Id) ? "green" : "red")"> @morador.Pessoa.Nome</span>
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Salvar <i class="glyphicon glyphicon-floppy-disk"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+}

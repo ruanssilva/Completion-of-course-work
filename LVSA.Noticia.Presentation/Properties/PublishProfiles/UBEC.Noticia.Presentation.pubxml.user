@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\LVSA.Noticia.Presentation</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>04/14/2016 01:32:58</publishTime>
+    </File>
+    <File Include="bin/Dapper.dll">
+      <publishTime>04/14/2016 01:32:51</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/14/2016 01:32:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/14/2016 01:32:52</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Application.dll">
+      <publishTime>04/14/2016 01:33:24</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Domain.dll">
+      <publishTime>03/29/2016 20:46:13</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>04/14/2016 01:33:25</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>04/14/2016 01:33:25</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Infrastructure.CrossCutting.REST.dll">
+      <publishTime>04/14/2016 01:33:23</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Infrastructure.CrossCutting.Utility.dll">
+      <publishTime>03/29/2016 21:56:56</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Infrastructure.Data.dll">
+      <publishTime>04/14/2016 01:33:23</publishTime>
+    </File>
+    <File Include="bin/LVSA.Base.Presentation.dll">
+      <publishTime>04/16/2016 19:58:46</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Application.dll">
+      <publishTime>04/16/2016 19:58:42</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Domain.dll">
+      <publishTime>04/12/2016 10:39:39</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>04/16/2016 19:58:43</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>04/14/2016 01:33:30</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Infrastructure.Data.dll">
+      <publishTime>04/14/2016 01:33:27</publishTime>
+    </File>
+    <File Include="bin/LVSA.Noticia.Presentation.dll">
+      <publishTime>04/16/2016 19:58:49</publishTime>
+    </File>
+    <File Include="bin/LVSA.Security.Application.dll">
+      <publishTime>04/16/2016 19:58:38</publishTime>
+    </File>
+    <File Include="bin/LVSA.Security.Domain.dll">
+      <publishTime>04/14/2016 09:28:41</publishTime>
+    </File>
+    <File Include="bin/LVSA.Security.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>04/16/2016 19:58:41</publishTime>
+    </File>
+    <File Include="bin/LVSA.Security.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>04/14/2016 09:28:44</publishTime>
+    </File>
+    <File Include="bin/LVSA.Security.Infrastructure.Data.dll">
+      <publishTime>04/14/2016 09:28:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Client.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/14/2016 01:32:51</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>04/14/2016 01:32:55</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>04/14/2016 01:32:54</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Mvc.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/RazorGenerator.Mvc.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/14/2016 01:33:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Application.dll">
+      <publishTime>01/26/2016 13:31:27</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Domain.dll">
+      <publishTime>10/22/2015 11:53:48</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>01/26/2016 13:31:29</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>01/26/2016 13:31:27</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Infrastructure.CrossCutting.REST.dll">
+      <publishTime>01/26/2016 13:33:57</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Infrastructure.CrossCutting.Utility.dll">
+      <publishTime>10/28/2015 11:37:32</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Infrastructure.Data.dll">
+      <publishTime>01/26/2016 13:31:26</publishTime>
+    </File>
+    <File Include="bin/UBEC.Base.Presentation.dll">
+      <publishTime>01/26/2016 13:33:59</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Application.dll">
+      <publishTime>01/26/2016 13:31:29</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Domain.dll">
+      <publishTime>10/22/2015 11:53:49</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>01/26/2016 13:31:30</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>01/26/2016 13:31:28</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Infrastructure.Data.dll">
+      <publishTime>01/26/2016 13:31:27</publishTime>
+    </File>
+    <File Include="bin/UBEC.Noticia.Presentation.dll">
+      <publishTime>01/26/2016 13:36:42</publishTime>
+    </File>
+    <File Include="bin/UBEC.RM.Domain.dll">
+      <publishTime>10/09/2015 16:44:12</publishTime>
+    </File>
+    <File Include="bin/UBEC.RM.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/UBEC.RM.Infrastructure.Data.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/UBEC.ScriptHost.Domain.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/UBEC.ScriptHost.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>11/05/2015 15:24:14</publishTime>
+    </File>
+    <File Include="bin/UBEC.ScriptHost.Infrastructure.Data.dll">
+      <publishTime>11/05/2015 15:24:13</publishTime>
+    </File>
+    <File Include="bin/UBEC.Security.Application.dll">
+      <publishTime>01/26/2016 13:31:29</publishTime>
+    </File>
+    <File Include="bin/UBEC.Security.Domain.dll">
+      <publishTime>01/26/2016 13:31:26</publishTime>
+    </File>
+    <File Include="bin/UBEC.Security.Infrastructure.CrossCutting.IoC.Application.dll">
+      <publishTime>01/26/2016 13:31:29</publishTime>
+    </File>
+    <File Include="bin/UBEC.Security.Infrastructure.CrossCutting.IoC.Domain.dll">
+      <publishTime>01/26/2016 13:31:29</publishTime>
+    </File>
+    <File Include="bin/UBEC.Security.Infrastructure.Data.dll">
+      <publishTime>01/26/2016 13:31:27</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/14/2016 01:33:03</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>10/02/2015 14:20:32</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/21/2015 08:41:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/19/2016 14:23:30</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/08/2016 18:23:00</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Noticia/Create.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Noticia/Delete.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Noticia/Details.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Noticia/Edit.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Noticia/Index.cshtml">
+      <publishTime>04/12/2016 11:06:33</publishTime>
+    </File>
+    <File Include="Views/Noticia/Show.cshtml">
+      <publishTime>04/14/2016 15:34:42</publishTime>
+    </File>
+    <File Include="Views/Noticia/Visualizar.cshtml">
+      <publishTime>02/19/2016 14:23:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_PartialView/Noticias.cshtml">
+      <publishTime>04/13/2016 16:05:22</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/19/2016 14:23:32</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>10/02/2015 14:20:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/16/2016 20:08:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C8AAA5A-B39A-4A92-8F31-6C4377880270}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Financial.Domain</RootNamespace>
+    <AssemblyName>LVSA.Financial.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoriaCCusto.cs" />
+    <Compile Include="CCusto.cs" />
+    <Compile Include="Conta.cs" />
+    <Compile Include="Interfaces\Infra\IContextManager.cs" />
+    <Compile Include="Interfaces\Repository\ICategoriaCCustoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICCustoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IContaRepository.cs" />
+    <Compile Include="Interfaces\Repository\ILancamentoRepository.cs" />
+    <Compile Include="Interfaces\Repository\INFiscalRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITipoContaRepository.cs" />
+    <Compile Include="Interfaces\Services\ICategoriaCCustoService.cs" />
+    <Compile Include="Interfaces\Services\ICCustoService.cs" />
+    <Compile Include="Interfaces\Services\IContaService.cs" />
+    <Compile Include="Interfaces\Services\ILancamentoService.cs" />
+    <Compile Include="Interfaces\Services\INFiscalService.cs" />
+    <Compile Include="Interfaces\Services\ITipoContaService.cs" />
+    <Compile Include="Lancamento.cs" />
+    <Compile Include="NFiscal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CategoriaCCustoService.cs" />
+    <Compile Include="Services\CCustoService.cs" />
+    <Compile Include="Services\ContaService.cs" />
+    <Compile Include="Services\LancamentoService.cs" />
+    <Compile Include="Services\NFiscalService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\TipoContaService.cs" />
+    <Compile Include="TipoConta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

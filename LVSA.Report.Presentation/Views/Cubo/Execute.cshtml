@@ -1,0 +1,56 @@
+﻿@model LVSA.Report.Application.ViewModels.CuboViewModel
+
+@{
+    ViewBag.Title = "Cubo";
+    ViewBag.Description = "Executar cubo";
+}
+
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.ConsultaId)
+        @Html.HiddenFor(model => model.InstrucaoId)
+
+        <hr />
+
+        <div class="form-horizontal">
+            @Html.EditorFor(model => model.Consulta.Parametros)
+        </div>
+        
+        <br />
+
+        @Html.ValidationSummary()
+
+        
+        <div class="form-actions no-color">
+            <div>
+                <button type="submit" class="btn btn-primary" title="Salvar">Executar <i class="fa fa-play"></i></button> |
+                <a href="@Url.Action("Index")" class="btn btn-default" title="Voltar para lista">Voltar para lista <i class="glyphicon glyphicon-arrow-left"></i></a>
+            </div>
+        </div>
+    }
+</div>

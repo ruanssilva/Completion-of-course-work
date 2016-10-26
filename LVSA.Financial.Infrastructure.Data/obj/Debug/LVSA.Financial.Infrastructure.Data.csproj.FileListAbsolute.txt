@@ -1,0 +1,30 @@
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Source\Workspaces\Leonelleo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.dll.config
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Base.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Base.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Domain.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\Dapper.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Base.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Base.Infrastructure.Data.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\LVSA.Financial.Domain.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\bin\Debug\Dapper.pdb
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.dll
+C:\Users\Avell B155 MAX\Documents\Visual Studio 2013\Projects\LVSA.Corporativo\LVSA.Financial.Infrastructure.Data\obj\Debug\LVSA.Financial.Infrastructure.Data.pdb

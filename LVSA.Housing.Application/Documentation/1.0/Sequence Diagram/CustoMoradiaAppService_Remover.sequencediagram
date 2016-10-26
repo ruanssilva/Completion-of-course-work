@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="07d1ff87-8e1a-473d-8e32-d915cc16d180" name="CustoMoradiaAppService_Remover" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="01cb868d-e387-4996-bc6d-8f2d9e6e9b35" name="CustoMoradiaAppService_Remover" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="ef2a3805-09cb-4b1d-9207-1cc67d633fe2" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="d57c06e1-6914-4fe2-b0d1-dfb4628b66b7" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="a14d5497-25bf-4ace-974a-2fc17f216334" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="6044cc61-e123-4f7e-8940-c7d6be6d9de1" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ee3abf13-9c10-4bd8-b6ce-1627841eff81" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="7663edb4-70ce-4a0b-9b41-da783e8a2485" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="a566c71f-2cda-455d-b450-48f9fe06407e" LastKnownName="ExecutionOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="a14d5497-25bf-4ace-974a-2fc17f216334" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="9790d96b-3f09-4536-b99a-99d9747abe16" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="dbdec13f-301c-4f0c-916d-1ca675deb683" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="6044cc61-e123-4f7e-8940-c7d6be6d9de1" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ee3abf13-9c10-4bd8-b6ce-1627841eff81" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="20e5358a-8a67-43e2-91bf-dd502f4f9905" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="a566c71f-2cda-455d-b450-48f9fe06407e" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="7663edb4-70ce-4a0b-9b41-da783e8a2485" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="bbd591e6-f97b-477b-b051-cb30c7c6106c" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="149f8f24-933e-46ea-9168-8bdee155c5d5" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="f3e8f996-f7ab-44ea-b94d-49d395bbb74d" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="7663edb4-70ce-4a0b-9b41-da783e8a2485" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d0b6b1ea-cc8a-489d-baff-56adf02977a3" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bbd591e6-f97b-477b-b051-cb30c7c6106c" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="c63f8de1-56c8-4058-bf57-d3076c79db37" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="9463d28e-5fb0-42bf-834a-e0551076e65e" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="07c001d1-dbe3-4abc-b295-d4b5562e36a4" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="4df8610d-ebb6-4383-a2cc-5ea25d3e2204" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="61193dea-1c81-4650-a4cb-70fea438d5eb" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="07c001d1-dbe3-4abc-b295-d4b5562e36a4" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d7070d6a-f4bf-4baf-b013-b7d7ea4596c9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="149f8f24-933e-46ea-9168-8bdee155c5d5" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4df8610d-ebb6-4383-a2cc-5ea25d3e2204" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f3e8f996-f7ab-44ea-b94d-49d395bbb74d" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="61193dea-1c81-4650-a4cb-70fea438d5eb" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="9463d28e-5fb0-42bf-834a-e0551076e65e" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5f8b0d84-c5be-4ab6-a02c-579cf7a8e52d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" LastKnownName="this._service : IServiceBase&lt;TEntity&gt;" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="a566c71f-2cda-455d-b450-48f9fe06407e" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="16d8514c-b669-4bf1-8cd0-1fa540e86985" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="d57c06e1-6914-4fe2-b0d1-dfb4628b66b7" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3c88aac7-d743-4cec-9a01-88d08033815d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" LastKnownName="this : CustoMoradiaAppService" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="da777fb8-5a98-43e5-9ac4-3e4b32cb7277" name="this : CustoMoradiaAppService" isActor="false" lifelineDisplayName="this : CustoMoradiaAppService" referencedInstance="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService ObjectInstance=&quot;Object instance 2&quot;)" referencedType="LVSA‎.Housing‎.Application‎.CustoMoradiaAppService">
+            <referencesInternal>
+              <reference Id="16778909-aa0c-44c6-b335-e1d89b2438a9" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService)&quot;)" tag="DGQL" />
+              <reference Id="365b9d6a-066c-4742-8a69-4e825101ab66" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="a14d5497-25bf-4ace-974a-2fc17f216334" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="d57c06e1-6914-4fe2-b0d1-dfb4628b66b7" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="25ab0d3e-d18c-4a94-ab3f-ba923b8776fb" name="this._service : IServiceBase&lt;TEntity&gt;" isActor="false" lifelineDisplayName="this._service : IServiceBase&lt;TEntity&gt;" referencedInstance="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3 GenericArguments=[(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=0),(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=1),(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=2)]) Member=_service ObjectInstance=&quot;Object instance 19&quot;)" referencedType="LVSA‎.Housing‎.Domain‎.Interfaces‎.Services‎.IServiceBase‎&lt;‎&gt;">
+            <referencesInternal>
+              <reference Id="b68007f7-f73c-4d87-b175-7af96b89c9ef" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Domain.Interfaces.Services)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))&quot;)" tag="DGQL" />
+              <reference Id="6762eb0e-8857-4a9d-b2d0-af29fdc4b144" handle="(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="07c001d1-dbe3-4abc-b295-d4b5562e36a4" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="9463d28e-5fb0-42bf-834a-e0551076e65e" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="911db382-7d27-407a-bf0b-3a138205f7ba" name="Remover" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="bdacd14b-f779-44fa-a72c-d036c8b9c8b3" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService Member=(Name=Remover OverloadingParameters=[(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application.ViewModels Type=CustoMoradiaViewModel)]))&quot;)" tag="DGQL" />
+              <reference Id="cef32e67-91f3-4dab-8c95-57e55a1fcbb3" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=CustoMoradiaAppService Member=(Name=Remover OverloadingParameters=[(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application.ViewModels Type=CustoMoradiaViewModel)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="dbdec13f-301c-4f0c-916d-1ca675deb683" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="6044cc61-e123-4f7e-8940-c7d6be6d9de1" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="00d6b404-bda9-4712-aa2f-5c22b2dde74b" name="base.Remover" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="base.Remover(model)">
+            <referencesInternal>
+              <reference Id="08199e47-fa66-48b3-84d9-7ef7caca577a" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Application)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) Member=(Name=Remover OverloadingParameters=[(Assembly=&amp;quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=0)]))&quot;)" tag="DGQL" />
+              <reference Id="877e7be2-1b61-4cd6-8e6a-b84eff622a0e" handle="(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) Member=(Name=Remover OverloadingParameters=[(Assembly=&quot;$(a7c1d551-b6d9-4f7c-ad70-f80dece69fc6.OutputPathUri)&quot; Namespace=LVSA.Housing.Application Type=(Name=AppServiceBase GenericParameterCount=3) ParameterIdentifier=0)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ee3abf13-9c10-4bd8-b6ce-1627841eff81" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="bbd591e6-f97b-477b-b051-cb30c7c6106c" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="92eb4dd8-f373-4dbf-8a36-98568552e1b4" name="IServiceBase‎&lt;TEntity‎&gt;.Delete" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_service.Delete(entity)">
+            <referencesInternal>
+              <reference Id="b41d7026-f8ee-457c-82ff-0d10a430aa29" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=LVSA.Housing.Domain.Interfaces.Services)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) Member=(Name=Delete OverloadingParameters=[(Assembly=&amp;quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&amp;quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) ParameterIdentifier=0)]))&quot;)" tag="DGQL" />
+              <reference Id="e66cfb6e-474b-45ae-b147-7ac5b5679b72" handle="(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) Member=(Name=Delete OverloadingParameters=[(Assembly=&quot;$(5d4c4134-c68c-4334-80fd-6db075838048.OutputPathUri)&quot; Namespace=LVSA.Housing.Domain.Interfaces.Services Type=(Name=IServiceBase GenericParameterCount=1) ParameterIdentifier=0)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="149f8f24-933e-46ea-9168-8bdee155c5d5" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="4df8610d-ebb6-4383-a2cc-5ea25d3e2204" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="b75c750e-5c64-45d0-9566-09fa29a239c1" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="61193dea-1c81-4650-a4cb-70fea438d5eb" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="f3e8f996-f7ab-44ea-b94d-49d395bbb74d" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="9790d96b-3f09-4536-b99a-99d9747abe16" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="3c88aac7-d743-4cec-9a01-88d08033815d" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="d0b6b1ea-cc8a-489d-baff-56adf02977a3" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="16d8514c-b669-4bf1-8cd0-1fa540e86985" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="d7070d6a-f4bf-4baf-b013-b7d7ea4596c9" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="5f8b0d84-c5be-4ab6-a02c-579cf7a8e52d" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

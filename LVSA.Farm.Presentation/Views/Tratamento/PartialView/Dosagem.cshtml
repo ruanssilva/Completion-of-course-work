@@ -1,0 +1,13 @@
+﻿@model LVSA.Farm.Application.ViewModels.TratamentoViewModel
+@{
+    Layout = null;
+}
+
+
+@Html.EditorFor(model => model.DosagemSet)
+
+<script>
+    $(function () {
+        LVSA.CDN.Plugins.Mask();
+    });
+</script>

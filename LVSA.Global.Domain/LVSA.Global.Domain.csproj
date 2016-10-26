@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91EB9ED2-B6E6-42BD-9CFA-B95252BF3B56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LVSA.Global.Domain</RootNamespace>
+    <AssemblyName>LVSA.Global.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bairro.cs" />
+    <Compile Include="Cidade.cs" />
+    <Compile Include="ColigadaComplemento.cs" />
+    <Compile Include="Escolaridade.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="FilialComplemento.cs" />
+    <Compile Include="Imagem.cs" />
+    <Compile Include="Interfaces\Infra\IContextManager.cs" />
+    <Compile Include="Interfaces\Repository\IBairroRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICidadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IColigadaComplementoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEscolaridadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEstadoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IFilialComplementoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IImagemRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPaisRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPessoaFisicaComplementoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPessoaFisicaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPessoaJuridicaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRacaCorRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITitulacaoRepository.cs" />
+    <Compile Include="Interfaces\Services\IBairroService.cs" />
+    <Compile Include="Interfaces\Services\ICidadeService.cs" />
+    <Compile Include="Interfaces\Services\IColigadaComplementoService.cs" />
+    <Compile Include="Interfaces\Services\IEscolaridadeService.cs" />
+    <Compile Include="Interfaces\Services\IEstadoService.cs" />
+    <Compile Include="Interfaces\Services\IFilialComplementoService.cs" />
+    <Compile Include="Interfaces\Services\IImagemService.cs" />
+    <Compile Include="Interfaces\Services\IPaisService.cs" />
+    <Compile Include="Interfaces\Services\IPessoaFisicaComplementoService.cs" />
+    <Compile Include="Interfaces\Services\IPessoaFisicaService.cs" />
+    <Compile Include="Interfaces\Services\IPessoaJuridicaService.cs" />
+    <Compile Include="Interfaces\Services\IRacaCorService.cs" />
+    <Compile Include="Interfaces\Services\ITitulacaoService.cs" />
+    <Compile Include="Pais.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaFisica.cs" />
+    <Compile Include="PessoaFisicaComplemento.cs" />
+    <Compile Include="PessoaJuridica.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RacaCor.cs" />
+    <Compile Include="Services\BairroService.cs" />
+    <Compile Include="Services\CidadeService.cs" />
+    <Compile Include="Services\ColigadaComplementoService.cs" />
+    <Compile Include="Services\EscolaridadeService.cs" />
+    <Compile Include="Services\EstadoService.cs" />
+    <Compile Include="Services\FilialComplementoService.cs" />
+    <Compile Include="Services\ImagemService.cs" />
+    <Compile Include="Services\PaisService.cs" />
+    <Compile Include="Services\PessoaFisicaComplementoService.cs" />
+    <Compile Include="Services\PessoaFisicaService.cs" />
+    <Compile Include="Services\PessoaJuridicaService.cs" />
+    <Compile Include="Services\RacaCorService.cs" />
+    <Compile Include="Services\TitulacaoService.cs" />
+    <Compile Include="Titulacao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LVSA.Base.Domain\LVSA.Base.Domain.csproj">
+      <Project>{7a07ff50-d1e2-426b-a189-1b07d62c7fc3}</Project>
+      <Name>LVSA.Base.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\Domain\" />
+    <Folder Include="Interfaces\Repository\ReadOnly\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
