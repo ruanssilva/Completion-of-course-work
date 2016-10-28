@@ -13,18 +13,27 @@
             foreach (LVSA.Housing.Application.ViewModels.ReuniaoViewModel reuniao in ViewBag.ReuniaoSet)
             {
                 <div style="height:initial!important;" title="@reuniao.Assunto" class="infobox @(reuniao.Quando < DateTime.Now ? ((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "infobox-green" : "infobox-red") : "infobox-blue") ">
-                    <a href="@Url.Action("Details","Reuniao", new { id = reuniao.Id })" class="infobox-icon">
+                    <a href="@Url.Action("Info","Reuniao", new { id = reuniao.Id })" class="infobox-icon">
                         <i class="ace-icon fa @(reuniao.Quando < DateTime.Now ? ((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "fa-check" : "fa-remove") : "fa-arrow-right")"></i>
                     </a>
 
                     <div class="infobox-data">
                         <span class="infobox-data-number">Reunião</span>
                         <div class="infobox-content"><b>@reuniao.Assunto</b> <br /><small>@reuniao.Descricao</small>  <br /> @reuniao.Quando.ToString("dd/MM/yyyy HH:mm:ss")</div>
+                        @if (reuniao.Quando < DateTime.Now)
+                        {
+                            <b>@((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "Presente" : "Ausente")</b>
+                        }
+                        else
+                        {
+                            <b>Não realizada</b>
+                        }
                     </div>
 
                     @if (reuniao.Quando < DateTime.Now)
                     {
-                        <a href="@Url.Action("Ata","Reuniao", new { id = reuniao.Id })" class="stat @((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "stat-success" : "stat-important")" title="@((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "Presente" : "Ausente")">&nbsp;</a>
+                        <a href="@Url.Action("Info","Reuniao", new { id = reuniao.Id })" class="stat @((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "stat-success" : "stat-important")" title="@((reuniao.PresencaSet.Contains((int)ViewBag.MoradorId) || reuniao.SindicoId == ViewBag.SindicoId) ? "Presente" : "Ausente")">&nbsp;</a>
+                        <br />
                     }
 
                 </div>

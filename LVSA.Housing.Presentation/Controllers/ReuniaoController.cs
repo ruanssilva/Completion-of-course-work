@@ -93,11 +93,48 @@ namespace LVSA.Housing.Presentation.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: Reuniao/Presenca/5
+        // GET: Reuniao/Info/5
+        public ActionResult Info(long id)
+        {
+            try
+            {
+
+
+                ReuniaoViewModel model = _reuniaoAppService.Filtrar(f => f.Id == id && f.SindicoId == Sindico.Id).SingleOrDefault();
+                if (model == null)
+                    throw new Exception("Registro não encontrado.");
+
+                if (string.IsNullOrWhiteSpace(model.Ata))
+                {
+                    Gritters.Add(new GritterViewModel
+                    {
+                        Tittle = "Ata não disponibilizada",
+                        Message = "Caso a reunião já tenha acontecido, aguarde a publicação da ata.",
+                        Center = true,
+                        Sticky = true,
+                        Style = GritterStyle.Warning
+                    });
+
+                    throw new Exception("Ata não disponibilizada");
+                }
+
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                HandlingException(ex);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: Reuniao/Ata/5
         public ActionResult Ata(long id)
         {
             try
             {
+                AddShortcut("Ir para presença", Url.Action("Ata", new { id = id }), "fa fa-users");
+
                 ReuniaoViewModel model = _reuniaoAppService.Filtrar(f => f.Id == id && f.SindicoId == Sindico.Id).SingleOrDefault();
                 if (model == null)
                     throw new Exception("Registro não encontrado.");
@@ -112,7 +149,7 @@ namespace LVSA.Housing.Presentation.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Reuniao/Presenca/5
+        // POST: Reuniao/Ata/5
         [HttpPost]
         public ActionResult Ata(long id, AtaViewModel ata)
         {
@@ -123,7 +160,7 @@ namespace LVSA.Housing.Presentation.Controllers
                     throw new Exception("Registro não encontrado.");
 
                 model.Ata = ata.AtaCliente;
-                                
+
                 _reuniaoAppService.Ata(model);
 
                 Gritters.Add(new GritterViewModel
@@ -147,6 +184,8 @@ namespace LVSA.Housing.Presentation.Controllers
         {
             try
             {
+                AddShortcut("Ir para ata", Url.Action("Ata", new { id = id }), "fa fa-arrow-right");
+
                 ReuniaoViewModel model = _reuniaoAppService.Filtrar(f => f.Id == id && f.SindicoId == Sindico.Id).SingleOrDefault();
                 if (model == null)
                     throw new Exception("Registro não encontrado.");
@@ -169,11 +208,13 @@ namespace LVSA.Housing.Presentation.Controllers
         {
             try
             {
+                AddShortcut("Ir para ata", Url.Action("Ata", new { id = id }), "fa fa-arrow-right");
+
                 ReuniaoViewModel model = _reuniaoAppService.Filtrar(f => f.Id == id && f.SindicoId == Sindico.Id).SingleOrDefault();
                 if (model == null)
                     throw new Exception("Registro não encontrado.");
 
-                model.PresencaSet = PresencaSet;                
+                model.PresencaSet = PresencaSet;
 
                 _reuniaoAppService.Presenca(model);
 
@@ -224,7 +265,7 @@ namespace LVSA.Housing.Presentation.Controllers
                 List<int> PessoaIds = Sindico.Blocos.SelectMany(s => s.Moradias.SelectMany(sm => sm.Moradores)).Select(s => s.PessoaId).ToList();
                 List<int> UsuarioIds = _pessoaFisicaComplementoAppService.Filtrar(f => PessoaIds.Contains(f.PessoaId) && f.UsuarioId != null).Select(s => (int)s.UsuarioId).ToList();
 
-        
+
                 Gritters.Add(new GritterViewModel
                 {
                     Tittle = "Sucesso!",

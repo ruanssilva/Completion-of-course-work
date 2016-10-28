@@ -161,6 +161,7 @@
     <Compile Include="Controllers\ConsultaController.cs" />
     <Compile Include="Controllers\CuboController.cs" />
     <Compile Include="Controllers\GrupoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstrucaoController.cs" />
     <Compile Include="Controllers\ParametroController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />

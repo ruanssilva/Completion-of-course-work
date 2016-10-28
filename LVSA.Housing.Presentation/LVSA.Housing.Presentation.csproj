@@ -203,6 +203,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Reuniao\Presenca.cshtml" />
     <Content Include="Views\Reuniao\Ata.cshtml" />
+    <Content Include="Views\Reuniao\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

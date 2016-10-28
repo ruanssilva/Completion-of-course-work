@@ -13,6 +13,10 @@ namespace LVSA.Housing.Infrastructure.Data.EntityConfig
                 .WithMany()
                 .HasForeignKey(fk => fk.SindicoId)
                 .WillCascadeOnDelete();
+
+            Property(p => p.Ata)
+                .HasColumnType("text")
+                .HasMaxLength(100000);
         }
     }
 }

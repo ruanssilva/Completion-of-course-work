@@ -24,7 +24,7 @@ namespace LVSA.Housing.Application.ViewModels
         public decimal Valor { get; set; }
         [Display(Name = "Valor desconto")]
         public decimal Desconto { get; set; }
-        [Display(Name = "Valor jurus")]
+        [Display(Name = "Valor juros")]
         public decimal Juros { get; set; }
         [Required]
         [Display(Name = "Data referente")]

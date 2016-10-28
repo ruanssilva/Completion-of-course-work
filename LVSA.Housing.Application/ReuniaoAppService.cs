@@ -18,17 +18,20 @@ namespace LVSA.Housing.Application
     {
         private readonly IPresencaService _presencaService;
         private readonly IPessoaFisicaAppService _pessoaFisicaAppService;
-        public ReuniaoAppService(IReuniaoService reuniaoService, IPresencaService presencaService, IPessoaFisicaAppService pessoaFisicaAppService)
+        private readonly IMoradorAppService _moradorAppService;
+        public ReuniaoAppService(IReuniaoService reuniaoService, IPresencaService presencaService, IPessoaFisicaAppService pessoaFisicaAppService, IMoradorAppService moradorAppService)
             : base(reuniaoService)
         {
             _presencaService = presencaService;
             _pessoaFisicaAppService = pessoaFisicaAppService;
+            _moradorAppService = moradorAppService;
         }
 
         public override void SetSeguranca(Seguranca seguranca, bool filter = true)
         {
             base.SetSeguranca(seguranca, filter);
             _pessoaFisicaAppService.SetSeguranca(seguranca, filter);
+            _moradorAppService.SetSeguranca(seguranca, filter);
         }
 
         public ReuniaoViewModel ObterPorId(int id)
@@ -83,12 +86,19 @@ namespace LVSA.Housing.Application
             var pessoa = _pessoaFisicaAppService.Filtrar(f => f.PessoaComplemento.UsuarioId == Seguranca.Usuario.Id).SingleOrDefault();
             if (pessoa == null)
                 return null;
+            else
+            {
 
-            var model = Filtrar(f => true).ToList();
+                var morador = _moradorAppService.Filtrar(f => f.PessoaId == pessoa.Id).SingleOrDefault();
+                var model = Filtrar(f => true).ToList();
 
-            return model.Where(w => w.SindicoId == pessoa.Id || w.Sindico.Blocos.SelectMany(sm => sm.Moradias).SelectMany(sm => sm.Moradores).Select(s => s.PessoaId).Contains(pessoa.Id)).ToList(); //.SelectMany(sm2 => sm2.Moradores).Select(s => s.PessoaId).Contains(pessoa.Id)).Count() > 0).ToList();
+                return model.Where(w => w.SindicoId == pessoa.Id || w.Sindico.Blocos.SelectMany(sm => sm.Moradias).SelectMany(sm => sm.Moradores).Select(s => s.PessoaId).Contains(morador.Id)).ToList(); //.SelectMany(sm2 => sm2.Moradores).Select(s => s.PessoaId).Contains(pessoa.Id)).Count() > 0).ToList();
 
-            //return model;
+            }
+
+
+
+            return null;
         }
     }
 }
